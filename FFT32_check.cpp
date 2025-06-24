@@ -5,7 +5,7 @@
 
 // 复数乘法：r = x * w
 static complex_t cmul(const complex_t& x, const complex_t& w) {
-    #pragma HLS INLINE
+   #pragma HLS INLINE
     complex_t r;
     r.real = x.real * w.real - x.imag * w.imag;
     r.imag = x.real * w.imag + x.imag * w.real;
@@ -70,8 +70,8 @@ void fft32(hls::stream<axis_data>& in_stream, hls::stream<axis_data>& out_stream
 
     // 1. 输入加载
     for (int i = 0; i < N; i++) {
-        #pragma HLS PIPELINE II=4
-//#pragma HLS UNROLL
+        #pragma HLS PIPELINE II=1
+
         axis_data val = in_stream.read();
         data[i] = val.data;
     }
