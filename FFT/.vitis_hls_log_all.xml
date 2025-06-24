@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="FFT" solutionName="solution1" date="2025-06-24T22:03:07.000+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'generic_sincos&lt;16, 4>' to 'generic_sincos_16_4_s'." projectName="FFT" solutionName="solution1" date="2025-06-24T22:02:56.495+0800" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'generic_sincos&lt;16, 4>_Pipeline_VITIS_LOOP_87_1' to 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1'." projectName="FFT" solutionName="solution1" date="2025-06-24T22:02:56.410+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:102:15)" projectName="FFT" solutionName="solution1" date="2025-06-24T22:02:54.845+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:88:15)" projectName="FFT" solutionName="solution1" date="2025-06-24T22:02:54.835+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:80:15)" projectName="FFT" solutionName="solution1" date="2025-06-24T22:02:54.799+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:68:12)" projectName="FFT" solutionName="solution1" date="2025-06-24T22:02:54.783+0800" type="Warning"/>
+        <logs message="WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed&lt;16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:111:19)" projectName="FFT" solutionName="solution1" date="2025-06-24T22:02:54.774+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
