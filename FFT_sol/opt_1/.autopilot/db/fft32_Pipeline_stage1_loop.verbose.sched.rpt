@@ -1,0 +1,820 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft32_Pipeline_stage1_loop'
+================================================================
+* Date:           Tue Jun 24 23:16:30 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        FFT_sol
+* Solution:       opt_1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbv485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.458 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       10|       10|  0.100 us|  0.100 us|   10|   10|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- stage1_loop  |        8|        8|         2|          1|          1|     8|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 3
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 3, States = { 1 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%block = alloca i32 1"   --->   Operation 5 'alloca' 'block' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%stage0_real = alloca i32 1"   --->   Operation 6 'alloca' 'stage0_real' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%stage0_real_1 = alloca i32 1"   --->   Operation 7 'alloca' 'stage0_real_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%stage0_real_2 = alloca i32 1"   --->   Operation 8 'alloca' 'stage0_real_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%stage0_real_3 = alloca i32 1"   --->   Operation 9 'alloca' 'stage0_real_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%stage0_real_4 = alloca i32 1"   --->   Operation 10 'alloca' 'stage0_real_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%stage0_real_5 = alloca i32 1"   --->   Operation 11 'alloca' 'stage0_real_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%stage0_real_6 = alloca i32 1"   --->   Operation 12 'alloca' 'stage0_real_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%stage0_real_7 = alloca i32 1"   --->   Operation 13 'alloca' 'stage0_real_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%stage0_real_8 = alloca i32 1"   --->   Operation 14 'alloca' 'stage0_real_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%stage0_real_9 = alloca i32 1"   --->   Operation 15 'alloca' 'stage0_real_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%stage0_real_10 = alloca i32 1"   --->   Operation 16 'alloca' 'stage0_real_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%stage0_real_11 = alloca i32 1"   --->   Operation 17 'alloca' 'stage0_real_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%stage0_real_12 = alloca i32 1"   --->   Operation 18 'alloca' 'stage0_real_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%stage0_real_13 = alloca i32 1"   --->   Operation 19 'alloca' 'stage0_real_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%stage0_real_14 = alloca i32 1"   --->   Operation 20 'alloca' 'stage0_real_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%stage0_real_15 = alloca i32 1"   --->   Operation 21 'alloca' 'stage0_real_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%stage0_real_16 = alloca i32 1"   --->   Operation 22 'alloca' 'stage0_real_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%stage0_real_17 = alloca i32 1"   --->   Operation 23 'alloca' 'stage0_real_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%stage0_real_18 = alloca i32 1"   --->   Operation 24 'alloca' 'stage0_real_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%stage0_real_19 = alloca i32 1"   --->   Operation 25 'alloca' 'stage0_real_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%stage0_real_20 = alloca i32 1"   --->   Operation 26 'alloca' 'stage0_real_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%stage0_real_21 = alloca i32 1"   --->   Operation 27 'alloca' 'stage0_real_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%stage0_real_22 = alloca i32 1"   --->   Operation 28 'alloca' 'stage0_real_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%stage0_real_23 = alloca i32 1"   --->   Operation 29 'alloca' 'stage0_real_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%stage0_real_24 = alloca i32 1"   --->   Operation 30 'alloca' 'stage0_real_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%stage0_real_25 = alloca i32 1"   --->   Operation 31 'alloca' 'stage0_real_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%stage0_real_26 = alloca i32 1"   --->   Operation 32 'alloca' 'stage0_real_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%stage0_real_27 = alloca i32 1"   --->   Operation 33 'alloca' 'stage0_real_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%stage0_real_28 = alloca i32 1"   --->   Operation 34 'alloca' 'stage0_real_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%stage0_real_29 = alloca i32 1"   --->   Operation 35 'alloca' 'stage0_real_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%stage0_real_30 = alloca i32 1"   --->   Operation 36 'alloca' 'stage0_real_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%stage0_real_31 = alloca i32 1"   --->   Operation 37 'alloca' 'stage0_real_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%stage0_imag = alloca i32 1"   --->   Operation 38 'alloca' 'stage0_imag' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%stage0_imag_1 = alloca i32 1"   --->   Operation 39 'alloca' 'stage0_imag_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%stage0_imag_2 = alloca i32 1"   --->   Operation 40 'alloca' 'stage0_imag_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%stage0_imag_3 = alloca i32 1"   --->   Operation 41 'alloca' 'stage0_imag_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%stage0_imag_4 = alloca i32 1"   --->   Operation 42 'alloca' 'stage0_imag_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%stage0_imag_5 = alloca i32 1"   --->   Operation 43 'alloca' 'stage0_imag_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%stage0_imag_6 = alloca i32 1"   --->   Operation 44 'alloca' 'stage0_imag_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%stage0_imag_7 = alloca i32 1"   --->   Operation 45 'alloca' 'stage0_imag_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%stage0_imag_8 = alloca i32 1"   --->   Operation 46 'alloca' 'stage0_imag_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%stage0_imag_9 = alloca i32 1"   --->   Operation 47 'alloca' 'stage0_imag_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%stage0_imag_10 = alloca i32 1"   --->   Operation 48 'alloca' 'stage0_imag_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%stage0_imag_11 = alloca i32 1"   --->   Operation 49 'alloca' 'stage0_imag_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%stage0_imag_12 = alloca i32 1"   --->   Operation 50 'alloca' 'stage0_imag_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%stage0_imag_13 = alloca i32 1"   --->   Operation 51 'alloca' 'stage0_imag_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%stage0_imag_14 = alloca i32 1"   --->   Operation 52 'alloca' 'stage0_imag_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%stage0_imag_15 = alloca i32 1"   --->   Operation 53 'alloca' 'stage0_imag_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%stage0_imag_16 = alloca i32 1"   --->   Operation 54 'alloca' 'stage0_imag_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%stage0_imag_17 = alloca i32 1"   --->   Operation 55 'alloca' 'stage0_imag_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%stage0_imag_18 = alloca i32 1"   --->   Operation 56 'alloca' 'stage0_imag_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%stage0_imag_19 = alloca i32 1"   --->   Operation 57 'alloca' 'stage0_imag_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%stage0_imag_20 = alloca i32 1"   --->   Operation 58 'alloca' 'stage0_imag_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%stage0_imag_21 = alloca i32 1"   --->   Operation 59 'alloca' 'stage0_imag_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%stage0_imag_22 = alloca i32 1"   --->   Operation 60 'alloca' 'stage0_imag_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%stage0_imag_23 = alloca i32 1"   --->   Operation 61 'alloca' 'stage0_imag_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%stage0_imag_24 = alloca i32 1"   --->   Operation 62 'alloca' 'stage0_imag_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%stage0_imag_25 = alloca i32 1"   --->   Operation 63 'alloca' 'stage0_imag_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%stage0_imag_26 = alloca i32 1"   --->   Operation 64 'alloca' 'stage0_imag_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%stage0_imag_27 = alloca i32 1"   --->   Operation 65 'alloca' 'stage0_imag_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%stage0_imag_28 = alloca i32 1"   --->   Operation 66 'alloca' 'stage0_imag_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%stage0_imag_29 = alloca i32 1"   --->   Operation 67 'alloca' 'stage0_imag_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%stage0_imag_30 = alloca i32 1"   --->   Operation 68 'alloca' 'stage0_imag_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%stage0_imag_31 = alloca i32 1"   --->   Operation 69 'alloca' 'stage0_imag_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%stage1_real = alloca i32 1"   --->   Operation 70 'alloca' 'stage1_real' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%stage1_real_1 = alloca i32 1"   --->   Operation 71 'alloca' 'stage1_real_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [1/1] (0.00ns)   --->   "%stage1_real_2 = alloca i32 1"   --->   Operation 72 'alloca' 'stage1_real_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%stage1_real_3 = alloca i32 1"   --->   Operation 73 'alloca' 'stage1_real_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%stage1_real_4 = alloca i32 1"   --->   Operation 74 'alloca' 'stage1_real_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%stage1_real_5 = alloca i32 1"   --->   Operation 75 'alloca' 'stage1_real_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%stage1_real_6 = alloca i32 1"   --->   Operation 76 'alloca' 'stage1_real_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%stage1_real_7 = alloca i32 1"   --->   Operation 77 'alloca' 'stage1_real_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 78 [1/1] (0.00ns)   --->   "%stage1_real_8 = alloca i32 1"   --->   Operation 78 'alloca' 'stage1_real_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 79 [1/1] (0.00ns)   --->   "%stage1_real_9 = alloca i32 1"   --->   Operation 79 'alloca' 'stage1_real_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 80 [1/1] (0.00ns)   --->   "%stage1_real_10 = alloca i32 1"   --->   Operation 80 'alloca' 'stage1_real_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 81 [1/1] (0.00ns)   --->   "%stage1_real_11 = alloca i32 1"   --->   Operation 81 'alloca' 'stage1_real_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 82 [1/1] (0.00ns)   --->   "%stage1_real_12 = alloca i32 1"   --->   Operation 82 'alloca' 'stage1_real_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 83 [1/1] (0.00ns)   --->   "%stage1_real_13 = alloca i32 1"   --->   Operation 83 'alloca' 'stage1_real_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 84 [1/1] (0.00ns)   --->   "%stage1_real_14 = alloca i32 1"   --->   Operation 84 'alloca' 'stage1_real_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 85 [1/1] (0.00ns)   --->   "%stage1_real_15 = alloca i32 1"   --->   Operation 85 'alloca' 'stage1_real_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 86 [1/1] (0.00ns)   --->   "%stage1_real_16 = alloca i32 1"   --->   Operation 86 'alloca' 'stage1_real_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 87 [1/1] (0.00ns)   --->   "%stage1_real_17 = alloca i32 1"   --->   Operation 87 'alloca' 'stage1_real_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 88 [1/1] (0.00ns)   --->   "%stage1_real_18 = alloca i32 1"   --->   Operation 88 'alloca' 'stage1_real_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 89 [1/1] (0.00ns)   --->   "%stage1_real_19 = alloca i32 1"   --->   Operation 89 'alloca' 'stage1_real_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 90 [1/1] (0.00ns)   --->   "%stage1_real_20 = alloca i32 1"   --->   Operation 90 'alloca' 'stage1_real_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 91 [1/1] (0.00ns)   --->   "%stage1_real_21 = alloca i32 1"   --->   Operation 91 'alloca' 'stage1_real_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 92 [1/1] (0.00ns)   --->   "%stage1_real_22 = alloca i32 1"   --->   Operation 92 'alloca' 'stage1_real_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 93 [1/1] (0.00ns)   --->   "%stage1_real_23 = alloca i32 1"   --->   Operation 93 'alloca' 'stage1_real_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 94 [1/1] (0.00ns)   --->   "%stage1_real_24 = alloca i32 1"   --->   Operation 94 'alloca' 'stage1_real_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 95 [1/1] (0.00ns)   --->   "%stage1_real_25 = alloca i32 1"   --->   Operation 95 'alloca' 'stage1_real_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 96 [1/1] (0.00ns)   --->   "%stage1_real_26 = alloca i32 1"   --->   Operation 96 'alloca' 'stage1_real_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 97 [1/1] (0.00ns)   --->   "%stage1_real_27 = alloca i32 1"   --->   Operation 97 'alloca' 'stage1_real_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 98 [1/1] (0.00ns)   --->   "%stage1_real_28 = alloca i32 1"   --->   Operation 98 'alloca' 'stage1_real_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 99 [1/1] (0.00ns)   --->   "%stage1_real_29 = alloca i32 1"   --->   Operation 99 'alloca' 'stage1_real_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 100 [1/1] (0.00ns)   --->   "%stage1_real_30 = alloca i32 1"   --->   Operation 100 'alloca' 'stage1_real_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 101 [1/1] (0.00ns)   --->   "%stage1_real_31 = alloca i32 1"   --->   Operation 101 'alloca' 'stage1_real_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 102 [1/1] (0.00ns)   --->   "%stage1_imag = alloca i32 1"   --->   Operation 102 'alloca' 'stage1_imag' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 103 [1/1] (0.00ns)   --->   "%stage1_imag_1 = alloca i32 1"   --->   Operation 103 'alloca' 'stage1_imag_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 104 [1/1] (0.00ns)   --->   "%stage1_imag_2 = alloca i32 1"   --->   Operation 104 'alloca' 'stage1_imag_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 105 [1/1] (0.00ns)   --->   "%stage1_imag_3 = alloca i32 1"   --->   Operation 105 'alloca' 'stage1_imag_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 106 [1/1] (0.00ns)   --->   "%stage1_imag_4 = alloca i32 1"   --->   Operation 106 'alloca' 'stage1_imag_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 107 [1/1] (0.00ns)   --->   "%stage1_imag_5 = alloca i32 1"   --->   Operation 107 'alloca' 'stage1_imag_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 108 [1/1] (0.00ns)   --->   "%stage1_imag_6 = alloca i32 1"   --->   Operation 108 'alloca' 'stage1_imag_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 109 [1/1] (0.00ns)   --->   "%stage1_imag_7 = alloca i32 1"   --->   Operation 109 'alloca' 'stage1_imag_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 110 [1/1] (0.00ns)   --->   "%stage1_imag_8 = alloca i32 1"   --->   Operation 110 'alloca' 'stage1_imag_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 111 [1/1] (0.00ns)   --->   "%stage1_imag_9 = alloca i32 1"   --->   Operation 111 'alloca' 'stage1_imag_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 112 [1/1] (0.00ns)   --->   "%stage1_imag_10 = alloca i32 1"   --->   Operation 112 'alloca' 'stage1_imag_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 113 [1/1] (0.00ns)   --->   "%stage1_imag_11 = alloca i32 1"   --->   Operation 113 'alloca' 'stage1_imag_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 114 [1/1] (0.00ns)   --->   "%stage1_imag_12 = alloca i32 1"   --->   Operation 114 'alloca' 'stage1_imag_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 115 [1/1] (0.00ns)   --->   "%stage1_imag_13 = alloca i32 1"   --->   Operation 115 'alloca' 'stage1_imag_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 116 [1/1] (0.00ns)   --->   "%stage1_imag_14 = alloca i32 1"   --->   Operation 116 'alloca' 'stage1_imag_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 117 [1/1] (0.00ns)   --->   "%stage1_imag_15 = alloca i32 1"   --->   Operation 117 'alloca' 'stage1_imag_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 118 [1/1] (0.00ns)   --->   "%stage1_imag_16 = alloca i32 1"   --->   Operation 118 'alloca' 'stage1_imag_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 119 [1/1] (0.00ns)   --->   "%stage1_imag_17 = alloca i32 1"   --->   Operation 119 'alloca' 'stage1_imag_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 120 [1/1] (0.00ns)   --->   "%stage1_imag_18 = alloca i32 1"   --->   Operation 120 'alloca' 'stage1_imag_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 121 [1/1] (0.00ns)   --->   "%stage1_imag_19 = alloca i32 1"   --->   Operation 121 'alloca' 'stage1_imag_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 122 [1/1] (0.00ns)   --->   "%stage1_imag_20 = alloca i32 1"   --->   Operation 122 'alloca' 'stage1_imag_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 123 [1/1] (0.00ns)   --->   "%stage1_imag_21 = alloca i32 1"   --->   Operation 123 'alloca' 'stage1_imag_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 124 [1/1] (0.00ns)   --->   "%stage1_imag_22 = alloca i32 1"   --->   Operation 124 'alloca' 'stage1_imag_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 125 [1/1] (0.00ns)   --->   "%stage1_imag_23 = alloca i32 1"   --->   Operation 125 'alloca' 'stage1_imag_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 126 [1/1] (0.00ns)   --->   "%stage1_imag_24 = alloca i32 1"   --->   Operation 126 'alloca' 'stage1_imag_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 127 [1/1] (0.00ns)   --->   "%stage1_imag_25 = alloca i32 1"   --->   Operation 127 'alloca' 'stage1_imag_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 128 [1/1] (0.00ns)   --->   "%stage1_imag_26 = alloca i32 1"   --->   Operation 128 'alloca' 'stage1_imag_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 129 [1/1] (0.00ns)   --->   "%stage1_imag_27 = alloca i32 1"   --->   Operation 129 'alloca' 'stage1_imag_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 130 [1/1] (0.00ns)   --->   "%stage1_imag_28 = alloca i32 1"   --->   Operation 130 'alloca' 'stage1_imag_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%stage1_imag_29 = alloca i32 1"   --->   Operation 131 'alloca' 'stage1_imag_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [1/1] (0.00ns)   --->   "%stage1_imag_30 = alloca i32 1"   --->   Operation 132 'alloca' 'stage1_imag_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 133 [1/1] (0.00ns)   --->   "%stage1_imag_31 = alloca i32 1"   --->   Operation 133 'alloca' 'stage1_imag_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 134 [1/1] (0.00ns)   --->   "%stage0_real_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_reload"   --->   Operation 134 'read' 'stage0_real_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 135 [1/1] (0.00ns)   --->   "%stage0_real_1_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_1_reload"   --->   Operation 135 'read' 'stage0_real_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 136 [1/1] (0.00ns)   --->   "%stage0_real_2_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_2_reload"   --->   Operation 136 'read' 'stage0_real_2_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 137 [1/1] (0.00ns)   --->   "%stage0_real_3_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_3_reload"   --->   Operation 137 'read' 'stage0_real_3_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 138 [1/1] (0.00ns)   --->   "%stage0_real_4_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_4_reload"   --->   Operation 138 'read' 'stage0_real_4_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 139 [1/1] (0.00ns)   --->   "%stage0_real_5_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_5_reload"   --->   Operation 139 'read' 'stage0_real_5_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 140 [1/1] (0.00ns)   --->   "%stage0_real_6_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_6_reload"   --->   Operation 140 'read' 'stage0_real_6_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 141 [1/1] (0.00ns)   --->   "%stage0_real_7_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_7_reload"   --->   Operation 141 'read' 'stage0_real_7_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 142 [1/1] (0.00ns)   --->   "%stage0_real_8_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_8_reload"   --->   Operation 142 'read' 'stage0_real_8_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 143 [1/1] (0.00ns)   --->   "%stage0_real_9_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_9_reload"   --->   Operation 143 'read' 'stage0_real_9_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 144 [1/1] (0.00ns)   --->   "%stage0_real_10_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_10_reload"   --->   Operation 144 'read' 'stage0_real_10_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 145 [1/1] (0.00ns)   --->   "%stage0_real_11_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_11_reload"   --->   Operation 145 'read' 'stage0_real_11_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 146 [1/1] (0.00ns)   --->   "%stage0_real_12_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_12_reload"   --->   Operation 146 'read' 'stage0_real_12_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 147 [1/1] (0.00ns)   --->   "%stage0_real_13_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_13_reload"   --->   Operation 147 'read' 'stage0_real_13_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 148 [1/1] (0.00ns)   --->   "%stage0_real_14_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_14_reload"   --->   Operation 148 'read' 'stage0_real_14_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 149 [1/1] (0.00ns)   --->   "%stage0_real_15_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_15_reload"   --->   Operation 149 'read' 'stage0_real_15_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 150 [1/1] (0.00ns)   --->   "%stage0_real_16_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_16_reload"   --->   Operation 150 'read' 'stage0_real_16_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 151 [1/1] (0.00ns)   --->   "%stage0_real_17_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_17_reload"   --->   Operation 151 'read' 'stage0_real_17_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 152 [1/1] (0.00ns)   --->   "%stage0_real_18_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_18_reload"   --->   Operation 152 'read' 'stage0_real_18_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 153 [1/1] (0.00ns)   --->   "%stage0_real_19_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_19_reload"   --->   Operation 153 'read' 'stage0_real_19_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 154 [1/1] (0.00ns)   --->   "%stage0_real_20_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_20_reload"   --->   Operation 154 'read' 'stage0_real_20_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 155 [1/1] (0.00ns)   --->   "%stage0_real_21_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_21_reload"   --->   Operation 155 'read' 'stage0_real_21_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 156 [1/1] (0.00ns)   --->   "%stage0_real_22_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_22_reload"   --->   Operation 156 'read' 'stage0_real_22_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 157 [1/1] (0.00ns)   --->   "%stage0_real_23_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_23_reload"   --->   Operation 157 'read' 'stage0_real_23_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 158 [1/1] (0.00ns)   --->   "%stage0_real_24_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_24_reload"   --->   Operation 158 'read' 'stage0_real_24_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 159 [1/1] (0.00ns)   --->   "%stage0_real_25_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_25_reload"   --->   Operation 159 'read' 'stage0_real_25_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 160 [1/1] (0.00ns)   --->   "%stage0_real_26_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_26_reload"   --->   Operation 160 'read' 'stage0_real_26_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 161 [1/1] (0.00ns)   --->   "%stage0_real_27_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_27_reload"   --->   Operation 161 'read' 'stage0_real_27_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 162 [1/1] (0.00ns)   --->   "%stage0_real_28_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_28_reload"   --->   Operation 162 'read' 'stage0_real_28_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 163 [1/1] (0.00ns)   --->   "%stage0_real_29_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_29_reload"   --->   Operation 163 'read' 'stage0_real_29_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 164 [1/1] (0.00ns)   --->   "%stage0_real_30_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_30_reload"   --->   Operation 164 'read' 'stage0_real_30_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 165 [1/1] (0.00ns)   --->   "%stage0_real_31_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_real_31_reload"   --->   Operation 165 'read' 'stage0_real_31_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 166 [1/1] (0.00ns)   --->   "%stage0_imag_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_reload"   --->   Operation 166 'read' 'stage0_imag_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 167 [1/1] (0.00ns)   --->   "%stage0_imag_1_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_1_reload"   --->   Operation 167 'read' 'stage0_imag_1_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 168 [1/1] (0.00ns)   --->   "%stage0_imag_2_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_2_reload"   --->   Operation 168 'read' 'stage0_imag_2_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 169 [1/1] (0.00ns)   --->   "%stage0_imag_3_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_3_reload"   --->   Operation 169 'read' 'stage0_imag_3_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 170 [1/1] (0.00ns)   --->   "%stage0_imag_4_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_4_reload"   --->   Operation 170 'read' 'stage0_imag_4_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 171 [1/1] (0.00ns)   --->   "%stage0_imag_5_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_5_reload"   --->   Operation 171 'read' 'stage0_imag_5_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 172 [1/1] (0.00ns)   --->   "%stage0_imag_6_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_6_reload"   --->   Operation 172 'read' 'stage0_imag_6_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 173 [1/1] (0.00ns)   --->   "%stage0_imag_7_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_7_reload"   --->   Operation 173 'read' 'stage0_imag_7_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 174 [1/1] (0.00ns)   --->   "%stage0_imag_8_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_8_reload"   --->   Operation 174 'read' 'stage0_imag_8_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 175 [1/1] (0.00ns)   --->   "%stage0_imag_9_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_9_reload"   --->   Operation 175 'read' 'stage0_imag_9_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 176 [1/1] (0.00ns)   --->   "%stage0_imag_10_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_10_reload"   --->   Operation 176 'read' 'stage0_imag_10_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 177 [1/1] (0.00ns)   --->   "%stage0_imag_11_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_11_reload"   --->   Operation 177 'read' 'stage0_imag_11_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 178 [1/1] (0.00ns)   --->   "%stage0_imag_12_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_12_reload"   --->   Operation 178 'read' 'stage0_imag_12_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 179 [1/1] (0.00ns)   --->   "%stage0_imag_13_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_13_reload"   --->   Operation 179 'read' 'stage0_imag_13_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 180 [1/1] (0.00ns)   --->   "%stage0_imag_14_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_14_reload"   --->   Operation 180 'read' 'stage0_imag_14_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 181 [1/1] (0.00ns)   --->   "%stage0_imag_15_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_15_reload"   --->   Operation 181 'read' 'stage0_imag_15_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 182 [1/1] (0.00ns)   --->   "%stage0_imag_16_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_16_reload"   --->   Operation 182 'read' 'stage0_imag_16_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 183 [1/1] (0.00ns)   --->   "%stage0_imag_17_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_17_reload"   --->   Operation 183 'read' 'stage0_imag_17_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 184 [1/1] (0.00ns)   --->   "%stage0_imag_18_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_18_reload"   --->   Operation 184 'read' 'stage0_imag_18_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 185 [1/1] (0.00ns)   --->   "%stage0_imag_19_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_19_reload"   --->   Operation 185 'read' 'stage0_imag_19_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 186 [1/1] (0.00ns)   --->   "%stage0_imag_20_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_20_reload"   --->   Operation 186 'read' 'stage0_imag_20_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 187 [1/1] (0.00ns)   --->   "%stage0_imag_21_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_21_reload"   --->   Operation 187 'read' 'stage0_imag_21_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 188 [1/1] (0.00ns)   --->   "%stage0_imag_22_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_22_reload"   --->   Operation 188 'read' 'stage0_imag_22_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 189 [1/1] (0.00ns)   --->   "%stage0_imag_23_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_23_reload"   --->   Operation 189 'read' 'stage0_imag_23_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 190 [1/1] (0.00ns)   --->   "%stage0_imag_24_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_24_reload"   --->   Operation 190 'read' 'stage0_imag_24_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 191 [1/1] (0.00ns)   --->   "%stage0_imag_25_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_25_reload"   --->   Operation 191 'read' 'stage0_imag_25_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 192 [1/1] (0.00ns)   --->   "%stage0_imag_26_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_26_reload"   --->   Operation 192 'read' 'stage0_imag_26_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 193 [1/1] (0.00ns)   --->   "%stage0_imag_27_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_27_reload"   --->   Operation 193 'read' 'stage0_imag_27_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 194 [1/1] (0.00ns)   --->   "%stage0_imag_28_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_28_reload"   --->   Operation 194 'read' 'stage0_imag_28_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 195 [1/1] (0.00ns)   --->   "%stage0_imag_29_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_29_reload"   --->   Operation 195 'read' 'stage0_imag_29_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 196 [1/1] (0.00ns)   --->   "%stage0_imag_30_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_30_reload"   --->   Operation 196 'read' 'stage0_imag_30_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 197 [1/1] (0.00ns)   --->   "%stage0_imag_31_reload_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %stage0_imag_31_reload"   --->   Operation 197 'read' 'stage0_imag_31_reload_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 198 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_31"   --->   Operation 198 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 199 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_30"   --->   Operation 199 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 200 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_29"   --->   Operation 200 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 201 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_28"   --->   Operation 201 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 202 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_27"   --->   Operation 202 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 203 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_26"   --->   Operation 203 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 204 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_25"   --->   Operation 204 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 205 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_24"   --->   Operation 205 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 206 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_23"   --->   Operation 206 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 207 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_22"   --->   Operation 207 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 208 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_21"   --->   Operation 208 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 209 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_20"   --->   Operation 209 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 210 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_19"   --->   Operation 210 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 211 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_18"   --->   Operation 211 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 212 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_17"   --->   Operation 212 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 213 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_16"   --->   Operation 213 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 214 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_15"   --->   Operation 214 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 215 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_14"   --->   Operation 215 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 216 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_13"   --->   Operation 216 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 217 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_12"   --->   Operation 217 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 218 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_11"   --->   Operation 218 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 219 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_10"   --->   Operation 219 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 220 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_9"   --->   Operation 220 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 221 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_8"   --->   Operation 221 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 222 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_7"   --->   Operation 222 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 223 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_6"   --->   Operation 223 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 224 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_5"   --->   Operation 224 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 225 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_4"   --->   Operation 225 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 226 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_3"   --->   Operation 226 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 227 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_2"   --->   Operation 227 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 228 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag_1"   --->   Operation 228 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 229 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_imag"   --->   Operation 229 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 230 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_31"   --->   Operation 230 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 231 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_30"   --->   Operation 231 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 232 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_29"   --->   Operation 232 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 233 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_28"   --->   Operation 233 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 234 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_27"   --->   Operation 234 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 235 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_26"   --->   Operation 235 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 236 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_25"   --->   Operation 236 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 237 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_24"   --->   Operation 237 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 238 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_23"   --->   Operation 238 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 239 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_22"   --->   Operation 239 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 240 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_21"   --->   Operation 240 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 241 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_20"   --->   Operation 241 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 242 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_19"   --->   Operation 242 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 243 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_18"   --->   Operation 243 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 244 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_17"   --->   Operation 244 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 245 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_16"   --->   Operation 245 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 246 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_15"   --->   Operation 246 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 247 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_14"   --->   Operation 247 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 248 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_13"   --->   Operation 248 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 249 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_12"   --->   Operation 249 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 250 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_11"   --->   Operation 250 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 251 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_10"   --->   Operation 251 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 252 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_9"   --->   Operation 252 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 253 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_8"   --->   Operation 253 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 254 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_7"   --->   Operation 254 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 255 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_6"   --->   Operation 255 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 256 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_5"   --->   Operation 256 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 257 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_4"   --->   Operation 257 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 258 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_3"   --->   Operation 258 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 259 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_2"   --->   Operation 259 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 260 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real_1"   --->   Operation 260 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 261 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 0, i16 %stage1_real"   --->   Operation 261 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 262 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_31_reload_read, i16 %stage0_imag_31"   --->   Operation 262 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 263 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_30_reload_read, i16 %stage0_imag_30"   --->   Operation 263 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 264 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_29_reload_read, i16 %stage0_imag_29"   --->   Operation 264 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 265 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_28_reload_read, i16 %stage0_imag_28"   --->   Operation 265 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 266 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_27_reload_read, i16 %stage0_imag_27"   --->   Operation 266 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 267 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_26_reload_read, i16 %stage0_imag_26"   --->   Operation 267 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 268 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_25_reload_read, i16 %stage0_imag_25"   --->   Operation 268 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 269 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_24_reload_read, i16 %stage0_imag_24"   --->   Operation 269 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 270 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_23_reload_read, i16 %stage0_imag_23"   --->   Operation 270 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 271 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_22_reload_read, i16 %stage0_imag_22"   --->   Operation 271 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 272 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_21_reload_read, i16 %stage0_imag_21"   --->   Operation 272 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 273 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_20_reload_read, i16 %stage0_imag_20"   --->   Operation 273 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 274 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_19_reload_read, i16 %stage0_imag_19"   --->   Operation 274 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 275 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_18_reload_read, i16 %stage0_imag_18"   --->   Operation 275 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 276 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_17_reload_read, i16 %stage0_imag_17"   --->   Operation 276 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 277 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_16_reload_read, i16 %stage0_imag_16"   --->   Operation 277 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 278 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_15_reload_read, i16 %stage0_imag_15"   --->   Operation 278 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 279 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_14_reload_read, i16 %stage0_imag_14"   --->   Operation 279 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 280 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_13_reload_read, i16 %stage0_imag_13"   --->   Operation 280 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 281 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_12_reload_read, i16 %stage0_imag_12"   --->   Operation 281 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 282 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_11_reload_read, i16 %stage0_imag_11"   --->   Operation 282 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 283 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_10_reload_read, i16 %stage0_imag_10"   --->   Operation 283 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 284 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_9_reload_read, i16 %stage0_imag_9"   --->   Operation 284 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 285 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_8_reload_read, i16 %stage0_imag_8"   --->   Operation 285 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 286 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_7_reload_read, i16 %stage0_imag_7"   --->   Operation 286 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 287 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_6_reload_read, i16 %stage0_imag_6"   --->   Operation 287 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 288 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_5_reload_read, i16 %stage0_imag_5"   --->   Operation 288 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 289 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_4_reload_read, i16 %stage0_imag_4"   --->   Operation 289 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 290 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_3_reload_read, i16 %stage0_imag_3"   --->   Operation 290 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 291 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_2_reload_read, i16 %stage0_imag_2"   --->   Operation 291 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 292 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_1_reload_read, i16 %stage0_imag_1"   --->   Operation 292 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 293 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_imag_reload_read, i16 %stage0_imag"   --->   Operation 293 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 294 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_31_reload_read, i16 %stage0_real_31"   --->   Operation 294 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 295 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_30_reload_read, i16 %stage0_real_30"   --->   Operation 295 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 296 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_29_reload_read, i16 %stage0_real_29"   --->   Operation 296 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 297 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_28_reload_read, i16 %stage0_real_28"   --->   Operation 297 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 298 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_27_reload_read, i16 %stage0_real_27"   --->   Operation 298 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 299 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_26_reload_read, i16 %stage0_real_26"   --->   Operation 299 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 300 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_25_reload_read, i16 %stage0_real_25"   --->   Operation 300 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 301 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_24_reload_read, i16 %stage0_real_24"   --->   Operation 301 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 302 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_23_reload_read, i16 %stage0_real_23"   --->   Operation 302 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 303 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_22_reload_read, i16 %stage0_real_22"   --->   Operation 303 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 304 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_21_reload_read, i16 %stage0_real_21"   --->   Operation 304 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 305 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_20_reload_read, i16 %stage0_real_20"   --->   Operation 305 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 306 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_19_reload_read, i16 %stage0_real_19"   --->   Operation 306 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 307 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_18_reload_read, i16 %stage0_real_18"   --->   Operation 307 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 308 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_17_reload_read, i16 %stage0_real_17"   --->   Operation 308 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 309 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_16_reload_read, i16 %stage0_real_16"   --->   Operation 309 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 310 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_15_reload_read, i16 %stage0_real_15"   --->   Operation 310 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 311 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_14_reload_read, i16 %stage0_real_14"   --->   Operation 311 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 312 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_13_reload_read, i16 %stage0_real_13"   --->   Operation 312 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 313 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_12_reload_read, i16 %stage0_real_12"   --->   Operation 313 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 314 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_11_reload_read, i16 %stage0_real_11"   --->   Operation 314 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 315 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_10_reload_read, i16 %stage0_real_10"   --->   Operation 315 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 316 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_9_reload_read, i16 %stage0_real_9"   --->   Operation 316 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 317 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_8_reload_read, i16 %stage0_real_8"   --->   Operation 317 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 318 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_7_reload_read, i16 %stage0_real_7"   --->   Operation 318 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 319 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_6_reload_read, i16 %stage0_real_6"   --->   Operation 319 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 320 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_5_reload_read, i16 %stage0_real_5"   --->   Operation 320 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 321 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_4_reload_read, i16 %stage0_real_4"   --->   Operation 321 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 322 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_3_reload_read, i16 %stage0_real_3"   --->   Operation 322 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 323 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_2_reload_read, i16 %stage0_real_2"   --->   Operation 323 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 324 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_1_reload_read, i16 %stage0_real_1"   --->   Operation 324 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 325 [1/1] (1.58ns)   --->   "%store_ln0 = store i16 %stage0_real_reload_read, i16 %stage0_real"   --->   Operation 325 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 326 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 0, i4 %block"   --->   Operation 326 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 327 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body38"   --->   Operation 327 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.45>
+ST_2 : Operation 328 [1/1] (0.00ns)   --->   "%block_1 = load i4 %block" [FFT32_sol.cpp:93]   --->   Operation 328 'load' 'block_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 329 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 329 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 330 [1/1] (1.73ns)   --->   "%icmp_ln93 = icmp_eq  i4 %block_1, i4 8" [FFT32_sol.cpp:93]   --->   Operation 330 'icmp' 'icmp_ln93' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 331 [1/1] (1.73ns)   --->   "%add_ln93 = add i4 %block_1, i4 1" [FFT32_sol.cpp:93]   --->   Operation 331 'add' 'add_ln93' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 332 [1/1] (0.00ns)   --->   "%br_ln93 = br i1 %icmp_ln93, void %for.body38.split, void %arrayctor.loop95_ifconv.preheader.exitStub" [FFT32_sol.cpp:93]   --->   Operation 332 'br' 'br_ln93' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 333 [1/1] (0.00ns)   --->   "%stage0_real_load = load i16 %stage0_real" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 333 'load' 'stage0_real_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 334 [1/1] (0.00ns)   --->   "%stage0_real_1_load = load i16 %stage0_real_1" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 334 'load' 'stage0_real_1_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 335 [1/1] (0.00ns)   --->   "%stage0_real_2_load = load i16 %stage0_real_2" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 335 'load' 'stage0_real_2_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 336 [1/1] (0.00ns)   --->   "%stage0_real_3_load = load i16 %stage0_real_3" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 336 'load' 'stage0_real_3_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 337 [1/1] (0.00ns)   --->   "%stage0_real_4_load = load i16 %stage0_real_4" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 337 'load' 'stage0_real_4_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 338 [1/1] (0.00ns)   --->   "%stage0_real_5_load = load i16 %stage0_real_5" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 338 'load' 'stage0_real_5_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 339 [1/1] (0.00ns)   --->   "%stage0_real_6_load = load i16 %stage0_real_6" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 339 'load' 'stage0_real_6_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 340 [1/1] (0.00ns)   --->   "%stage0_real_7_load = load i16 %stage0_real_7" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 340 'load' 'stage0_real_7_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 341 [1/1] (0.00ns)   --->   "%stage0_real_8_load = load i16 %stage0_real_8" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 341 'load' 'stage0_real_8_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 342 [1/1] (0.00ns)   --->   "%stage0_real_9_load = load i16 %stage0_real_9" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 342 'load' 'stage0_real_9_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 343 [1/1] (0.00ns)   --->   "%stage0_real_10_load = load i16 %stage0_real_10" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 343 'load' 'stage0_real_10_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 344 [1/1] (0.00ns)   --->   "%stage0_real_11_load = load i16 %stage0_real_11" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 344 'load' 'stage0_real_11_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 345 [1/1] (0.00ns)   --->   "%stage0_real_12_load = load i16 %stage0_real_12" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 345 'load' 'stage0_real_12_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 346 [1/1] (0.00ns)   --->   "%stage0_real_13_load = load i16 %stage0_real_13" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 346 'load' 'stage0_real_13_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 347 [1/1] (0.00ns)   --->   "%stage0_real_14_load = load i16 %stage0_real_14" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 347 'load' 'stage0_real_14_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 348 [1/1] (0.00ns)   --->   "%stage0_real_15_load = load i16 %stage0_real_15" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 348 'load' 'stage0_real_15_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 349 [1/1] (0.00ns)   --->   "%stage0_real_16_load = load i16 %stage0_real_16" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 349 'load' 'stage0_real_16_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 350 [1/1] (0.00ns)   --->   "%stage0_real_17_load = load i16 %stage0_real_17" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 350 'load' 'stage0_real_17_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 351 [1/1] (0.00ns)   --->   "%stage0_real_18_load = load i16 %stage0_real_18" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 351 'load' 'stage0_real_18_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 352 [1/1] (0.00ns)   --->   "%stage0_real_19_load = load i16 %stage0_real_19" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 352 'load' 'stage0_real_19_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 353 [1/1] (0.00ns)   --->   "%stage0_real_20_load = load i16 %stage0_real_20" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 353 'load' 'stage0_real_20_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 354 [1/1] (0.00ns)   --->   "%stage0_real_21_load = load i16 %stage0_real_21" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 354 'load' 'stage0_real_21_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 355 [1/1] (0.00ns)   --->   "%stage0_real_22_load = load i16 %stage0_real_22" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 355 'load' 'stage0_real_22_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 356 [1/1] (0.00ns)   --->   "%stage0_real_23_load = load i16 %stage0_real_23" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 356 'load' 'stage0_real_23_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 357 [1/1] (0.00ns)   --->   "%stage0_real_24_load = load i16 %stage0_real_24" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 357 'load' 'stage0_real_24_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 358 [1/1] (0.00ns)   --->   "%stage0_real_25_load = load i16 %stage0_real_25" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 358 'load' 'stage0_real_25_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 359 [1/1] (0.00ns)   --->   "%stage0_real_26_load = load i16 %stage0_real_26" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 359 'load' 'stage0_real_26_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 360 [1/1] (0.00ns)   --->   "%stage0_real_27_load = load i16 %stage0_real_27" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 360 'load' 'stage0_real_27_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 361 [1/1] (0.00ns)   --->   "%stage0_real_28_load = load i16 %stage0_real_28" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 361 'load' 'stage0_real_28_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 362 [1/1] (0.00ns)   --->   "%stage0_real_29_load = load i16 %stage0_real_29" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 362 'load' 'stage0_real_29_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 363 [1/1] (0.00ns)   --->   "%stage0_real_30_load = load i16 %stage0_real_30" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 363 'load' 'stage0_real_30_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 364 [1/1] (0.00ns)   --->   "%stage0_real_31_load = load i16 %stage0_real_31" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 364 'load' 'stage0_real_31_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 365 [1/1] (0.00ns)   --->   "%stage0_imag_load = load i16 %stage0_imag" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 365 'load' 'stage0_imag_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 366 [1/1] (0.00ns)   --->   "%stage0_imag_1_load = load i16 %stage0_imag_1" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 366 'load' 'stage0_imag_1_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 367 [1/1] (0.00ns)   --->   "%stage0_imag_2_load = load i16 %stage0_imag_2" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 367 'load' 'stage0_imag_2_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 368 [1/1] (0.00ns)   --->   "%stage0_imag_3_load = load i16 %stage0_imag_3" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 368 'load' 'stage0_imag_3_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 369 [1/1] (0.00ns)   --->   "%stage0_imag_4_load = load i16 %stage0_imag_4" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 369 'load' 'stage0_imag_4_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 370 [1/1] (0.00ns)   --->   "%stage0_imag_5_load = load i16 %stage0_imag_5" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 370 'load' 'stage0_imag_5_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 371 [1/1] (0.00ns)   --->   "%stage0_imag_6_load = load i16 %stage0_imag_6" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 371 'load' 'stage0_imag_6_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 372 [1/1] (0.00ns)   --->   "%stage0_imag_7_load = load i16 %stage0_imag_7" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 372 'load' 'stage0_imag_7_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 373 [1/1] (0.00ns)   --->   "%stage0_imag_8_load = load i16 %stage0_imag_8" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 373 'load' 'stage0_imag_8_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 374 [1/1] (0.00ns)   --->   "%stage0_imag_9_load = load i16 %stage0_imag_9" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 374 'load' 'stage0_imag_9_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 375 [1/1] (0.00ns)   --->   "%stage0_imag_10_load = load i16 %stage0_imag_10" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 375 'load' 'stage0_imag_10_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 376 [1/1] (0.00ns)   --->   "%stage0_imag_11_load = load i16 %stage0_imag_11" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 376 'load' 'stage0_imag_11_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 377 [1/1] (0.00ns)   --->   "%stage0_imag_12_load = load i16 %stage0_imag_12" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 377 'load' 'stage0_imag_12_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 378 [1/1] (0.00ns)   --->   "%stage0_imag_13_load = load i16 %stage0_imag_13" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 378 'load' 'stage0_imag_13_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 379 [1/1] (0.00ns)   --->   "%stage0_imag_14_load = load i16 %stage0_imag_14" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 379 'load' 'stage0_imag_14_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 380 [1/1] (0.00ns)   --->   "%stage0_imag_15_load = load i16 %stage0_imag_15" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 380 'load' 'stage0_imag_15_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 381 [1/1] (0.00ns)   --->   "%stage0_imag_16_load = load i16 %stage0_imag_16" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 381 'load' 'stage0_imag_16_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 382 [1/1] (0.00ns)   --->   "%stage0_imag_17_load = load i16 %stage0_imag_17" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 382 'load' 'stage0_imag_17_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 383 [1/1] (0.00ns)   --->   "%stage0_imag_18_load = load i16 %stage0_imag_18" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 383 'load' 'stage0_imag_18_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 384 [1/1] (0.00ns)   --->   "%stage0_imag_19_load = load i16 %stage0_imag_19" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 384 'load' 'stage0_imag_19_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 385 [1/1] (0.00ns)   --->   "%stage0_imag_20_load = load i16 %stage0_imag_20" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 385 'load' 'stage0_imag_20_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 386 [1/1] (0.00ns)   --->   "%stage0_imag_21_load = load i16 %stage0_imag_21" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 386 'load' 'stage0_imag_21_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 387 [1/1] (0.00ns)   --->   "%stage0_imag_22_load = load i16 %stage0_imag_22" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 387 'load' 'stage0_imag_22_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 388 [1/1] (0.00ns)   --->   "%stage0_imag_23_load = load i16 %stage0_imag_23" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 388 'load' 'stage0_imag_23_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 389 [1/1] (0.00ns)   --->   "%stage0_imag_24_load = load i16 %stage0_imag_24" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 389 'load' 'stage0_imag_24_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 390 [1/1] (0.00ns)   --->   "%stage0_imag_25_load = load i16 %stage0_imag_25" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 390 'load' 'stage0_imag_25_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 391 [1/1] (0.00ns)   --->   "%stage0_imag_26_load = load i16 %stage0_imag_26" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 391 'load' 'stage0_imag_26_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 392 [1/1] (0.00ns)   --->   "%stage0_imag_27_load = load i16 %stage0_imag_27" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 392 'load' 'stage0_imag_27_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 393 [1/1] (0.00ns)   --->   "%stage0_imag_28_load = load i16 %stage0_imag_28" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 393 'load' 'stage0_imag_28_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 394 [1/1] (0.00ns)   --->   "%stage0_imag_29_load = load i16 %stage0_imag_29" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 394 'load' 'stage0_imag_29_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 395 [1/1] (0.00ns)   --->   "%stage0_imag_30_load = load i16 %stage0_imag_30" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 395 'load' 'stage0_imag_30_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 396 [1/1] (0.00ns)   --->   "%stage0_imag_31_load = load i16 %stage0_imag_31" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 396 'load' 'stage0_imag_31_load' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 397 [1/1] (0.00ns)   --->   "%speclooptripcount_ln81 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8" [FFT32_sol.cpp:81]   --->   Operation 397 'speclooptripcount' 'speclooptripcount_ln81' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 398 [1/1] (0.00ns)   --->   "%specloopname_ln93 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [FFT32_sol.cpp:93]   --->   Operation 398 'specloopname' 'specloopname_ln93' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 399 [1/1] (0.00ns)   --->   "%trunc_ln93 = trunc i4 %block_1" [FFT32_sol.cpp:93]   --->   Operation 399 'trunc' 'trunc_ln93' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 400 [1/1] (2.30ns)   --->   "%ar = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_real_load, i16 %stage0_real_4_load, i16 %stage0_real_8_load, i16 %stage0_real_12_load, i16 %stage0_real_16_load, i16 %stage0_real_20_load, i16 %stage0_real_24_load, i16 %stage0_real_28_load, i3 %trunc_ln93" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 400 'mux' 'ar' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 401 [1/1] (2.30ns)   --->   "%ai = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_imag_load, i16 %stage0_imag_4_load, i16 %stage0_imag_8_load, i16 %stage0_imag_12_load, i16 %stage0_imag_16_load, i16 %stage0_imag_20_load, i16 %stage0_imag_24_load, i16 %stage0_imag_28_load, i3 %trunc_ln93" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 401 'mux' 'ai' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 402 [1/1] (2.30ns)   --->   "%br = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_real_1_load, i16 %stage0_real_5_load, i16 %stage0_real_9_load, i16 %stage0_real_13_load, i16 %stage0_real_17_load, i16 %stage0_real_21_load, i16 %stage0_real_25_load, i16 %stage0_real_29_load, i3 %trunc_ln93" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 402 'mux' 'br' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 403 [1/1] (2.30ns)   --->   "%bi = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_imag_1_load, i16 %stage0_imag_5_load, i16 %stage0_imag_9_load, i16 %stage0_imag_13_load, i16 %stage0_imag_17_load, i16 %stage0_imag_21_load, i16 %stage0_imag_25_load, i16 %stage0_imag_29_load, i3 %trunc_ln93" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 403 'mux' 'bi' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 404 [1/1] (2.30ns)   --->   "%cr = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_real_2_load, i16 %stage0_real_6_load, i16 %stage0_real_10_load, i16 %stage0_real_14_load, i16 %stage0_real_18_load, i16 %stage0_real_22_load, i16 %stage0_real_26_load, i16 %stage0_real_30_load, i3 %trunc_ln93" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 404 'mux' 'cr' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 405 [1/1] (2.30ns)   --->   "%ci = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_imag_2_load, i16 %stage0_imag_6_load, i16 %stage0_imag_10_load, i16 %stage0_imag_14_load, i16 %stage0_imag_18_load, i16 %stage0_imag_22_load, i16 %stage0_imag_26_load, i16 %stage0_imag_30_load, i3 %trunc_ln93" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 405 'mux' 'ci' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 406 [1/1] (2.30ns)   --->   "%dr = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_real_3_load, i16 %stage0_real_7_load, i16 %stage0_real_11_load, i16 %stage0_real_15_load, i16 %stage0_real_19_load, i16 %stage0_real_23_load, i16 %stage0_real_27_load, i16 %stage0_real_31_load, i3 %trunc_ln93" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 406 'mux' 'dr' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 407 [1/1] (2.30ns)   --->   "%di = mux i16 @_ssdm_op_Mux.ap_auto.8i16.i3, i16 %stage0_imag_3_load, i16 %stage0_imag_7_load, i16 %stage0_imag_11_load, i16 %stage0_imag_15_load, i16 %stage0_imag_19_load, i16 %stage0_imag_23_load, i16 %stage0_imag_27_load, i16 %stage0_imag_31_load, i3 %trunc_ln93" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 407 'mux' 'di' <Predicate = (!icmp_ln93)> <Delay = 2.30> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 408 [1/1] (2.07ns)   --->   "%ar0 = add i16 %br, i16 %ar" [FFT32_sol.cpp:24->FFT32_sol.cpp:96]   --->   Operation 408 'add' 'ar0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 409 [1/1] (2.07ns)   --->   "%ai0 = add i16 %bi, i16 %ai" [FFT32_sol.cpp:25->FFT32_sol.cpp:96]   --->   Operation 409 'add' 'ai0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 410 [1/1] (2.07ns)   --->   "%ar1 = sub i16 %ar, i16 %br" [FFT32_sol.cpp:26->FFT32_sol.cpp:96]   --->   Operation 410 'sub' 'ar1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 411 [1/1] (2.07ns)   --->   "%ai1 = sub i16 %ai, i16 %bi" [FFT32_sol.cpp:27->FFT32_sol.cpp:96]   --->   Operation 411 'sub' 'ai1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 412 [1/1] (2.07ns)   --->   "%cr0 = add i16 %dr, i16 %cr" [FFT32_sol.cpp:28->FFT32_sol.cpp:96]   --->   Operation 412 'add' 'cr0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 413 [1/1] (2.07ns)   --->   "%ci0 = add i16 %di, i16 %ci" [FFT32_sol.cpp:29->FFT32_sol.cpp:96]   --->   Operation 413 'add' 'ci0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 414 [1/1] (2.07ns)   --->   "%cr1 = sub i16 %cr, i16 %dr" [FFT32_sol.cpp:30->FFT32_sol.cpp:96]   --->   Operation 414 'sub' 'cr1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 415 [1/1] (2.07ns)   --->   "%ci1 = sub i16 %ci, i16 %di" [FFT32_sol.cpp:31->FFT32_sol.cpp:96]   --->   Operation 415 'sub' 'ci1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 416 [1/1] (2.07ns)   --->   "%stage1_real_56 = add i16 %cr0, i16 %ar0" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 416 'add' 'stage1_real_56' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 417 [1/1] (2.07ns)   --->   "%stage1_imag_56 = add i16 %ci0, i16 %ai0" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 417 'add' 'stage1_imag_56' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 418 [1/1] (2.07ns)   --->   "%stage1_real_57 = add i16 %ci1, i16 %ar1" [FFT32_sol.cpp:35->FFT32_sol.cpp:96]   --->   Operation 418 'add' 'stage1_real_57' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 419 [1/1] (2.07ns)   --->   "%stage1_imag_57 = sub i16 %ai1, i16 %cr1" [FFT32_sol.cpp:35->FFT32_sol.cpp:96]   --->   Operation 419 'sub' 'stage1_imag_57' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 420 [1/1] (2.07ns)   --->   "%stage1_real_58 = sub i16 %ar0, i16 %cr0" [FFT32_sol.cpp:36->FFT32_sol.cpp:96]   --->   Operation 420 'sub' 'stage1_real_58' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 421 [1/1] (2.07ns)   --->   "%stage1_imag_58 = sub i16 %ai0, i16 %ci0" [FFT32_sol.cpp:36->FFT32_sol.cpp:96]   --->   Operation 421 'sub' 'stage1_imag_58' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 422 [1/1] (2.07ns)   --->   "%stage1_real_59 = sub i16 %ar1, i16 %ci1" [FFT32_sol.cpp:37->FFT32_sol.cpp:96]   --->   Operation 422 'sub' 'stage1_real_59' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 423 [1/1] (2.07ns)   --->   "%stage1_imag_59 = add i16 %cr1, i16 %ai1" [FFT32_sol.cpp:37->FFT32_sol.cpp:96]   --->   Operation 423 'add' 'stage1_imag_59' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 424 [1/1] (1.87ns)   --->   "%switch_ln34 = switch i3 %trunc_ln93, void %arrayidx70.1.case.31, i3 0, void %for.body38.split.arrayidx70.1.exit_crit_edge65, i3 1, void %arrayidx70.1.case.7, i3 2, void %arrayidx70.1.case.11, i3 3, void %arrayidx70.1.case.15, i3 4, void %arrayidx70.1.case.19, i3 5, void %arrayidx70.1.case.23, i3 6, void %for.body38.split.arrayidx70.1.exit_crit_edge" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 424 'switch' 'switch_ln34' <Predicate = (!icmp_ln93)> <Delay = 1.87>
+ST_2 : Operation 425 [1/1] (1.58ns)   --->   "%store_ln93 = store i4 %add_ln93, i4 %block" [FFT32_sol.cpp:93]   --->   Operation 425 'store' 'store_ln93' <Predicate = (!icmp_ln93)> <Delay = 1.58>
+ST_2 : Operation 426 [1/1] (0.00ns)   --->   "%br_ln93 = br void %for.body38" [FFT32_sol.cpp:93]   --->   Operation 426 'br' 'br_ln93' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 563 [1/1] (0.00ns)   --->   "%stage1_real_load = load i16 %stage1_real"   --->   Operation 563 'load' 'stage1_real_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 564 [1/1] (0.00ns)   --->   "%stage1_real_1_load = load i16 %stage1_real_1"   --->   Operation 564 'load' 'stage1_real_1_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 565 [1/1] (0.00ns)   --->   "%stage1_real_2_load = load i16 %stage1_real_2"   --->   Operation 565 'load' 'stage1_real_2_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 566 [1/1] (0.00ns)   --->   "%stage1_real_3_load = load i16 %stage1_real_3"   --->   Operation 566 'load' 'stage1_real_3_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 567 [1/1] (0.00ns)   --->   "%stage1_real_4_load = load i16 %stage1_real_4"   --->   Operation 567 'load' 'stage1_real_4_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 568 [1/1] (0.00ns)   --->   "%stage1_real_5_load = load i16 %stage1_real_5"   --->   Operation 568 'load' 'stage1_real_5_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 569 [1/1] (0.00ns)   --->   "%stage1_real_6_load = load i16 %stage1_real_6"   --->   Operation 569 'load' 'stage1_real_6_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 570 [1/1] (0.00ns)   --->   "%stage1_real_7_load = load i16 %stage1_real_7"   --->   Operation 570 'load' 'stage1_real_7_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 571 [1/1] (0.00ns)   --->   "%stage1_real_8_load = load i16 %stage1_real_8"   --->   Operation 571 'load' 'stage1_real_8_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 572 [1/1] (0.00ns)   --->   "%stage1_real_9_load = load i16 %stage1_real_9"   --->   Operation 572 'load' 'stage1_real_9_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 573 [1/1] (0.00ns)   --->   "%stage1_real_10_load = load i16 %stage1_real_10"   --->   Operation 573 'load' 'stage1_real_10_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 574 [1/1] (0.00ns)   --->   "%stage1_real_11_load = load i16 %stage1_real_11"   --->   Operation 574 'load' 'stage1_real_11_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 575 [1/1] (0.00ns)   --->   "%stage1_real_12_load = load i16 %stage1_real_12"   --->   Operation 575 'load' 'stage1_real_12_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 576 [1/1] (0.00ns)   --->   "%stage1_real_13_load = load i16 %stage1_real_13"   --->   Operation 576 'load' 'stage1_real_13_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 577 [1/1] (0.00ns)   --->   "%stage1_real_14_load = load i16 %stage1_real_14"   --->   Operation 577 'load' 'stage1_real_14_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 578 [1/1] (0.00ns)   --->   "%stage1_real_15_load = load i16 %stage1_real_15"   --->   Operation 578 'load' 'stage1_real_15_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 579 [1/1] (0.00ns)   --->   "%stage1_real_16_load = load i16 %stage1_real_16"   --->   Operation 579 'load' 'stage1_real_16_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 580 [1/1] (0.00ns)   --->   "%stage1_real_17_load = load i16 %stage1_real_17"   --->   Operation 580 'load' 'stage1_real_17_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 581 [1/1] (0.00ns)   --->   "%stage1_real_18_load = load i16 %stage1_real_18"   --->   Operation 581 'load' 'stage1_real_18_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 582 [1/1] (0.00ns)   --->   "%stage1_real_19_load = load i16 %stage1_real_19"   --->   Operation 582 'load' 'stage1_real_19_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 583 [1/1] (0.00ns)   --->   "%stage1_real_20_load = load i16 %stage1_real_20"   --->   Operation 583 'load' 'stage1_real_20_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 584 [1/1] (0.00ns)   --->   "%stage1_real_21_load = load i16 %stage1_real_21"   --->   Operation 584 'load' 'stage1_real_21_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 585 [1/1] (0.00ns)   --->   "%stage1_real_22_load = load i16 %stage1_real_22"   --->   Operation 585 'load' 'stage1_real_22_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 586 [1/1] (0.00ns)   --->   "%stage1_real_23_load = load i16 %stage1_real_23"   --->   Operation 586 'load' 'stage1_real_23_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 587 [1/1] (0.00ns)   --->   "%stage1_real_24_load = load i16 %stage1_real_24"   --->   Operation 587 'load' 'stage1_real_24_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 588 [1/1] (0.00ns)   --->   "%stage1_real_25_load = load i16 %stage1_real_25"   --->   Operation 588 'load' 'stage1_real_25_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 589 [1/1] (0.00ns)   --->   "%stage1_real_26_load = load i16 %stage1_real_26"   --->   Operation 589 'load' 'stage1_real_26_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 590 [1/1] (0.00ns)   --->   "%stage1_real_27_load = load i16 %stage1_real_27"   --->   Operation 590 'load' 'stage1_real_27_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 591 [1/1] (0.00ns)   --->   "%stage1_real_28_load = load i16 %stage1_real_28"   --->   Operation 591 'load' 'stage1_real_28_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 592 [1/1] (0.00ns)   --->   "%stage1_real_29_load = load i16 %stage1_real_29"   --->   Operation 592 'load' 'stage1_real_29_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 593 [1/1] (0.00ns)   --->   "%stage1_real_30_load = load i16 %stage1_real_30"   --->   Operation 593 'load' 'stage1_real_30_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 594 [1/1] (0.00ns)   --->   "%stage1_real_31_load = load i16 %stage1_real_31"   --->   Operation 594 'load' 'stage1_real_31_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 595 [1/1] (0.00ns)   --->   "%stage1_imag_load = load i16 %stage1_imag"   --->   Operation 595 'load' 'stage1_imag_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 596 [1/1] (0.00ns)   --->   "%stage1_imag_1_load = load i16 %stage1_imag_1"   --->   Operation 596 'load' 'stage1_imag_1_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 597 [1/1] (0.00ns)   --->   "%stage1_imag_2_load = load i16 %stage1_imag_2"   --->   Operation 597 'load' 'stage1_imag_2_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 598 [1/1] (0.00ns)   --->   "%stage1_imag_3_load = load i16 %stage1_imag_3"   --->   Operation 598 'load' 'stage1_imag_3_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 599 [1/1] (0.00ns)   --->   "%stage1_imag_4_load = load i16 %stage1_imag_4"   --->   Operation 599 'load' 'stage1_imag_4_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 600 [1/1] (0.00ns)   --->   "%stage1_imag_5_load = load i16 %stage1_imag_5"   --->   Operation 600 'load' 'stage1_imag_5_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 601 [1/1] (0.00ns)   --->   "%stage1_imag_6_load = load i16 %stage1_imag_6"   --->   Operation 601 'load' 'stage1_imag_6_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 602 [1/1] (0.00ns)   --->   "%stage1_imag_7_load = load i16 %stage1_imag_7"   --->   Operation 602 'load' 'stage1_imag_7_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 603 [1/1] (0.00ns)   --->   "%stage1_imag_8_load = load i16 %stage1_imag_8"   --->   Operation 603 'load' 'stage1_imag_8_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 604 [1/1] (0.00ns)   --->   "%stage1_imag_9_load = load i16 %stage1_imag_9"   --->   Operation 604 'load' 'stage1_imag_9_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 605 [1/1] (0.00ns)   --->   "%stage1_imag_10_load = load i16 %stage1_imag_10"   --->   Operation 605 'load' 'stage1_imag_10_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 606 [1/1] (0.00ns)   --->   "%stage1_imag_11_load = load i16 %stage1_imag_11"   --->   Operation 606 'load' 'stage1_imag_11_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 607 [1/1] (0.00ns)   --->   "%stage1_imag_12_load = load i16 %stage1_imag_12"   --->   Operation 607 'load' 'stage1_imag_12_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 608 [1/1] (0.00ns)   --->   "%stage1_imag_13_load = load i16 %stage1_imag_13"   --->   Operation 608 'load' 'stage1_imag_13_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 609 [1/1] (0.00ns)   --->   "%stage1_imag_14_load = load i16 %stage1_imag_14"   --->   Operation 609 'load' 'stage1_imag_14_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 610 [1/1] (0.00ns)   --->   "%stage1_imag_15_load = load i16 %stage1_imag_15"   --->   Operation 610 'load' 'stage1_imag_15_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 611 [1/1] (0.00ns)   --->   "%stage1_imag_16_load = load i16 %stage1_imag_16"   --->   Operation 611 'load' 'stage1_imag_16_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 612 [1/1] (0.00ns)   --->   "%stage1_imag_17_load = load i16 %stage1_imag_17"   --->   Operation 612 'load' 'stage1_imag_17_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 613 [1/1] (0.00ns)   --->   "%stage1_imag_18_load = load i16 %stage1_imag_18"   --->   Operation 613 'load' 'stage1_imag_18_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 614 [1/1] (0.00ns)   --->   "%stage1_imag_19_load = load i16 %stage1_imag_19"   --->   Operation 614 'load' 'stage1_imag_19_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 615 [1/1] (0.00ns)   --->   "%stage1_imag_20_load = load i16 %stage1_imag_20"   --->   Operation 615 'load' 'stage1_imag_20_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 616 [1/1] (0.00ns)   --->   "%stage1_imag_21_load = load i16 %stage1_imag_21"   --->   Operation 616 'load' 'stage1_imag_21_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 617 [1/1] (0.00ns)   --->   "%stage1_imag_22_load = load i16 %stage1_imag_22"   --->   Operation 617 'load' 'stage1_imag_22_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 618 [1/1] (0.00ns)   --->   "%stage1_imag_23_load = load i16 %stage1_imag_23"   --->   Operation 618 'load' 'stage1_imag_23_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 619 [1/1] (0.00ns)   --->   "%stage1_imag_24_load = load i16 %stage1_imag_24"   --->   Operation 619 'load' 'stage1_imag_24_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 620 [1/1] (0.00ns)   --->   "%stage1_imag_25_load = load i16 %stage1_imag_25"   --->   Operation 620 'load' 'stage1_imag_25_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 621 [1/1] (0.00ns)   --->   "%stage1_imag_26_load = load i16 %stage1_imag_26"   --->   Operation 621 'load' 'stage1_imag_26_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 622 [1/1] (0.00ns)   --->   "%stage1_imag_27_load = load i16 %stage1_imag_27"   --->   Operation 622 'load' 'stage1_imag_27_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 623 [1/1] (0.00ns)   --->   "%stage1_imag_28_load = load i16 %stage1_imag_28"   --->   Operation 623 'load' 'stage1_imag_28_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 624 [1/1] (0.00ns)   --->   "%stage1_imag_29_load = load i16 %stage1_imag_29"   --->   Operation 624 'load' 'stage1_imag_29_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 625 [1/1] (0.00ns)   --->   "%stage1_imag_30_load = load i16 %stage1_imag_30"   --->   Operation 625 'load' 'stage1_imag_30_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 626 [1/1] (0.00ns)   --->   "%stage1_imag_31_load = load i16 %stage1_imag_31"   --->   Operation 626 'load' 'stage1_imag_31_load' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 627 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_31_out, i16 %stage1_imag_31_load"   --->   Operation 627 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 628 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_30_out, i16 %stage1_imag_30_load"   --->   Operation 628 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 629 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_29_out, i16 %stage1_imag_29_load"   --->   Operation 629 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 630 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_28_out, i16 %stage1_imag_28_load"   --->   Operation 630 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 631 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_27_out, i16 %stage1_imag_27_load"   --->   Operation 631 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 632 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_26_out, i16 %stage1_imag_26_load"   --->   Operation 632 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 633 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_25_out, i16 %stage1_imag_25_load"   --->   Operation 633 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 634 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_24_out, i16 %stage1_imag_24_load"   --->   Operation 634 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 635 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_23_out, i16 %stage1_imag_23_load"   --->   Operation 635 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 636 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_22_out, i16 %stage1_imag_22_load"   --->   Operation 636 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 637 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_21_out, i16 %stage1_imag_21_load"   --->   Operation 637 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 638 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_20_out, i16 %stage1_imag_20_load"   --->   Operation 638 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 639 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_19_out, i16 %stage1_imag_19_load"   --->   Operation 639 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 640 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_18_out, i16 %stage1_imag_18_load"   --->   Operation 640 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 641 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_17_out, i16 %stage1_imag_17_load"   --->   Operation 641 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 642 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_16_out, i16 %stage1_imag_16_load"   --->   Operation 642 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 643 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_15_out, i16 %stage1_imag_15_load"   --->   Operation 643 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 644 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_14_out, i16 %stage1_imag_14_load"   --->   Operation 644 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 645 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_13_out, i16 %stage1_imag_13_load"   --->   Operation 645 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 646 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_12_out, i16 %stage1_imag_12_load"   --->   Operation 646 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 647 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_11_out, i16 %stage1_imag_11_load"   --->   Operation 647 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 648 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_10_out, i16 %stage1_imag_10_load"   --->   Operation 648 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 649 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_9_out, i16 %stage1_imag_9_load"   --->   Operation 649 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 650 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_8_out, i16 %stage1_imag_8_load"   --->   Operation 650 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 651 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_7_out, i16 %stage1_imag_7_load"   --->   Operation 651 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 652 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_6_out, i16 %stage1_imag_6_load"   --->   Operation 652 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 653 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_5_out, i16 %stage1_imag_5_load"   --->   Operation 653 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 654 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_4_out, i16 %stage1_imag_4_load"   --->   Operation 654 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 655 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_3_out, i16 %stage1_imag_3_load"   --->   Operation 655 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 656 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_2_out, i16 %stage1_imag_2_load"   --->   Operation 656 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 657 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_1_out, i16 %stage1_imag_1_load"   --->   Operation 657 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 658 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_imag_out, i16 %stage1_imag_load"   --->   Operation 658 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 659 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_31_out, i16 %stage1_real_31_load"   --->   Operation 659 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 660 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_30_out, i16 %stage1_real_30_load"   --->   Operation 660 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 661 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_29_out, i16 %stage1_real_29_load"   --->   Operation 661 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 662 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_28_out, i16 %stage1_real_28_load"   --->   Operation 662 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 663 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_27_out, i16 %stage1_real_27_load"   --->   Operation 663 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 664 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_26_out, i16 %stage1_real_26_load"   --->   Operation 664 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 665 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_25_out, i16 %stage1_real_25_load"   --->   Operation 665 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 666 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_24_out, i16 %stage1_real_24_load"   --->   Operation 666 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 667 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_23_out, i16 %stage1_real_23_load"   --->   Operation 667 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 668 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_22_out, i16 %stage1_real_22_load"   --->   Operation 668 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 669 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_21_out, i16 %stage1_real_21_load"   --->   Operation 669 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 670 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_20_out, i16 %stage1_real_20_load"   --->   Operation 670 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 671 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_19_out, i16 %stage1_real_19_load"   --->   Operation 671 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 672 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_18_out, i16 %stage1_real_18_load"   --->   Operation 672 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 673 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_17_out, i16 %stage1_real_17_load"   --->   Operation 673 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 674 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_16_out, i16 %stage1_real_16_load"   --->   Operation 674 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 675 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_15_out, i16 %stage1_real_15_load"   --->   Operation 675 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 676 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_14_out, i16 %stage1_real_14_load"   --->   Operation 676 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 677 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_13_out, i16 %stage1_real_13_load"   --->   Operation 677 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 678 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_12_out, i16 %stage1_real_12_load"   --->   Operation 678 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 679 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_11_out, i16 %stage1_real_11_load"   --->   Operation 679 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 680 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_10_out, i16 %stage1_real_10_load"   --->   Operation 680 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 681 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_9_out, i16 %stage1_real_9_load"   --->   Operation 681 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 682 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_8_out, i16 %stage1_real_8_load"   --->   Operation 682 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 683 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_7_out, i16 %stage1_real_7_load"   --->   Operation 683 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 684 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_6_out, i16 %stage1_real_6_load"   --->   Operation 684 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 685 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_5_out, i16 %stage1_real_5_load"   --->   Operation 685 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 686 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_4_out, i16 %stage1_real_4_load"   --->   Operation 686 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 687 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_3_out, i16 %stage1_real_3_load"   --->   Operation 687 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 688 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_2_out, i16 %stage1_real_2_load"   --->   Operation 688 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 689 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_1_out, i16 %stage1_real_1_load"   --->   Operation 689 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 690 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %stage1_real_out, i16 %stage1_real_load"   --->   Operation 690 'write' 'write_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 691 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 691 'ret' 'ret_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.58>
+ST_3 : Operation 427 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_59, i16 %stage1_imag_27" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 427 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 428 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_58, i16 %stage1_imag_26" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 428 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 429 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_57, i16 %stage1_imag_25" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 429 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 430 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_56, i16 %stage1_imag_24" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 430 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 431 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_59, i16 %stage1_real_27" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 431 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 432 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_58, i16 %stage1_real_26" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 432 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 433 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_57, i16 %stage1_real_25" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 433 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 434 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_56, i16 %stage1_real_24" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 434 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 435 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_59, i16 %stage0_imag_27" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 435 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 436 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_58, i16 %stage0_imag_26" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 436 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 437 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_57, i16 %stage0_imag_25" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 437 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 438 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_56, i16 %stage0_imag_24" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 438 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 439 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_59, i16 %stage0_real_27" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 439 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 440 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_58, i16 %stage0_real_26" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 440 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 441 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_57, i16 %stage0_real_25" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 441 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 442 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_56, i16 %stage0_real_24" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 442 'store' 'store_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 1.58>
+ST_3 : Operation 443 [1/1] (0.00ns)   --->   "%br_ln34 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 443 'br' 'br_ln34' <Predicate = (trunc_ln93 == 6)> <Delay = 0.00>
+ST_3 : Operation 444 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage1_imag_23" [FFT32_sol.cpp:100]   --->   Operation 444 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 445 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage1_imag_22" [FFT32_sol.cpp:100]   --->   Operation 445 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 446 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage1_imag_21" [FFT32_sol.cpp:100]   --->   Operation 446 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 447 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage1_imag_20" [FFT32_sol.cpp:100]   --->   Operation 447 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 448 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage1_real_23" [FFT32_sol.cpp:100]   --->   Operation 448 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 449 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage1_real_22" [FFT32_sol.cpp:100]   --->   Operation 449 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 450 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage1_real_21" [FFT32_sol.cpp:100]   --->   Operation 450 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 451 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage1_real_20" [FFT32_sol.cpp:100]   --->   Operation 451 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 452 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage0_imag_23" [FFT32_sol.cpp:100]   --->   Operation 452 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 453 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage0_imag_22" [FFT32_sol.cpp:100]   --->   Operation 453 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 454 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage0_imag_21" [FFT32_sol.cpp:100]   --->   Operation 454 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 455 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage0_imag_20" [FFT32_sol.cpp:100]   --->   Operation 455 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 456 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage0_real_23" [FFT32_sol.cpp:100]   --->   Operation 456 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 457 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage0_real_22" [FFT32_sol.cpp:100]   --->   Operation 457 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 458 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage0_real_21" [FFT32_sol.cpp:100]   --->   Operation 458 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 459 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage0_real_20" [FFT32_sol.cpp:100]   --->   Operation 459 'store' 'store_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 1.58>
+ST_3 : Operation 460 [1/1] (0.00ns)   --->   "%br_ln100 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:100]   --->   Operation 460 'br' 'br_ln100' <Predicate = (trunc_ln93 == 5)> <Delay = 0.00>
+ST_3 : Operation 461 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage1_imag_19" [FFT32_sol.cpp:100]   --->   Operation 461 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 462 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage1_imag_18" [FFT32_sol.cpp:100]   --->   Operation 462 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 463 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage1_imag_17" [FFT32_sol.cpp:100]   --->   Operation 463 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 464 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage1_imag_16" [FFT32_sol.cpp:100]   --->   Operation 464 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 465 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage1_real_19" [FFT32_sol.cpp:100]   --->   Operation 465 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 466 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage1_real_18" [FFT32_sol.cpp:100]   --->   Operation 466 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 467 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage1_real_17" [FFT32_sol.cpp:100]   --->   Operation 467 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 468 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage1_real_16" [FFT32_sol.cpp:100]   --->   Operation 468 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 469 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage0_imag_19" [FFT32_sol.cpp:100]   --->   Operation 469 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 470 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage0_imag_18" [FFT32_sol.cpp:100]   --->   Operation 470 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 471 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage0_imag_17" [FFT32_sol.cpp:100]   --->   Operation 471 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 472 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage0_imag_16" [FFT32_sol.cpp:100]   --->   Operation 472 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 473 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage0_real_19" [FFT32_sol.cpp:100]   --->   Operation 473 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 474 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage0_real_18" [FFT32_sol.cpp:100]   --->   Operation 474 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 475 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage0_real_17" [FFT32_sol.cpp:100]   --->   Operation 475 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 476 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage0_real_16" [FFT32_sol.cpp:100]   --->   Operation 476 'store' 'store_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 1.58>
+ST_3 : Operation 477 [1/1] (0.00ns)   --->   "%br_ln100 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:100]   --->   Operation 477 'br' 'br_ln100' <Predicate = (trunc_ln93 == 4)> <Delay = 0.00>
+ST_3 : Operation 478 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage1_imag_15" [FFT32_sol.cpp:100]   --->   Operation 478 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 479 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage1_imag_14" [FFT32_sol.cpp:100]   --->   Operation 479 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 480 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage1_imag_13" [FFT32_sol.cpp:100]   --->   Operation 480 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 481 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage1_imag_12" [FFT32_sol.cpp:100]   --->   Operation 481 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 482 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage1_real_15" [FFT32_sol.cpp:100]   --->   Operation 482 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 483 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage1_real_14" [FFT32_sol.cpp:100]   --->   Operation 483 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 484 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage1_real_13" [FFT32_sol.cpp:100]   --->   Operation 484 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 485 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage1_real_12" [FFT32_sol.cpp:100]   --->   Operation 485 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 486 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage0_imag_15" [FFT32_sol.cpp:100]   --->   Operation 486 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 487 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage0_imag_14" [FFT32_sol.cpp:100]   --->   Operation 487 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 488 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage0_imag_13" [FFT32_sol.cpp:100]   --->   Operation 488 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 489 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage0_imag_12" [FFT32_sol.cpp:100]   --->   Operation 489 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 490 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage0_real_15" [FFT32_sol.cpp:100]   --->   Operation 490 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 491 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage0_real_14" [FFT32_sol.cpp:100]   --->   Operation 491 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 492 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage0_real_13" [FFT32_sol.cpp:100]   --->   Operation 492 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 493 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage0_real_12" [FFT32_sol.cpp:100]   --->   Operation 493 'store' 'store_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 1.58>
+ST_3 : Operation 494 [1/1] (0.00ns)   --->   "%br_ln100 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:100]   --->   Operation 494 'br' 'br_ln100' <Predicate = (trunc_ln93 == 3)> <Delay = 0.00>
+ST_3 : Operation 495 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage1_imag_11" [FFT32_sol.cpp:100]   --->   Operation 495 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 496 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage1_imag_10" [FFT32_sol.cpp:100]   --->   Operation 496 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 497 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage1_imag_9" [FFT32_sol.cpp:100]   --->   Operation 497 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 498 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage1_imag_8" [FFT32_sol.cpp:100]   --->   Operation 498 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 499 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage1_real_11" [FFT32_sol.cpp:100]   --->   Operation 499 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 500 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage1_real_10" [FFT32_sol.cpp:100]   --->   Operation 500 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 501 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage1_real_9" [FFT32_sol.cpp:100]   --->   Operation 501 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 502 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage1_real_8" [FFT32_sol.cpp:100]   --->   Operation 502 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 503 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage0_imag_11" [FFT32_sol.cpp:100]   --->   Operation 503 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 504 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage0_imag_10" [FFT32_sol.cpp:100]   --->   Operation 504 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 505 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage0_imag_9" [FFT32_sol.cpp:100]   --->   Operation 505 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 506 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage0_imag_8" [FFT32_sol.cpp:100]   --->   Operation 506 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 507 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage0_real_11" [FFT32_sol.cpp:100]   --->   Operation 507 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 508 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage0_real_10" [FFT32_sol.cpp:100]   --->   Operation 508 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 509 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage0_real_9" [FFT32_sol.cpp:100]   --->   Operation 509 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 510 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage0_real_8" [FFT32_sol.cpp:100]   --->   Operation 510 'store' 'store_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 1.58>
+ST_3 : Operation 511 [1/1] (0.00ns)   --->   "%br_ln100 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:100]   --->   Operation 511 'br' 'br_ln100' <Predicate = (trunc_ln93 == 2)> <Delay = 0.00>
+ST_3 : Operation 512 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage1_imag_7" [FFT32_sol.cpp:100]   --->   Operation 512 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 513 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage1_imag_6" [FFT32_sol.cpp:100]   --->   Operation 513 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 514 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage1_imag_5" [FFT32_sol.cpp:100]   --->   Operation 514 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 515 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage1_imag_4" [FFT32_sol.cpp:100]   --->   Operation 515 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 516 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage1_real_7" [FFT32_sol.cpp:100]   --->   Operation 516 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 517 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage1_real_6" [FFT32_sol.cpp:100]   --->   Operation 517 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 518 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage1_real_5" [FFT32_sol.cpp:100]   --->   Operation 518 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 519 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage1_real_4" [FFT32_sol.cpp:100]   --->   Operation 519 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 520 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage0_imag_7" [FFT32_sol.cpp:100]   --->   Operation 520 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 521 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage0_imag_6" [FFT32_sol.cpp:100]   --->   Operation 521 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 522 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage0_imag_5" [FFT32_sol.cpp:100]   --->   Operation 522 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 523 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage0_imag_4" [FFT32_sol.cpp:100]   --->   Operation 523 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 524 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage0_real_7" [FFT32_sol.cpp:100]   --->   Operation 524 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 525 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage0_real_6" [FFT32_sol.cpp:100]   --->   Operation 525 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 526 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage0_real_5" [FFT32_sol.cpp:100]   --->   Operation 526 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 527 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage0_real_4" [FFT32_sol.cpp:100]   --->   Operation 527 'store' 'store_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 1.58>
+ST_3 : Operation 528 [1/1] (0.00ns)   --->   "%br_ln100 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:100]   --->   Operation 528 'br' 'br_ln100' <Predicate = (trunc_ln93 == 1)> <Delay = 0.00>
+ST_3 : Operation 529 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_59, i16 %stage1_imag_3" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 529 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 530 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_58, i16 %stage1_imag_2" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 530 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 531 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_57, i16 %stage1_imag_1" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 531 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 532 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_56, i16 %stage1_imag" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 532 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 533 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_59, i16 %stage1_real_3" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 533 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 534 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_58, i16 %stage1_real_2" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 534 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 535 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_57, i16 %stage1_real_1" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 535 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 536 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_56, i16 %stage1_real" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 536 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 537 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_59, i16 %stage0_imag_3" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 537 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 538 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_58, i16 %stage0_imag_2" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 538 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 539 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_57, i16 %stage0_imag_1" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 539 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 540 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_imag_56, i16 %stage0_imag" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 540 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 541 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_59, i16 %stage0_real_3" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 541 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 542 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_58, i16 %stage0_real_2" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 542 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 543 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_57, i16 %stage0_real_1" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 543 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 544 [1/1] (1.58ns)   --->   "%store_ln34 = store i16 %stage1_real_56, i16 %stage0_real" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 544 'store' 'store_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 1.58>
+ST_3 : Operation 545 [1/1] (0.00ns)   --->   "%br_ln34 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 545 'br' 'br_ln34' <Predicate = (trunc_ln93 == 0)> <Delay = 0.00>
+ST_3 : Operation 546 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage1_imag_31" [FFT32_sol.cpp:100]   --->   Operation 546 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 547 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage1_imag_30" [FFT32_sol.cpp:100]   --->   Operation 547 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 548 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage1_imag_29" [FFT32_sol.cpp:100]   --->   Operation 548 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 549 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage1_imag_28" [FFT32_sol.cpp:100]   --->   Operation 549 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 550 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage1_real_31" [FFT32_sol.cpp:100]   --->   Operation 550 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 551 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage1_real_30" [FFT32_sol.cpp:100]   --->   Operation 551 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 552 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage1_real_29" [FFT32_sol.cpp:100]   --->   Operation 552 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 553 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage1_real_28" [FFT32_sol.cpp:100]   --->   Operation 553 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 554 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_59, i16 %stage0_imag_31" [FFT32_sol.cpp:100]   --->   Operation 554 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 555 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_58, i16 %stage0_imag_30" [FFT32_sol.cpp:100]   --->   Operation 555 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 556 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_57, i16 %stage0_imag_29" [FFT32_sol.cpp:100]   --->   Operation 556 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 557 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_imag_56, i16 %stage0_imag_28" [FFT32_sol.cpp:100]   --->   Operation 557 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 558 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_59, i16 %stage0_real_31" [FFT32_sol.cpp:100]   --->   Operation 558 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 559 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_58, i16 %stage0_real_30" [FFT32_sol.cpp:100]   --->   Operation 559 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 560 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_57, i16 %stage0_real_29" [FFT32_sol.cpp:100]   --->   Operation 560 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 561 [1/1] (1.58ns)   --->   "%store_ln100 = store i16 %stage1_real_56, i16 %stage0_real_28" [FFT32_sol.cpp:100]   --->   Operation 561 'store' 'store_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 1.58>
+ST_3 : Operation 562 [1/1] (0.00ns)   --->   "%br_ln100 = br void %arrayidx70.1.exit" [FFT32_sol.cpp:100]   --->   Operation 562 'br' 'br_ln100' <Predicate = (trunc_ln93 == 7)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.588ns
+The critical path consists of the following:
+	'alloca' operation ('stage1.imag') [257]  (0.000 ns)
+	'store' operation ('store_ln0') of constant 0 on local variable 'stage1.imag' [322]  (1.588 ns)
+
+ <State 2>: 6.458ns
+The critical path consists of the following:
+	'load' operation ('block', FFT32_sol.cpp:93) on local variable 'block' [453]  (0.000 ns)
+	'mux' operation ('cr', FFT32_sol.cpp:20->FFT32_sol.cpp:96) [530]  (2.304 ns)
+	'add' operation ('cr0', FFT32_sol.cpp:28->FFT32_sol.cpp:96) [538]  (2.077 ns)
+	'add' operation ('stage1.real', FFT32_sol.cpp:34->FFT32_sol.cpp:96) [542]  (2.077 ns)
+
+ <State 3>: 1.588ns
+The critical path consists of the following:
+	'store' operation ('store_ln100', FFT32_sol.cpp:100) of variable 'stage1.imag', FFT32_sol.cpp:37->FFT32_sol.cpp:96 on local variable 'stage1.imag' [570]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

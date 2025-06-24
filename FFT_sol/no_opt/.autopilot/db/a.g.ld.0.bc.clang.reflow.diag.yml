@@ -1,0 +1,334 @@
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_sol.cpp, Line: 43, Column: 19 }
+Function:        _ZL11radix2_bflyR9complex_tS0_RKS_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'cmul(complex_t const&, complex_t const&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_sol.cpp, Line: 130, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_sol.cpp, Line: 69, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_sol.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_sol.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_sol.cpp, Line: 104, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_sol.cpp, Line: 114, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+Function:        _ZN9axis_dataC2Ev
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'axis_data::axis_data()'
+    DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 228, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi16ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.65
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::circ_range_redux<16, 4, 17>(ap_ufixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<17, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 60, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 228, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi16ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.65
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 79, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 7, Column: 0 }
+Function:        _ZL4cmulRK9complex_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cmul(complex_t const&, complex_t const&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 7, Column: 0 }
+Function:        _ZL4cmulRK9complex_tS1_.201
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cmul(complex_t const&, complex_t const&) (.201)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 41, Column: 0 }
+Function:        _ZL11radix2_bflyR9complex_tS0_RKS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cmul(complex_t const&, complex_t const&) (.201)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'radix2_bfly(complex_t&, complex_t&, complex_t const&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41.203)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'axis_data::axis_data()'
+    DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bit_reverse(unsigned int, int)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1953, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1934, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cmul(complex_t const&, complex_t const&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&) (.202)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'radix2_bfly(complex_t&, complex_t&, complex_t const&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 41, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            out_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '33'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: FFT32_sol.cpp, Line: 64, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            in_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '33'
+  - String:          '-bits'
+...

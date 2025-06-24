@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "fft32",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "fft32"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "D:/Vivado/FFT_sol/FFT_sol/no_opt/csynth.tcl",
+    "sourceLine": 19,
+    "success": true
+  }
+]

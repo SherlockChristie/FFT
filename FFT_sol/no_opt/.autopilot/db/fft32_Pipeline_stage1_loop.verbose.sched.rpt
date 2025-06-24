@@ -1,0 +1,252 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft32_Pipeline_stage1_loop'
+================================================================
+* Date:           Tue Jun 24 23:09:44 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        FFT_sol
+* Solution:       no_opt (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbv485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.476 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       36|       36|  0.360 us|  0.360 us|   36|   36|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- stage1_loop  |       34|       34|         7|          4|          1|     8|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 4, depth = 7
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 4, D = 7, States = { 1 2 3 4 5 6 7 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.32>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%block = alloca i32 1"   --->   Operation 10 'alloca' 'block' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 0, i4 %block"   --->   Operation 11 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc71"   --->   Operation 12 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%block_1 = load i4 %block" [FFT32_sol.cpp:95]   --->   Operation 13 'load' 'block_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 14 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.73ns)   --->   "%icmp_ln93 = icmp_eq  i4 %block_1, i4 8" [FFT32_sol.cpp:93]   --->   Operation 15 'icmp' 'icmp_ln93' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 16 [1/1] (1.73ns)   --->   "%add_ln93 = add i4 %block_1, i4 1" [FFT32_sol.cpp:93]   --->   Operation 16 'add' 'add_ln93' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln93 = br i1 %icmp_ln93, void %for.inc71.split, void %arrayctor.loop77.preheader.exitStub" [FFT32_sol.cpp:93]   --->   Operation 17 'br' 'br_ln93' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%trunc_ln95 = trunc i4 %block_1" [FFT32_sol.cpp:95]   --->   Operation 18 'trunc' 'trunc_ln95' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %trunc_ln95, i2 0" [FFT32_sol.cpp:95]   --->   Operation 19 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%zext_ln96 = zext i5 %shl_ln" [FFT32_sol.cpp:96]   --->   Operation 20 'zext' 'zext_ln96' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%a_real = getelementptr i16 %stage0_real, i64 0, i64 %zext_ln96" [FFT32_sol.cpp:96]   --->   Operation 21 'getelementptr' 'a_real' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%a_imag = getelementptr i16 %stage0_imag, i64 0, i64 %zext_ln96" [FFT32_sol.cpp:96]   --->   Operation 22 'getelementptr' 'a_imag' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%or_ln96 = or i5 %shl_ln, i5 1" [FFT32_sol.cpp:96]   --->   Operation 23 'or' 'or_ln96' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%zext_ln96_1 = zext i5 %or_ln96" [FFT32_sol.cpp:96]   --->   Operation 24 'zext' 'zext_ln96_1' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%b_real = getelementptr i16 %stage0_real, i64 0, i64 %zext_ln96_1" [FFT32_sol.cpp:96]   --->   Operation 25 'getelementptr' 'b_real' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%b_imag = getelementptr i16 %stage0_imag, i64 0, i64 %zext_ln96_1" [FFT32_sol.cpp:96]   --->   Operation 26 'getelementptr' 'b_imag' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_1 : Operation 27 [2/2] (2.32ns)   --->   "%ar = load i5 %a_real" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 27 'load' 'ar' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_1 : Operation 28 [2/2] (2.32ns)   --->   "%ai = load i5 %a_imag" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 28 'load' 'ai' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_1 : Operation 29 [2/2] (2.32ns)   --->   "%br = load i5 %b_real" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 29 'load' 'br' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_1 : Operation 30 [2/2] (2.32ns)   --->   "%bi = load i5 %b_imag" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 30 'load' 'bi' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_1 : Operation 31 [1/1] (1.58ns)   --->   "%store_ln93 = store i4 %add_ln93, i4 %block" [FFT32_sol.cpp:93]   --->   Operation 31 'store' 'store_ln93' <Predicate = (!icmp_ln93)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%or_ln96_1 = or i5 %shl_ln, i5 2" [FFT32_sol.cpp:96]   --->   Operation 32 'or' 'or_ln96_1' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%zext_ln96_2 = zext i5 %or_ln96_1" [FFT32_sol.cpp:96]   --->   Operation 33 'zext' 'zext_ln96_2' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%c_real = getelementptr i16 %stage0_real, i64 0, i64 %zext_ln96_2" [FFT32_sol.cpp:96]   --->   Operation 34 'getelementptr' 'c_real' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%c_imag = getelementptr i16 %stage0_imag, i64 0, i64 %zext_ln96_2" [FFT32_sol.cpp:96]   --->   Operation 35 'getelementptr' 'c_imag' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%or_ln96_2 = or i5 %shl_ln, i5 3" [FFT32_sol.cpp:96]   --->   Operation 36 'or' 'or_ln96_2' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln96_3 = zext i5 %or_ln96_2" [FFT32_sol.cpp:96]   --->   Operation 37 'zext' 'zext_ln96_3' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%d_real = getelementptr i16 %stage0_real, i64 0, i64 %zext_ln96_3" [FFT32_sol.cpp:96]   --->   Operation 38 'getelementptr' 'd_real' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%d_imag = getelementptr i16 %stage0_imag, i64 0, i64 %zext_ln96_3" [FFT32_sol.cpp:96]   --->   Operation 39 'getelementptr' 'd_imag' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_2 : Operation 40 [1/2] (2.32ns)   --->   "%ar = load i5 %a_real" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 40 'load' 'ar' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 41 [1/2] (2.32ns)   --->   "%ai = load i5 %a_imag" [FFT32_sol.cpp:18->FFT32_sol.cpp:96]   --->   Operation 41 'load' 'ai' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 42 [1/2] (2.32ns)   --->   "%br = load i5 %b_real" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 42 'load' 'br' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 43 [1/2] (2.32ns)   --->   "%bi = load i5 %b_imag" [FFT32_sol.cpp:19->FFT32_sol.cpp:96]   --->   Operation 43 'load' 'bi' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 44 [2/2] (2.32ns)   --->   "%cr = load i5 %c_real" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 44 'load' 'cr' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 45 [2/2] (2.32ns)   --->   "%ci = load i5 %c_imag" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 45 'load' 'ci' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 46 [2/2] (2.32ns)   --->   "%dr = load i5 %d_real" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 46 'load' 'dr' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_2 : Operation 47 [2/2] (2.32ns)   --->   "%di = load i5 %d_imag" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 47 'load' 'di' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 48 [1/2] (2.32ns)   --->   "%cr = load i5 %c_real" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 48 'load' 'cr' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_3 : Operation 49 [1/2] (2.32ns)   --->   "%ci = load i5 %c_imag" [FFT32_sol.cpp:20->FFT32_sol.cpp:96]   --->   Operation 49 'load' 'ci' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_3 : Operation 50 [1/2] (2.32ns)   --->   "%dr = load i5 %d_real" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 50 'load' 'dr' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_3 : Operation 51 [1/2] (2.32ns)   --->   "%di = load i5 %d_imag" [FFT32_sol.cpp:21->FFT32_sol.cpp:96]   --->   Operation 51 'load' 'di' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_3 : Operation 95 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 95 'ret' 'ret_ln0' <Predicate = (icmp_ln93)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 6.47>
+ST_4 : Operation 52 [1/1] (2.07ns)   --->   "%ar0 = add i16 %br, i16 %ar" [FFT32_sol.cpp:24->FFT32_sol.cpp:96]   --->   Operation 52 'add' 'ar0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 53 [1/1] (2.07ns)   --->   "%ai0 = add i16 %bi, i16 %ai" [FFT32_sol.cpp:25->FFT32_sol.cpp:96]   --->   Operation 53 'add' 'ai0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 54 [1/1] (2.07ns)   --->   "%ar1 = sub i16 %ar, i16 %br" [FFT32_sol.cpp:26->FFT32_sol.cpp:96]   --->   Operation 54 'sub' 'ar1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 55 [1/1] (2.07ns)   --->   "%ai1 = sub i16 %ai, i16 %bi" [FFT32_sol.cpp:27->FFT32_sol.cpp:96]   --->   Operation 55 'sub' 'ai1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 56 [1/1] (2.07ns)   --->   "%cr0 = add i16 %dr, i16 %cr" [FFT32_sol.cpp:28->FFT32_sol.cpp:96]   --->   Operation 56 'add' 'cr0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [1/1] (2.07ns)   --->   "%ci0 = add i16 %di, i16 %ci" [FFT32_sol.cpp:29->FFT32_sol.cpp:96]   --->   Operation 57 'add' 'ci0' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (2.07ns)   --->   "%cr1 = sub i16 %cr, i16 %dr" [FFT32_sol.cpp:30->FFT32_sol.cpp:96]   --->   Operation 58 'sub' 'cr1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [1/1] (2.07ns)   --->   "%ci1 = sub i16 %ci, i16 %di" [FFT32_sol.cpp:31->FFT32_sol.cpp:96]   --->   Operation 59 'sub' 'ci1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 60 [1/1] (2.07ns)   --->   "%add_ln34 = add i16 %cr0, i16 %ar0" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 60 'add' 'add_ln34' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [1/1] (2.32ns)   --->   "%store_ln34 = store i16 %add_ln34, i5 %a_real" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 61 'store' 'store_ln34' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_4 : Operation 62 [1/1] (2.07ns)   --->   "%add_ln34_1 = add i16 %ci0, i16 %ai0" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 62 'add' 'add_ln34_1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (2.32ns)   --->   "%store_ln34 = store i16 %add_ln34_1, i5 %a_imag" [FFT32_sol.cpp:34->FFT32_sol.cpp:96]   --->   Operation 63 'store' 'store_ln34' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_4 : Operation 64 [1/1] (2.07ns)   --->   "%add_ln35 = add i16 %ci1, i16 %ar1" [FFT32_sol.cpp:35->FFT32_sol.cpp:96]   --->   Operation 64 'add' 'add_ln35' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (2.32ns)   --->   "%store_ln35 = store i16 %add_ln35, i5 %b_real" [FFT32_sol.cpp:35->FFT32_sol.cpp:96]   --->   Operation 65 'store' 'store_ln35' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_4 : Operation 66 [1/1] (2.07ns)   --->   "%sub_ln35 = sub i16 %ai1, i16 %cr1" [FFT32_sol.cpp:35->FFT32_sol.cpp:96]   --->   Operation 66 'sub' 'sub_ln35' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 67 [1/1] (2.32ns)   --->   "%store_ln35 = store i16 %sub_ln35, i5 %b_imag" [FFT32_sol.cpp:35->FFT32_sol.cpp:96]   --->   Operation 67 'store' 'store_ln35' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_4 : Operation 68 [1/1] (2.07ns)   --->   "%sub_ln36 = sub i16 %ar0, i16 %cr0" [FFT32_sol.cpp:36->FFT32_sol.cpp:96]   --->   Operation 68 'sub' 'sub_ln36' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 69 [1/1] (2.07ns)   --->   "%sub_ln36_1 = sub i16 %ai0, i16 %ci0" [FFT32_sol.cpp:36->FFT32_sol.cpp:96]   --->   Operation 69 'sub' 'sub_ln36_1' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 70 [1/1] (2.07ns)   --->   "%sub_ln37 = sub i16 %ar1, i16 %ci1" [FFT32_sol.cpp:37->FFT32_sol.cpp:96]   --->   Operation 70 'sub' 'sub_ln37' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 71 [1/1] (2.07ns)   --->   "%add_ln37 = add i16 %cr1, i16 %ai1" [FFT32_sol.cpp:37->FFT32_sol.cpp:96]   --->   Operation 71 'add' 'add_ln37' <Predicate = (!icmp_ln93)> <Delay = 2.07> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 72 [1/1] (0.00ns)   --->   "%stage1_real_addr = getelementptr i16 %stage1_real, i64 0, i64 %zext_ln96" [FFT32_sol.cpp:97]   --->   Operation 72 'getelementptr' 'stage1_real_addr' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%stage1_imag_addr = getelementptr i16 %stage1_imag, i64 0, i64 %zext_ln96" [FFT32_sol.cpp:97]   --->   Operation 73 'getelementptr' 'stage1_imag_addr' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_4 : Operation 74 [1/1] (2.32ns)   --->   "%store_ln97 = store i16 %add_ln34, i5 %stage1_real_addr" [FFT32_sol.cpp:97]   --->   Operation 74 'store' 'store_ln97' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_4 : Operation 75 [1/1] (2.32ns)   --->   "%store_ln97 = store i16 %add_ln34_1, i5 %stage1_imag_addr" [FFT32_sol.cpp:97]   --->   Operation 75 'store' 'store_ln97' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%stage1_real_addr_1 = getelementptr i16 %stage1_real, i64 0, i64 %zext_ln96_1" [FFT32_sol.cpp:98]   --->   Operation 76 'getelementptr' 'stage1_real_addr_1' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%stage1_imag_addr_1 = getelementptr i16 %stage1_imag, i64 0, i64 %zext_ln96_1" [FFT32_sol.cpp:98]   --->   Operation 77 'getelementptr' 'stage1_imag_addr_1' <Predicate = (!icmp_ln93)> <Delay = 0.00>
+ST_4 : Operation 78 [1/1] (2.32ns)   --->   "%store_ln98 = store i16 %add_ln35, i5 %stage1_real_addr_1" [FFT32_sol.cpp:98]   --->   Operation 78 'store' 'store_ln98' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_4 : Operation 79 [1/1] (2.32ns)   --->   "%store_ln98 = store i16 %sub_ln35, i5 %stage1_imag_addr_1" [FFT32_sol.cpp:98]   --->   Operation 79 'store' 'store_ln98' <Predicate = (!icmp_ln93)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+
+State 5 <SV = 4> <Delay = 2.32>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%stage1_real_addr_2 = getelementptr i16 %stage1_real, i64 0, i64 %zext_ln96_2" [FFT32_sol.cpp:99]   --->   Operation 80 'getelementptr' 'stage1_real_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%stage1_imag_addr_2 = getelementptr i16 %stage1_imag, i64 0, i64 %zext_ln96_2" [FFT32_sol.cpp:99]   --->   Operation 81 'getelementptr' 'stage1_imag_addr_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 82 [1/1] (2.32ns)   --->   "%store_ln99 = store i16 %sub_ln36, i5 %stage1_real_addr_2" [FFT32_sol.cpp:99]   --->   Operation 82 'store' 'store_ln99' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_5 : Operation 83 [1/1] (2.32ns)   --->   "%store_ln99 = store i16 %sub_ln36_1, i5 %stage1_imag_addr_2" [FFT32_sol.cpp:99]   --->   Operation 83 'store' 'store_ln99' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_5 : Operation 84 [1/1] (0.00ns)   --->   "%stage1_real_addr_3 = getelementptr i16 %stage1_real, i64 0, i64 %zext_ln96_3" [FFT32_sol.cpp:100]   --->   Operation 84 'getelementptr' 'stage1_real_addr_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "%stage1_imag_addr_3 = getelementptr i16 %stage1_imag, i64 0, i64 %zext_ln96_3" [FFT32_sol.cpp:100]   --->   Operation 85 'getelementptr' 'stage1_imag_addr_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 86 [1/1] (2.32ns)   --->   "%store_ln100 = store i16 %sub_ln37, i5 %stage1_real_addr_3" [FFT32_sol.cpp:100]   --->   Operation 86 'store' 'store_ln100' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_5 : Operation 87 [1/1] (2.32ns)   --->   "%store_ln100 = store i16 %add_ln37, i5 %stage1_imag_addr_3" [FFT32_sol.cpp:100]   --->   Operation 87 'store' 'store_ln100' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+
+State 6 <SV = 5> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 2.32>
+ST_7 : Operation 88 [1/1] (0.00ns)   --->   "%speclooptripcount_ln93 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 8, i64 8, i64 8" [FFT32_sol.cpp:93]   --->   Operation 88 'speclooptripcount' 'speclooptripcount_ln93' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 89 [1/1] (0.00ns)   --->   "%specloopname_ln93 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [FFT32_sol.cpp:93]   --->   Operation 89 'specloopname' 'specloopname_ln93' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 90 [1/1] (2.32ns)   --->   "%store_ln36 = store i16 %sub_ln36, i5 %c_real" [FFT32_sol.cpp:36->FFT32_sol.cpp:96]   --->   Operation 90 'store' 'store_ln36' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_7 : Operation 91 [1/1] (2.32ns)   --->   "%store_ln36 = store i16 %sub_ln36_1, i5 %c_imag" [FFT32_sol.cpp:36->FFT32_sol.cpp:96]   --->   Operation 91 'store' 'store_ln36' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_7 : Operation 92 [1/1] (2.32ns)   --->   "%store_ln37 = store i16 %sub_ln37, i5 %d_real" [FFT32_sol.cpp:37->FFT32_sol.cpp:96]   --->   Operation 92 'store' 'store_ln37' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_7 : Operation 93 [1/1] (2.32ns)   --->   "%store_ln37 = store i16 %add_ln37, i5 %d_imag" [FFT32_sol.cpp:37->FFT32_sol.cpp:96]   --->   Operation 93 'store' 'store_ln37' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 32> <RAM>
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%br_ln93 = br void %for.inc71" [FFT32_sol.cpp:93]   --->   Operation 94 'br' 'br_ln93' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.323ns
+The critical path consists of the following:
+	'alloca' operation ('block') [5]  (0.000 ns)
+	'load' operation ('block', FFT32_sol.cpp:95) on local variable 'block' [9]  (0.000 ns)
+	'add' operation ('add_ln93', FFT32_sol.cpp:93) [12]  (1.735 ns)
+	'store' operation ('store_ln93', FFT32_sol.cpp:93) of variable 'add_ln93', FFT32_sol.cpp:93 on local variable 'block' [82]  (1.588 ns)
+
+ <State 2>: 2.322ns
+The critical path consists of the following:
+	'load' operation ('ar', FFT32_sol.cpp:18->FFT32_sol.cpp:96) on array 'stage0_real' [34]  (2.322 ns)
+
+ <State 3>: 2.322ns
+The critical path consists of the following:
+	'load' operation ('cr', FFT32_sol.cpp:20->FFT32_sol.cpp:96) on array 'stage0_real' [38]  (2.322 ns)
+
+ <State 4>: 6.476ns
+The critical path consists of the following:
+	'add' operation ('ar0', FFT32_sol.cpp:24->FFT32_sol.cpp:96) [42]  (2.077 ns)
+	'add' operation ('add_ln34', FFT32_sol.cpp:34->FFT32_sol.cpp:96) [50]  (2.077 ns)
+	'store' operation ('store_ln34', FFT32_sol.cpp:34->FFT32_sol.cpp:96) of variable 'add_ln34', FFT32_sol.cpp:34->FFT32_sol.cpp:96 on array 'stage0_real' [51]  (2.322 ns)
+
+ <State 5>: 2.322ns
+The critical path consists of the following:
+	'getelementptr' operation ('stage1_real_addr_2', FFT32_sol.cpp:99) [74]  (0.000 ns)
+	'store' operation ('store_ln99', FFT32_sol.cpp:99) of variable 'sub_ln36', FFT32_sol.cpp:36->FFT32_sol.cpp:96 on array 'stage1_real' [76]  (2.322 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 2.322ns
+The critical path consists of the following:
+	'store' operation ('store_ln36', FFT32_sol.cpp:36->FFT32_sol.cpp:96) of variable 'sub_ln36', FFT32_sol.cpp:36->FFT32_sol.cpp:96 on array 'stage0_real' [59]  (2.322 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
