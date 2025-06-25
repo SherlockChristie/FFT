@@ -1,0 +1,5 @@
+,AESL_inst_fft32,,module_status1.csv
+,grp_cos_16_4_s_fu_101,,module_status2.csv
+grp_cos_16_4_s_fu_101,grp_cordic_circ_apfixed_18_3_0_s_fu_59,,module_status3.csv
+,grp_sin_16_4_s_fu_122,,module_status4.csv
+grp_sin_16_4_s_fu_122,grp_cordic_circ_apfixed_18_3_0_s_fu_48,,module_status5.csv

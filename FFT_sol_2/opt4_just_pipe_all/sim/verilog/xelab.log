@@ -1,0 +1,87 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_fft32_top glbl -Oenable_linking_all_libraries -prj fft32.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s fft32 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/AESL_autofifo_in_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_in_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/AESL_autofifo_out_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_autofifo_out_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_fft32_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_cmul.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_cmul
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_cordic_circ_apfixed_18_3_0_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_cordic_circ_apfixed_18_3_0_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_cos_16_4_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_cos_16_4_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mac_muladd_14s_16s_28s_28_4_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_14s_16s_28s_28_4_0_DSP48_2
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_14s_16s_28s_28_4_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mac_muladd_16s_14s_28s_28_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_16s_14s_28s_28_4_1_DSP48_4
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_16s_14s_28s_28_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mac_muladd_2ns_16ns_18ns_18_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_2ns_16ns_18ns_18_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_2ns_16ns_18ns_18_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mac_mulsub_14s_16s_28s_28_4_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_mulsub_14s_16s_28s_28_4_0_DSP48_1
+INFO: [VRFC 10-311] analyzing module fft32_mac_mulsub_14s_16s_28s_28_4_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mac_mulsub_16s_14s_28s_28_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_mulsub_16s_14s_28s_28_4_1_DSP48_3
+INFO: [VRFC 10-311] analyzing module fft32_mac_mulsub_16s_14s_28s_28_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mul_14ns_22ns_35_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mul_14ns_22ns_35_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mul_14s_16s_28_1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mul_14s_16s_28_1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_mul_16s_14s_28_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mul_16s_14s_28_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_radix2_bfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_radix2_bfly
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_radix4_bfly.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_radix4_bfly
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_radix4_bfly_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_radix4_bfly_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/fft32_sin_16_4_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_sin_16_4_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.fft32_cordic_circ_apfixed_18_3_0...
+Compiling module xil_defaultlib.fft32_mul_14ns_22ns_35_1_1(NUM_S...
+Compiling module xil_defaultlib.fft32_mac_muladd_2ns_16ns_18ns_1...
+Compiling module xil_defaultlib.fft32_mac_muladd_2ns_16ns_18ns_1...
+Compiling module xil_defaultlib.fft32_cos_16_4_s
+Compiling module xil_defaultlib.fft32_sin_16_4_s
+Compiling module xil_defaultlib.fft32_radix4_bfly
+Compiling module xil_defaultlib.fft32_mul_14s_16s_28_1_0(NUM_STA...
+Compiling module xil_defaultlib.fft32_mac_mulsub_14s_16s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_mulsub_14s_16s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_muladd_14s_16s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_muladd_14s_16s_28s_28_...
+Compiling module xil_defaultlib.fft32_cmul
+Compiling module xil_defaultlib.fft32_radix4_bfly_1
+Compiling module xil_defaultlib.fft32_mul_16s_14s_28_1_1(NUM_STA...
+Compiling module xil_defaultlib.fft32_mac_mulsub_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_mulsub_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_muladd_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_muladd_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_radix2_bfly
+Compiling module xil_defaultlib.fft32
+Compiling module xil_defaultlib.AESL_autofifo_in_stream
+Compiling module xil_defaultlib.AESL_autofifo_out_stream
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_fft32_top
+Compiling module work.glbl
+Built simulation snapshot fft32

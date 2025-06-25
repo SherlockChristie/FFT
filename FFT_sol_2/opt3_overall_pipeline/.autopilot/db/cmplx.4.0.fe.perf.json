@@ -1,0 +1,44 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "FFT32_check.cpp",
+    "fileloc": 63,
+    "instructions": 3457,
+    "loads": {
+      "L": 180
+    },
+    "name": "fft32",
+    "stores": {
+      "L": 206
+    },
+    "total_instructions": 72785
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32.h",
+    "fileloc": 18,
+    "instructions": 3,
+    "name": "complex_t",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 3
+  },
+  "2": {
+    "basicblocks": 49,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 77,
+    "instructions": 782,
+    "loads": {
+      "L": 3
+    },
+    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "stores": {
+      "L": 48
+    },
+    "total_instructions": 782
+  }
+}

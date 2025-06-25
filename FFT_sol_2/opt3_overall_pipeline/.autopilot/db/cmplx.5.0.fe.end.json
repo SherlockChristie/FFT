@@ -1,0 +1,38 @@
+{
+    "1": {
+        "name": "sin<16, 4>",
+        "file": "FFT32_check.cpp",
+        "fileloc": "0",
+        "instructions": "23",
+        "total_instructions": "277",
+        "calls": "2",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "cordic_circ_apfixed<18, 3, 0>",
+        "file": "FFT32_check.cpp",
+        "fileloc": "0",
+        "instructions": "254",
+        "total_instructions": "254",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "cos<16, 4>",
+        "file": "FFT32_check.cpp",
+        "fileloc": "0",
+        "instructions": "27",
+        "total_instructions": "281",
+        "calls": "2",
+        "basicblocks": "3"
+    },
+    "0": {
+        "name": "fft32",
+        "file": "FFT32_check.cpp",
+        "fileloc": "63",
+        "instructions": "984",
+        "total_instructions": "9912",
+        "calls": "3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1 3 1",
+        "basicblocks": "1"
+    }
+}

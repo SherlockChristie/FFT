@@ -1,0 +1,1200 @@
+
+
+================================================================
+== Vitis HLS Report for 'cos_16_4_s'
+================================================================
+* Date:           Wed Jun 25 08:56:58 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        FFT_sol_2
+* Solution:       opt3_overall_pipeline (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbv485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.101 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       20|       20|  0.200 us|  0.200 us|    2|    2|      yes|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                                        |                              |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |                Instance                |            Module            |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_cordic_circ_apfixed_18_3_0_s_fu_59  |cordic_circ_apfixed_18_3_0_s  |       13|       13|  0.130 us|  0.130 us|    2|    2|      yes|
+        +----------------------------------------+------------------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    1|       -|      -|    -|
+|Expression       |        -|    -|       0|     95|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    1|     931|   2988|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     46|    -|
+|Register         |        -|    -|     155|     32|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    2|    1086|   3161|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      530|  400|  157200|  78600|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|   ~0|      ~0|      4|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------+------------------------------+---------+----+-----+------+-----+
+    |                Instance                |            Module            | BRAM_18K| DSP|  FF |  LUT | URAM|
+    +----------------------------------------+------------------------------+---------+----+-----+------+-----+
+    |grp_cordic_circ_apfixed_18_3_0_s_fu_59  |cordic_circ_apfixed_18_3_0_s  |        0|   0|  931|  2964|    0|
+    |mul_14ns_22ns_35_1_1_U2                 |mul_14ns_22ns_35_1_1          |        0|   1|    0|    24|    0|
+    +----------------------------------------+------------------------------+---------+----+-----+------+-----+
+    |Total                                   |                              |        0|   1|  931|  2988|    0|
+    +----------------------------------------+------------------------------+---------+----+-----+------+-----+
+
+    * DSP: 
+    +------------------------------------+---------------------------------+--------------+
+    |              Instance              |              Module             |  Expression  |
+    +------------------------------------+---------------------------------+--------------+
+    |mac_muladd_2ns_16ns_18ns_18_4_1_U3  |mac_muladd_2ns_16ns_18ns_18_4_1  |  i0 + i1 * i2|
+    +------------------------------------+---------------------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |sub_ln254_fu_121_p2  |         -|   0|  0|  25|          17|          18|
+    |sub_ln280_fu_165_p2  |         -|   0|  0|  24|           1|          17|
+    |x_fu_64_p2           |         -|   0|  0|  17|           1|          14|
+    |icmp_ln251_fu_96_p2  |      icmp|   0|  0|  10|           2|           1|
+    |z_fu_150_p3          |    select|   0|  0|  17|           1|          17|
+    |ap_enable_pp0        |       xor|   0|  0|   2|           1|           2|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  95|          23|          69|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |                    Name                    | LUT| Input Size| Bits| Total Bits|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                                   |  14|          3|    1|          3|
+    |ap_enable_reg_pp0_iter0                     |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter10                    |   9|          2|    1|          2|
+    |ap_phi_mux_agg_result_0_in_in_phi_fu_53_p4  |  14|          3|   17|         51|
+    +--------------------------------------------+----+-----------+-----+-----------+
+    |Total                                       |  46|         10|   20|         58|
+    +--------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |                         Name                        | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                            |   2|   0|    2|          0|
+    |ap_enable_reg_pp0_iter0_reg                          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter10                             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8                              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter9                              |   1|   0|    1|          0|
+    |grp_cordic_circ_apfixed_18_3_0_s_fu_59_ap_start_reg  |   1|   0|    1|          0|
+    |icmp_ln251_reg_212                                   |   1|   0|    1|          0|
+    |k_reg_201                                            |   2|   0|    2|          0|
+    |trunc_ln266_reg_227                                  |  17|   0|   17|          0|
+    |trunc_ln68_reg_196                                   |  13|   0|   13|          0|
+    |trunc_ln68_reg_196_pp0_iter1_reg                     |  13|   0|   13|          0|
+    |x_reg_191                                            |  14|   0|   14|          0|
+    |z_reg_222                                            |  17|   0|   17|          0|
+    |icmp_ln251_reg_212                                   |  64|  32|    1|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |Total                                                | 155|  32|   92|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------+-----+-----+------------+--------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------+-----+-----+------------+--------------+--------------+
+|ap_clk     |   in|    1|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|ap_rst     |   in|    1|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|ap_start   |   in|    1|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|ap_done    |  out|    1|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|ap_idle    |  out|    1|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|ap_ready   |  out|    1|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|ap_ce      |   in|    1|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|ap_return  |  out|   14|  ap_ctrl_hs|    cos<16, 4>|  return value|
+|x_val      |   in|   14|     ap_none|         x_val|        scalar|
++-----------+-----+-----+------------+--------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 2
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 1
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 21
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 21
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 21, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.81>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%x_val_read = read i14 @_ssdm_op_Read.ap_auto.i14, i14 %x_val"   --->   Operation 22 'read' 'x_val_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.81ns)   --->   "%x = sub i14 0, i14 %x_val_read" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:237->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 23 'sub' 'x' <Predicate = true> <Delay = 1.81> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln68 = trunc i14 %x" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 24 'trunc' 'trunc_ln68' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 6.32>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%zext_ln64 = zext i14 %x" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 25 'zext' 'zext_ln64' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (6.32ns)   --->   "%mul_ln64 = mul i35 %zext_ln64, i35 1335088" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 26 'mul' 'mul_ln64' <Predicate = true> <Delay = 6.32> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 0> <II = 1> <Delay = 6.32> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%k = partselect i2 @_ssdm_op_PartSelect.i2.i35.i32.i32, i35 %mul_ln64, i32 33, i32 34" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:65->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 27 'partselect' 'k' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 1.56>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln68 = zext i2 %k" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 28 'zext' 'zext_ln68' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [3/3] (1.05ns) (grouped into DSP with root node add_ln68)   --->   "%mul_ln68 = mul i18 %zext_ln68, i18 56257" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 29 'mul' 'mul_ln68' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 30 [1/1] (1.56ns)   --->   "%icmp_ln251 = icmp_eq  i2 %k, i2 1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 30 'icmp' 'icmp_ln251' <Predicate = true> <Delay = 1.56> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 1.05>
+ST_4 : Operation 31 [2/3] (1.05ns) (grouped into DSP with root node add_ln68)   --->   "%mul_ln68 = mul i18 %zext_ln68, i18 56257" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 31 'mul' 'mul_ln68' <Predicate = true> <Delay = 1.05> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 2.10>
+ST_5 : Operation 32 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i13.i5, i13 %trunc_ln68, i5 0" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 32 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 33 [1/3] (0.00ns) (grouped into DSP with root node add_ln68)   --->   "%mul_ln68 = mul i18 %zext_ln68, i18 56257" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 33 'mul' 'mul_ln68' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 34 [2/2] (2.10ns) (root node of the DSP)   --->   "%add_ln68 = add i18 %shl_ln, i18 %mul_ln68" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 34 'add' 'add_ln68' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 5.01>
+ST_6 : Operation 35 [1/2] (2.10ns) (root node of the DSP)   --->   "%add_ln68 = add i18 %shl_ln, i18 %mul_ln68" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 35 'add' 'add_ln68' <Predicate = true> <Delay = 2.10> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 2.15> <IPBlock> <Opcode : '<invalid operator> ' 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%r = partselect i17 @_ssdm_op_PartSelect.i17.i18.i32.i32, i18 %add_ln68, i32 1, i32 17" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 36 'partselect' 'r' <Predicate = (icmp_ln251)> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln68_2 = zext i17 %r" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 37 'zext' 'zext_ln68_2' <Predicate = (icmp_ln251)> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (2.13ns)   --->   "%sub_ln254 = sub i18 102943, i18 %zext_ln68_2" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:254->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 38 'sub' 'sub_ln254' <Predicate = (icmp_ln251)> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i16 @_ssdm_op_PartSelect.i16.i18.i32.i32, i18 %add_ln68, i32 2, i32 17" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:257->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 39 'partselect' 'tmp_3' <Predicate = (!icmp_ln251)> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln257 = zext i16 %tmp_3" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:257->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 40 'zext' 'zext_ln257' <Predicate = (!icmp_ln251)> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_4 = partselect i17 @_ssdm_op_PartSelect.i17.i18.i32.i32, i18 %sub_ln254, i32 1, i32 17" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:257->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 41 'partselect' 'tmp_4' <Predicate = (icmp_ln251)> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.78ns)   --->   "%z = select i1 %icmp_ln251, i17 %tmp_4, i17 %zext_ln257" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:251->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 42 'select' 'z' <Predicate = true> <Delay = 0.78> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.87>
+ST_7 : Operation 43 [14/14] (6.87ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 43 'call' 'call_ret' <Predicate = true> <Delay = 6.87> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 7.10>
+ST_8 : Operation 44 [13/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 44 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 7.10>
+ST_9 : Operation 45 [12/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 45 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 7.10>
+ST_10 : Operation 46 [11/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 46 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 10> <Delay = 7.10>
+ST_11 : Operation 47 [10/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 47 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 11> <Delay = 7.10>
+ST_12 : Operation 48 [9/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 48 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 12> <Delay = 7.10>
+ST_13 : Operation 49 [8/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 49 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 7.10>
+ST_14 : Operation 50 [7/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 50 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 7.10>
+ST_15 : Operation 51 [6/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 51 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 7.10>
+ST_16 : Operation 52 [5/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 52 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 7.10>
+ST_17 : Operation 53 [4/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 53 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 7.10>
+ST_18 : Operation 54 [3/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 54 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 7.10>
+ST_19 : Operation 55 [2/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 55 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 7.10>
+ST_20 : Operation 56 [1/14] (7.10ns)   --->   "%call_ret = call i36 @cordic_circ_apfixed<18, 3, 0>, i17 %z" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 56 'call' 'call_ret' <Predicate = true> <Delay = 7.10> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 57 [1/1] (0.00ns)   --->   "%x_1 = extractvalue i36 %call_ret" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 57 'extractvalue' 'x_1' <Predicate = true> <Delay = 0.00>
+ST_20 : Operation 58 [1/1] (0.00ns)   --->   "%trunc_ln266 = trunc i18 %x_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 58 'trunc' 'trunc_ln266' <Predicate = true> <Delay = 0.00>
+
+State 21 <SV = 20> <Delay = 3.69>
+ST_21 : Operation 59 [1/1] (1.58ns)   --->   "%br_ln274 = br i1 %icmp_ln251, void %_ZN14cordic_apfixed14generic_sincosILi16ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.55.exit, void %if.then19.i" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 59 'br' 'br_ln274' <Predicate = true> <Delay = 1.58>
+ST_21 : Operation 60 [1/1] (2.10ns)   --->   "%sub_ln280 = sub i17 0, i17 %trunc_ln266" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:280->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 60 'sub' 'sub_ln280' <Predicate = (icmp_ln251)> <Delay = 2.10> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.10> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 61 [1/1] (1.58ns)   --->   "%br_ln281 = br void %_ZN14cordic_apfixed14generic_sincosILi16ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.55.exit" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:281->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 61 'br' 'br_ln281' <Predicate = (icmp_ln251)> <Delay = 1.58>
+ST_21 : Operation 62 [1/1] (0.00ns)   --->   "%agg_result_0_in_in = phi i17 %sub_ln280, void %if.then19.i, i17 %trunc_ln266, void %entry_ifconv" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:280->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 62 'phi' 'agg_result_0_in_in' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 63 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i14 @_ssdm_op_PartSelect.i14.i17.i32.i32, i17 %agg_result_0_in_in, i32 3, i32 16" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:276->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956]   --->   Operation 63 'partselect' 'trunc_ln2' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 64 [1/1] (0.00ns)   --->   "%ret_ln1958 = ret i14 %trunc_ln2" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1958]   --->   Operation 64 'ret' 'ret_ln1958' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 1
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ x_val]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+x_val_read         (read          ) [ 0000000000000000000000]
+x                  (sub           ) [ 0010000000000000000000]
+trunc_ln68         (trunc         ) [ 0111110000000000000000]
+zext_ln64          (zext          ) [ 0000000000000000000000]
+mul_ln64           (mul           ) [ 0000000000000000000000]
+k                  (partselect    ) [ 0101000000000000000000]
+zext_ln68          (zext          ) [ 0110110000000000000000]
+icmp_ln251         (icmp          ) [ 0110111111111111111111]
+shl_ln             (bitconcatenate) [ 0010001000000000000000]
+mul_ln68           (mul           ) [ 0010001000000000000000]
+add_ln68           (add           ) [ 0000000000000000000000]
+r                  (partselect    ) [ 0000000000000000000000]
+zext_ln68_2        (zext          ) [ 0000000000000000000000]
+sub_ln254          (sub           ) [ 0000000000000000000000]
+tmp_3              (partselect    ) [ 0000000000000000000000]
+zext_ln257         (zext          ) [ 0000000000000000000000]
+tmp_4              (partselect    ) [ 0000000000000000000000]
+z                  (select        ) [ 0100000100000000000000]
+call_ret           (call          ) [ 0000000000000000000000]
+x_1                (extractvalue  ) [ 0000000000000000000000]
+trunc_ln266        (trunc         ) [ 0100000000000000000001]
+br_ln274           (br            ) [ 0000000000000000000000]
+sub_ln280          (sub           ) [ 0000000000000000000000]
+br_ln281           (br            ) [ 0000000000000000000000]
+agg_result_0_in_in (phi           ) [ 0100000000000000000001]
+trunc_ln2          (partselect    ) [ 0000000000000000000000]
+ret_ln1958         (ret           ) [ 0000000000000000000000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="x_val">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="x_val"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1001" name="const_2">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i14"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1001" name="const_4">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i2.i35.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i18.i13.i5"/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i17.i18.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i16.i18.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="cordic_circ_apfixed<18, 3, 0>"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_PartSelect.i14.i17.i32.i32"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1004" name="x_val_read_read_fu_44">
+<pin_list>
+<pin id="45" dir="0" index="0" bw="14" slack="0"/>
+<pin id="46" dir="0" index="1" bw="14" slack="0"/>
+<pin id="47" dir="1" index="2" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="x_val_read/1 "/>
+</bind>
+</comp>
+
+<comp id="50" class="1005" name="agg_result_0_in_in_reg_50">
+<pin_list>
+<pin id="51" dir="0" index="0" bw="17" slack="2147483647"/>
+<pin id="52" dir="1" index="1" bw="17" slack="2147483647"/>
+</pin_list>
+<bind>
+<opset="agg_result_0_in_in (phireg) "/>
+</bind>
+</comp>
+
+<comp id="53" class="1004" name="agg_result_0_in_in_phi_fu_53">
+<pin_list>
+<pin id="54" dir="0" index="0" bw="17" slack="0"/>
+<pin id="55" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="56" dir="0" index="2" bw="17" slack="1"/>
+<pin id="57" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="58" dir="1" index="4" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="agg_result_0_in_in/21 "/>
+</bind>
+</comp>
+
+<comp id="59" class="1004" name="grp_cordic_circ_apfixed_18_3_0_s_fu_59">
+<pin_list>
+<pin id="60" dir="0" index="0" bw="36" slack="0"/>
+<pin id="61" dir="0" index="1" bw="17" slack="1"/>
+<pin id="62" dir="1" index="2" bw="36" slack="0"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="call_ret/7 "/>
+</bind>
+</comp>
+
+<comp id="64" class="1004" name="x_fu_64">
+<pin_list>
+<pin id="65" dir="0" index="0" bw="1" slack="0"/>
+<pin id="66" dir="0" index="1" bw="14" slack="0"/>
+<pin id="67" dir="1" index="2" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="x/1 "/>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="trunc_ln68_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="14" slack="0"/>
+<pin id="72" dir="1" index="1" bw="13" slack="4"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="trunc_ln68/1 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="zext_ln64_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="14" slack="1"/>
+<pin id="76" dir="1" index="1" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln64/2 "/>
+</bind>
+</comp>
+
+<comp id="77" class="1004" name="mul_ln64_fu_77">
+<pin_list>
+<pin id="78" dir="0" index="0" bw="14" slack="0"/>
+<pin id="79" dir="0" index="1" bw="22" slack="0"/>
+<pin id="80" dir="1" index="2" bw="35" slack="0"/>
+</pin_list>
+<bind>
+<opcode="mul(12) " fcode="mul"/>
+<opset="mul_ln64/2 "/>
+</bind>
+</comp>
+
+<comp id="83" class="1004" name="k_fu_83">
+<pin_list>
+<pin id="84" dir="0" index="0" bw="2" slack="0"/>
+<pin id="85" dir="0" index="1" bw="35" slack="0"/>
+<pin id="86" dir="0" index="2" bw="7" slack="0"/>
+<pin id="87" dir="0" index="3" bw="7" slack="0"/>
+<pin id="88" dir="1" index="4" bw="2" slack="1"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="k/2 "/>
+</bind>
+</comp>
+
+<comp id="93" class="1004" name="zext_ln68_fu_93">
+<pin_list>
+<pin id="94" dir="0" index="0" bw="2" slack="1"/>
+<pin id="95" dir="1" index="1" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln68/3 "/>
+</bind>
+</comp>
+
+<comp id="96" class="1004" name="icmp_ln251_fu_96">
+<pin_list>
+<pin id="97" dir="0" index="0" bw="2" slack="1"/>
+<pin id="98" dir="0" index="1" bw="2" slack="0"/>
+<pin id="99" dir="1" index="2" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln251/3 "/>
+</bind>
+</comp>
+
+<comp id="101" class="1004" name="shl_ln_fu_101">
+<pin_list>
+<pin id="102" dir="0" index="0" bw="18" slack="0"/>
+<pin id="103" dir="0" index="1" bw="13" slack="4"/>
+<pin id="104" dir="0" index="2" bw="1" slack="0"/>
+<pin id="105" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="shl_ln/5 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="r_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="17" slack="0"/>
+<pin id="110" dir="0" index="1" bw="18" slack="0"/>
+<pin id="111" dir="0" index="2" bw="1" slack="0"/>
+<pin id="112" dir="0" index="3" bw="6" slack="0"/>
+<pin id="113" dir="1" index="4" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="r/6 "/>
+</bind>
+</comp>
+
+<comp id="117" class="1004" name="zext_ln68_2_fu_117">
+<pin_list>
+<pin id="118" dir="0" index="0" bw="17" slack="0"/>
+<pin id="119" dir="1" index="1" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln68_2/6 "/>
+</bind>
+</comp>
+
+<comp id="121" class="1004" name="sub_ln254_fu_121">
+<pin_list>
+<pin id="122" dir="0" index="0" bw="18" slack="0"/>
+<pin id="123" dir="0" index="1" bw="17" slack="0"/>
+<pin id="124" dir="1" index="2" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="sub_ln254/6 "/>
+</bind>
+</comp>
+
+<comp id="127" class="1004" name="tmp_3_fu_127">
+<pin_list>
+<pin id="128" dir="0" index="0" bw="16" slack="0"/>
+<pin id="129" dir="0" index="1" bw="18" slack="0"/>
+<pin id="130" dir="0" index="2" bw="3" slack="0"/>
+<pin id="131" dir="0" index="3" bw="6" slack="0"/>
+<pin id="132" dir="1" index="4" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="tmp_3/6 "/>
+</bind>
+</comp>
+
+<comp id="136" class="1004" name="zext_ln257_fu_136">
+<pin_list>
+<pin id="137" dir="0" index="0" bw="16" slack="0"/>
+<pin id="138" dir="1" index="1" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln257/6 "/>
+</bind>
+</comp>
+
+<comp id="140" class="1004" name="tmp_4_fu_140">
+<pin_list>
+<pin id="141" dir="0" index="0" bw="17" slack="0"/>
+<pin id="142" dir="0" index="1" bw="18" slack="0"/>
+<pin id="143" dir="0" index="2" bw="1" slack="0"/>
+<pin id="144" dir="0" index="3" bw="6" slack="0"/>
+<pin id="145" dir="1" index="4" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="tmp_4/6 "/>
+</bind>
+</comp>
+
+<comp id="150" class="1004" name="z_fu_150">
+<pin_list>
+<pin id="151" dir="0" index="0" bw="1" slack="3"/>
+<pin id="152" dir="0" index="1" bw="17" slack="0"/>
+<pin id="153" dir="0" index="2" bw="17" slack="0"/>
+<pin id="154" dir="1" index="3" bw="17" slack="1"/>
+</pin_list>
+<bind>
+<opcode="select(49) " fcode="select"/>
+<opset="z/6 "/>
+</bind>
+</comp>
+
+<comp id="157" class="1004" name="x_1_fu_157">
+<pin_list>
+<pin id="158" dir="0" index="0" bw="36" slack="0"/>
+<pin id="159" dir="1" index="1" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="extractvalue(56) " fcode="extractvalue"/>
+<opset="x_1/20 "/>
+</bind>
+</comp>
+
+<comp id="161" class="1004" name="trunc_ln266_fu_161">
+<pin_list>
+<pin id="162" dir="0" index="0" bw="18" slack="0"/>
+<pin id="163" dir="1" index="1" bw="17" slack="1"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="trunc_ln266/20 "/>
+</bind>
+</comp>
+
+<comp id="165" class="1004" name="sub_ln280_fu_165">
+<pin_list>
+<pin id="166" dir="0" index="0" bw="1" slack="0"/>
+<pin id="167" dir="0" index="1" bw="17" slack="1"/>
+<pin id="168" dir="1" index="2" bw="17" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="sub_ln280/21 "/>
+</bind>
+</comp>
+
+<comp id="171" class="1004" name="trunc_ln2_fu_171">
+<pin_list>
+<pin id="172" dir="0" index="0" bw="14" slack="0"/>
+<pin id="173" dir="0" index="1" bw="17" slack="0"/>
+<pin id="174" dir="0" index="2" bw="3" slack="0"/>
+<pin id="175" dir="0" index="3" bw="6" slack="0"/>
+<pin id="176" dir="1" index="4" bw="14" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="partselect(1002) " fcode="partselect"/>
+<opset="trunc_ln2/21 "/>
+</bind>
+</comp>
+
+<comp id="181" class="1007" name="grp_fu_181">
+<pin_list>
+<pin id="182" dir="0" index="0" bw="2" slack="0"/>
+<pin id="183" dir="0" index="1" bw="16" slack="0"/>
+<pin id="184" dir="0" index="2" bw="18" slack="0"/>
+<pin id="185" dir="1" index="3" bw="18" slack="0"/>
+</pin_list>
+<bind>
+<opcode="muladd(1172) " fcode="muladd"/>
+<opset="mul_ln68/3 add_ln68/5 "/>
+</bind>
+</comp>
+
+<comp id="191" class="1005" name="x_reg_191">
+<pin_list>
+<pin id="192" dir="0" index="0" bw="14" slack="1"/>
+<pin id="193" dir="1" index="1" bw="14" slack="1"/>
+</pin_list>
+<bind>
+<opset="x "/>
+</bind>
+</comp>
+
+<comp id="196" class="1005" name="trunc_ln68_reg_196">
+<pin_list>
+<pin id="197" dir="0" index="0" bw="13" slack="4"/>
+<pin id="198" dir="1" index="1" bw="13" slack="4"/>
+</pin_list>
+<bind>
+<opset="trunc_ln68 "/>
+</bind>
+</comp>
+
+<comp id="201" class="1005" name="k_reg_201">
+<pin_list>
+<pin id="202" dir="0" index="0" bw="2" slack="1"/>
+<pin id="203" dir="1" index="1" bw="2" slack="1"/>
+</pin_list>
+<bind>
+<opset="k "/>
+</bind>
+</comp>
+
+<comp id="207" class="1005" name="zext_ln68_reg_207">
+<pin_list>
+<pin id="208" dir="0" index="0" bw="18" slack="1"/>
+<pin id="209" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="zext_ln68 "/>
+</bind>
+</comp>
+
+<comp id="212" class="1005" name="icmp_ln251_reg_212">
+<pin_list>
+<pin id="213" dir="0" index="0" bw="1" slack="3"/>
+<pin id="214" dir="1" index="1" bw="1" slack="3"/>
+</pin_list>
+<bind>
+<opset="icmp_ln251 "/>
+</bind>
+</comp>
+
+<comp id="217" class="1005" name="shl_ln_reg_217">
+<pin_list>
+<pin id="218" dir="0" index="0" bw="18" slack="1"/>
+<pin id="219" dir="1" index="1" bw="18" slack="1"/>
+</pin_list>
+<bind>
+<opset="shl_ln "/>
+</bind>
+</comp>
+
+<comp id="222" class="1005" name="z_reg_222">
+<pin_list>
+<pin id="223" dir="0" index="0" bw="17" slack="1"/>
+<pin id="224" dir="1" index="1" bw="17" slack="1"/>
+</pin_list>
+<bind>
+<opset="z "/>
+</bind>
+</comp>
+
+<comp id="227" class="1005" name="trunc_ln266_reg_227">
+<pin_list>
+<pin id="228" dir="0" index="0" bw="17" slack="1"/>
+<pin id="229" dir="1" index="1" bw="17" slack="1"/>
+</pin_list>
+<bind>
+<opset="trunc_ln266 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="48"><net_src comp="2" pin="0"/><net_sink comp="44" pin=0"/></net>
+
+<net id="49"><net_src comp="0" pin="0"/><net_sink comp="44" pin=1"/></net>
+
+<net id="63"><net_src comp="34" pin="0"/><net_sink comp="59" pin=0"/></net>
+
+<net id="68"><net_src comp="4" pin="0"/><net_sink comp="64" pin=0"/></net>
+
+<net id="69"><net_src comp="44" pin="2"/><net_sink comp="64" pin=1"/></net>
+
+<net id="73"><net_src comp="64" pin="2"/><net_sink comp="70" pin=0"/></net>
+
+<net id="81"><net_src comp="74" pin="1"/><net_sink comp="77" pin=0"/></net>
+
+<net id="82"><net_src comp="6" pin="0"/><net_sink comp="77" pin=1"/></net>
+
+<net id="89"><net_src comp="8" pin="0"/><net_sink comp="83" pin=0"/></net>
+
+<net id="90"><net_src comp="77" pin="2"/><net_sink comp="83" pin=1"/></net>
+
+<net id="91"><net_src comp="10" pin="0"/><net_sink comp="83" pin=2"/></net>
+
+<net id="92"><net_src comp="12" pin="0"/><net_sink comp="83" pin=3"/></net>
+
+<net id="100"><net_src comp="16" pin="0"/><net_sink comp="96" pin=1"/></net>
+
+<net id="106"><net_src comp="18" pin="0"/><net_sink comp="101" pin=0"/></net>
+
+<net id="107"><net_src comp="20" pin="0"/><net_sink comp="101" pin=2"/></net>
+
+<net id="114"><net_src comp="22" pin="0"/><net_sink comp="108" pin=0"/></net>
+
+<net id="115"><net_src comp="24" pin="0"/><net_sink comp="108" pin=2"/></net>
+
+<net id="116"><net_src comp="26" pin="0"/><net_sink comp="108" pin=3"/></net>
+
+<net id="120"><net_src comp="108" pin="4"/><net_sink comp="117" pin=0"/></net>
+
+<net id="125"><net_src comp="28" pin="0"/><net_sink comp="121" pin=0"/></net>
+
+<net id="126"><net_src comp="117" pin="1"/><net_sink comp="121" pin=1"/></net>
+
+<net id="133"><net_src comp="30" pin="0"/><net_sink comp="127" pin=0"/></net>
+
+<net id="134"><net_src comp="32" pin="0"/><net_sink comp="127" pin=2"/></net>
+
+<net id="135"><net_src comp="26" pin="0"/><net_sink comp="127" pin=3"/></net>
+
+<net id="139"><net_src comp="127" pin="4"/><net_sink comp="136" pin=0"/></net>
+
+<net id="146"><net_src comp="22" pin="0"/><net_sink comp="140" pin=0"/></net>
+
+<net id="147"><net_src comp="121" pin="2"/><net_sink comp="140" pin=1"/></net>
+
+<net id="148"><net_src comp="24" pin="0"/><net_sink comp="140" pin=2"/></net>
+
+<net id="149"><net_src comp="26" pin="0"/><net_sink comp="140" pin=3"/></net>
+
+<net id="155"><net_src comp="140" pin="4"/><net_sink comp="150" pin=1"/></net>
+
+<net id="156"><net_src comp="136" pin="1"/><net_sink comp="150" pin=2"/></net>
+
+<net id="160"><net_src comp="59" pin="2"/><net_sink comp="157" pin=0"/></net>
+
+<net id="164"><net_src comp="157" pin="1"/><net_sink comp="161" pin=0"/></net>
+
+<net id="169"><net_src comp="36" pin="0"/><net_sink comp="165" pin=0"/></net>
+
+<net id="170"><net_src comp="165" pin="2"/><net_sink comp="53" pin=0"/></net>
+
+<net id="177"><net_src comp="38" pin="0"/><net_sink comp="171" pin=0"/></net>
+
+<net id="178"><net_src comp="53" pin="4"/><net_sink comp="171" pin=1"/></net>
+
+<net id="179"><net_src comp="40" pin="0"/><net_sink comp="171" pin=2"/></net>
+
+<net id="180"><net_src comp="42" pin="0"/><net_sink comp="171" pin=3"/></net>
+
+<net id="186"><net_src comp="93" pin="1"/><net_sink comp="181" pin=0"/></net>
+
+<net id="187"><net_src comp="14" pin="0"/><net_sink comp="181" pin=1"/></net>
+
+<net id="188"><net_src comp="101" pin="3"/><net_sink comp="181" pin=2"/></net>
+
+<net id="189"><net_src comp="181" pin="3"/><net_sink comp="108" pin=1"/></net>
+
+<net id="190"><net_src comp="181" pin="3"/><net_sink comp="127" pin=1"/></net>
+
+<net id="194"><net_src comp="64" pin="2"/><net_sink comp="191" pin=0"/></net>
+
+<net id="195"><net_src comp="191" pin="1"/><net_sink comp="74" pin=0"/></net>
+
+<net id="199"><net_src comp="70" pin="1"/><net_sink comp="196" pin=0"/></net>
+
+<net id="200"><net_src comp="196" pin="1"/><net_sink comp="101" pin=1"/></net>
+
+<net id="204"><net_src comp="83" pin="4"/><net_sink comp="201" pin=0"/></net>
+
+<net id="205"><net_src comp="201" pin="1"/><net_sink comp="93" pin=0"/></net>
+
+<net id="206"><net_src comp="201" pin="1"/><net_sink comp="96" pin=0"/></net>
+
+<net id="210"><net_src comp="93" pin="1"/><net_sink comp="207" pin=0"/></net>
+
+<net id="211"><net_src comp="207" pin="1"/><net_sink comp="181" pin=0"/></net>
+
+<net id="215"><net_src comp="96" pin="2"/><net_sink comp="212" pin=0"/></net>
+
+<net id="216"><net_src comp="212" pin="1"/><net_sink comp="150" pin=0"/></net>
+
+<net id="220"><net_src comp="101" pin="3"/><net_sink comp="217" pin=0"/></net>
+
+<net id="221"><net_src comp="217" pin="1"/><net_sink comp="181" pin=0"/></net>
+
+<net id="225"><net_src comp="150" pin="3"/><net_sink comp="222" pin=0"/></net>
+
+<net id="226"><net_src comp="222" pin="1"/><net_sink comp="59" pin=1"/></net>
+
+<net id="230"><net_src comp="161" pin="1"/><net_sink comp="227" pin=0"/></net>
+
+<net id="231"><net_src comp="227" pin="1"/><net_sink comp="165" pin=1"/></net>
+
+<net id="232"><net_src comp="227" pin="1"/><net_sink comp="53" pin=2"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+	Port: cos<16, 4> : x_val | {1 }
+  - Chain level:
+	State 1
+		trunc_ln68 : 1
+	State 2
+		mul_ln64 : 1
+		k : 2
+	State 3
+		mul_ln68 : 1
+	State 4
+	State 5
+		add_ln68 : 1
+	State 6
+		r : 1
+		zext_ln68_2 : 2
+		sub_ln254 : 3
+		tmp_3 : 1
+		zext_ln257 : 2
+		tmp_4 : 4
+		z : 5
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+		x_1 : 1
+		trunc_ln266 : 2
+	State 21
+		agg_result_0_in_in : 1
+		trunc_ln2 : 2
+		ret_ln1958 : 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|----------------------------------------|---------|---------|---------|
+| Operation|             Functional Unit            |   DSP   |    FF   |   LUT   |
+|----------|----------------------------------------|---------|---------|---------|
+|   call   | grp_cordic_circ_apfixed_18_3_0_s_fu_59 |    0    |   598   |   3026  |
+|----------|----------------------------------------|---------|---------|---------|
+|          |                 x_fu_64                |    0    |    0    |    17   |
+|    sub   |            sub_ln254_fu_121            |    0    |    0    |    25   |
+|          |            sub_ln280_fu_165            |    0    |    0    |    24   |
+|----------|----------------------------------------|---------|---------|---------|
+|    mul   |             mul_ln64_fu_77             |    1    |    0    |    24   |
+|----------|----------------------------------------|---------|---------|---------|
+|  select  |                z_fu_150                |    0    |    0    |    17   |
+|----------|----------------------------------------|---------|---------|---------|
+|   icmp   |            icmp_ln251_fu_96            |    0    |    0    |    10   |
+|----------|----------------------------------------|---------|---------|---------|
+|  muladd  |               grp_fu_181               |    1    |    0    |    0    |
+|----------|----------------------------------------|---------|---------|---------|
+|   read   |          x_val_read_read_fu_44         |    0    |    0    |    0    |
+|----------|----------------------------------------|---------|---------|---------|
+|   trunc  |            trunc_ln68_fu_70            |    0    |    0    |    0    |
+|          |           trunc_ln266_fu_161           |    0    |    0    |    0    |
+|----------|----------------------------------------|---------|---------|---------|
+|          |             zext_ln64_fu_74            |    0    |    0    |    0    |
+|   zext   |             zext_ln68_fu_93            |    0    |    0    |    0    |
+|          |           zext_ln68_2_fu_117           |    0    |    0    |    0    |
+|          |            zext_ln257_fu_136           |    0    |    0    |    0    |
+|----------|----------------------------------------|---------|---------|---------|
+|          |                 k_fu_83                |    0    |    0    |    0    |
+|          |                r_fu_108                |    0    |    0    |    0    |
+|partselect|              tmp_3_fu_127              |    0    |    0    |    0    |
+|          |              tmp_4_fu_140              |    0    |    0    |    0    |
+|          |            trunc_ln2_fu_171            |    0    |    0    |    0    |
+|----------|----------------------------------------|---------|---------|---------|
+|bitconcatenate|              shl_ln_fu_101             |    0    |    0    |    0    |
+|----------|----------------------------------------|---------|---------|---------|
+|extractvalue|               x_1_fu_157               |    0    |    0    |    0    |
+|----------|----------------------------------------|---------|---------|---------|
+|   Total  |                                        |    2    |   598   |   3143  |
+|----------|----------------------------------------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------------+--------+
+|                         |   FF   |
++-------------------------+--------+
+|agg_result_0_in_in_reg_50|   17   |
+|    icmp_ln251_reg_212   |    1   |
+|        k_reg_201        |    2   |
+|      shl_ln_reg_217     |   18   |
+|   trunc_ln266_reg_227   |   17   |
+|    trunc_ln68_reg_196   |   13   |
+|        x_reg_191        |   14   |
+|        z_reg_222        |   17   |
+|    zext_ln68_reg_207    |   18   |
++-------------------------+--------+
+|          Total          |   117  |
++-------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------|------|------|------|--------||---------||---------|
+|    Comp    |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------|------|------|------|--------||---------||---------|
+| grp_fu_181 |  p0  |   3  |   2  |    6   ||    14   |
+|------------|------|------|------|--------||---------||---------|
+|    Total   |      |      |      |    6   ||  1.7073 ||    14   |
+|------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+
+|           |   DSP  |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+
+|  Function |    2   |    -   |   598  |  3143  |
+|   Memory  |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    1   |    -   |   14   |
+|  Register |    -   |    -   |   117  |    -   |
++-----------+--------+--------+--------+--------+
+|   Total   |    2   |    1   |   715  |  3157  |
++-----------+--------+--------+--------+--------+

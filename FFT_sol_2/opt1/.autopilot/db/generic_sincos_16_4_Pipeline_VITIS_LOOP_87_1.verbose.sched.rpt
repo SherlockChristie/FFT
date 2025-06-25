@@ -1,0 +1,193 @@
+
+
+================================================================
+== Vitis HLS Report for 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1'
+================================================================
+* Date:           Wed Jun 25 08:09:11 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        FFT_sol_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbv485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.935 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       22|       22|  0.220 us|  0.220 us|   22|   22|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_87_1  |       20|       20|         4|          1|          1|    18|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 4, States = { 1 2 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.36>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tz_1 = alloca i32 1"   --->   Operation 7 'alloca' 'tz_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tx_1 = alloca i32 1"   --->   Operation 8 'alloca' 'tx_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%ty_1 = alloca i32 1"   --->   Operation 9 'alloca' 'ty_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%n = alloca i32 1"   --->   Operation 10 'alloca' 'n' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%z_read = read i17 @_ssdm_op_Read.ap_auto.i17, i17 %z"   --->   Operation 11 'read' 'z_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%z_cast = sext i17 %z_read"   --->   Operation 12 'sext' 'z_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %n"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 14 [1/1] (1.58ns)   --->   "%store_ln0 = store i18 0, i18 %ty_1"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 15 [1/1] (1.58ns)   --->   "%store_ln0 = store i18 19898, i18 %tx_1"   --->   Operation 15 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln0 = store i18 %z_cast, i18 %tz_1"   --->   Operation 16 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body.i"   --->   Operation 17 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%n_1 = load i5 %n" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 18 'load' 'n_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (1.78ns)   --->   "%icmp_ln87 = icmp_eq  i5 %n_1, i5 18" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 19 'icmp' 'icmp_ln87' <Predicate = true> <Delay = 1.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 20 [1/1] (1.78ns)   --->   "%add_ln87 = add i5 %n_1, i5 1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 20 'add' 'add_ln87' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln87 = br i1 %icmp_ln87, void %for.body.i.split_ifconv, void %_ZN14cordic_apfixed19cordic_circ_apfixedILi18ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_.exit.exitStub" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 21 'br' 'br_ln87' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln87 = zext i5 %n_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 22 'zext' 'zext_ln87' <Predicate = (!icmp_ln87)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%cordic_apfixed_circ_table_arctan_128_addr = getelementptr i126 %cordic_apfixed_circ_table_arctan_128, i64 0, i64 %zext_ln87" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:99->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 23 'getelementptr' 'cordic_apfixed_circ_table_arctan_128_addr' <Predicate = (!icmp_ln87)> <Delay = 0.00>
+ST_1 : Operation 24 [2/2] (3.25ns)   --->   "%cordic_apfixed_circ_table_arctan_128_load = load i7 %cordic_apfixed_circ_table_arctan_128_addr" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:99->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 24 'load' 'cordic_apfixed_circ_table_arctan_128_load' <Predicate = (!icmp_ln87)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 126> <Depth = 128> <ROM>
+ST_1 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln87 = store i5 %add_ln87, i5 %n" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 25 'store' 'store_ln87' <Predicate = (!icmp_ln87)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 26 [1/2] (3.25ns)   --->   "%cordic_apfixed_circ_table_arctan_128_load = load i7 %cordic_apfixed_circ_table_arctan_128_addr" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:99->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 26 'load' 'cordic_apfixed_circ_table_arctan_128_load' <Predicate = (!icmp_ln87)> <Delay = 3.25> <CoreInst = "ROM">   --->   Core 95 'ROM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 126> <Depth = 128> <ROM>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i15 @_ssdm_op_PartSelect.i15.i126.i32.i32, i126 %cordic_apfixed_circ_table_arctan_128_load, i32 111, i32 125" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:99->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 27 'partselect' 'tmp_3' <Predicate = (!icmp_ln87)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.93>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%tx_1_load = load i18 %tx_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 28 'load' 'tx_1_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%ty_1_load = load i18 %ty_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 29 'load' 'ty_1_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln87 = trunc i18 %tx_1_load" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 30 'trunc' 'trunc_ln87' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln87_1 = trunc i18 %ty_1_load" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 31 'trunc' 'trunc_ln87_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%tz_1_load = load i18 %tz_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:94->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 32 'load' 'tz_1_load' <Predicate = (!icmp_ln87)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%d = bitselect i1 @_ssdm_op_BitSelect.i1.i18.i32, i18 %tz_1_load, i32 17" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:94->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 33 'bitselect' 'd' <Predicate = (!icmp_ln87)> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln97 = zext i5 %n_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:97->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 34 'zext' 'zext_ln97' <Predicate = (!icmp_ln87)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (4.04ns)   --->   "%x_s = ashr i18 %tx_1_load, i18 %zext_ln97" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:97->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 35 'ashr' 'x_s' <Predicate = (!icmp_ln87)> <Delay = 4.04> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.04> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (4.04ns)   --->   "%y_s = ashr i18 %ty_1_load, i18 %zext_ln97" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:98->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 36 'ashr' 'y_s' <Predicate = (!icmp_ln87)> <Delay = 4.04> <CoreInst = "Shifter">   --->   Core 75 'Shifter' <Latency = 0> <II = 1> <Delay = 4.04> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln99 = zext i15 %tmp_3" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:99->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 37 'zext' 'zext_ln99' <Predicate = (!icmp_ln87)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (2.13ns)   --->   "%add_ln102 = add i18 %y_s, i18 %tx_1_load" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 38 'add' 'add_ln102' <Predicate = (!icmp_ln87)> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (2.13ns)   --->   "%sub_ln103 = sub i18 %ty_1_load, i18 %x_s" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 39 'sub' 'sub_ln103' <Predicate = (!icmp_ln87)> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 40 [1/1] (2.13ns)   --->   "%add_ln104 = add i18 %zext_ln99, i18 %tz_1_load" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:104->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 40 'add' 'add_ln104' <Predicate = (!icmp_ln87)> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (2.13ns)   --->   "%sub_ln107 = sub i18 %tx_1_load, i18 %y_s" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 41 'sub' 'sub_ln107' <Predicate = (!icmp_ln87)> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (2.13ns)   --->   "%add_ln108 = add i18 %x_s, i18 %ty_1_load" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 42 'add' 'add_ln108' <Predicate = (!icmp_ln87)> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (2.13ns)   --->   "%sub_ln109 = sub i18 %tz_1_load, i18 %zext_ln99" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:109->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 43 'sub' 'sub_ln109' <Predicate = (!icmp_ln87)> <Delay = 2.13> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.75ns)   --->   "%tx = select i1 %d, i18 %add_ln102, i18 %sub_ln107" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:94->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 44 'select' 'tx' <Predicate = (!icmp_ln87)> <Delay = 0.75> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.75ns)   --->   "%ty = select i1 %d, i18 %sub_ln103, i18 %add_ln108" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:94->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 45 'select' 'ty' <Predicate = (!icmp_ln87)> <Delay = 0.75> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 46 [1/1] (0.75ns)   --->   "%tz = select i1 %d, i18 %add_ln104, i18 %sub_ln109" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:94->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 46 'select' 'tz' <Predicate = (!icmp_ln87)> <Delay = 0.75> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.75> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 47 [1/1] (1.58ns)   --->   "%store_ln87 = store i18 %tz, i18 %tz_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 47 'store' 'store_ln87' <Predicate = (!icmp_ln87)> <Delay = 1.58>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%write_ln87 = write void @_ssdm_op_Write.ap_auto.i17P0A, i17 %p_out, i17 %trunc_ln87_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 54 'write' 'write_ln87' <Predicate = (icmp_ln87)> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "%write_ln87 = write void @_ssdm_op_Write.ap_auto.i17P0A, i17 %p_out1, i17 %trunc_ln87" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 55 'write' 'write_ln87' <Predicate = (icmp_ln87)> <Delay = 0.00>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 56 'ret' 'ret_ln0' <Predicate = (icmp_ln87)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 1.58>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%specpipeline_ln88 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:88->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 48 'specpipeline' 'specpipeline_ln88' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%speclooptripcount_ln87 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 18, i64 18, i64 18" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 49 'speclooptripcount' 'speclooptripcount_ln87' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%specloopname_ln87 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 50 'specloopname' 'specloopname_ln87' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (1.58ns)   --->   "%store_ln87 = store i18 %ty, i18 %ty_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 51 'store' 'store_ln87' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 52 [1/1] (1.58ns)   --->   "%store_ln87 = store i18 %tx, i18 %tx_1" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 52 'store' 'store_ln87' <Predicate = true> <Delay = 1.58>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%br_ln87 = br void %for.body.i" [D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266]   --->   Operation 53 'br' 'br_ln87' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.368ns
+The critical path consists of the following:
+	'alloca' operation ('n') [8]  (0.000 ns)
+	'load' operation ('n', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) on local variable 'n' [19]  (0.000 ns)
+	'add' operation ('add_ln87', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) [23]  (1.780 ns)
+	'store' operation ('store_ln87', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) of variable 'add_ln87', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266 on local variable 'n' [48]  (1.588 ns)
+
+ <State 2>: 3.254ns
+The critical path consists of the following:
+	'load' operation ('cordic_apfixed_circ_table_arctan_128_load', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:99->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) on array 'cordic_apfixed_circ_table_arctan_128' [36]  (3.254 ns)
+
+ <State 3>: 6.935ns
+The critical path consists of the following:
+	'load' operation ('ty_1_load', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) on local variable 'ty' [18]  (0.000 ns)
+	'ashr' operation ('y_s', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:98->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) [34]  (4.042 ns)
+	'add' operation ('add_ln102', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) [39]  (2.136 ns)
+	'select' operation ('tx', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:94->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) [45]  (0.756 ns)
+
+ <State 4>: 1.588ns
+The critical path consists of the following:
+	'store' operation ('store_ln87', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266) of variable 'ty', D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:94->D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:266 on local variable 'ty' [49]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

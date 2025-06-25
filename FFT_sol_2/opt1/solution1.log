@@ -1,0 +1,659 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbv485-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z030sbv485-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 107.656 MB.
+INFO: [HLS 200-10] Analyzing design file 'FFT32_check.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 31.713 seconds; current allocated memory: 112.887 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'radix2_bfly(complex_t&, complex_t&, complex_t const&)' (FFT32_check.cpp:43:16)
+INFO: [HLS 214-131] Inlining function 'radix2_bfly(complex_t&, complex_t&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:142:9)
+INFO: [HLS 214-131] Inlining function 'bit_reverse(unsigned int, int)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:84:19)
+INFO: [HLS 214-131] Inlining function 'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:126:9)
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:125:23)
+INFO: [HLS 214-131] Inlining function 'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:93:9)
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:124:23)
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:123:23)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_136_6' (FFT32_check.cpp:136:23) in function 'fft32' completely with a factor of 16 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_104_4' (FFT32_check.cpp:104:20) in function 'fft32' completely with a factor of 8 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_114_5' (FFT32_check.cpp:114:27) in function 'fft32' completely with a factor of 3 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_90_3' (FFT32_check.cpp:90:19) in function 'fft32' completely with a factor of 8 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_82_2' (FFT32_check.cpp:82:19) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:111:19)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:68:12)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:80:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:88:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:102:15)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'axis_data::axis_data()' (./FFT32.h:50:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::circ_range_redux<16, 4, 17>(ap_ufixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<17, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.55)' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.55)' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.106)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-178] Inlining function 'axis_data::axis_data()' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-248] Applying array_partition to 'data.real': Complete partitioning on dimension 1. (FFT32_check.cpp:68:12)
+INFO: [HLS 214-248] Applying array_partition to 'data.imag': Complete partitioning on dimension 1. (FFT32_check.cpp:68:12)
+INFO: [HLS 214-248] Applying array_partition to 'stage2.real': Complete partitioning on dimension 1. (FFT32_check.cpp:102:15)
+INFO: [HLS 214-248] Applying array_partition to 'stage2.imag': Complete partitioning on dimension 1. (FFT32_check.cpp:102:15)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.857 seconds; current allocated memory: 113.848 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 113.848 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 122.922 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::cos<16, 4>' into 'fft32' (FFT32_check.cpp:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sin<16, 4>' into 'fft32' (FFT32_check.cpp:118) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.114 seconds; current allocated memory: 126.254 MB.
+INFO: [XFORM 203-602] Inlining function 'hls::cos<16, 4>' into 'fft32' (FFT32_check.cpp:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sin<16, 4>' into 'fft32' (FFT32_check.cpp:118) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:88:9) to (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<16, 4>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<16, 4>'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.366 seconds; current allocated memory: 152.355 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.281 seconds; current allocated memory: 188.355 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fft32' ...
+WARNING: [SYN 201-103] Legalizing function name 'generic_sincos<16, 4>_Pipeline_VITIS_LOOP_87_1' to 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1'.
+WARNING: [SYN 201-103] Legalizing function name 'generic_sincos<16, 4>' to 'generic_sincos_16_4_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft32_Pipeline_VITIS_LOOP_72_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_72_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_72_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.379 seconds; current allocated memory: 196.105 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 197.289 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_87_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_87_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.254 seconds; current allocated memory: 197.648 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 197.797 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_sincos_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.164 seconds; current allocated memory: 198.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.134 seconds; current allocated memory: 198.223 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft32_Pipeline_VITIS_LOOP_146_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_146_7'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_146_7'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 198.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 199.020 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_79) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_79) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_77) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_77) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_73) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_73) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_69) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_69) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_65) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_65) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_63) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_63) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.827 seconds; current allocated memory: 209.047 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.643 seconds; current allocated memory: 209.094 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft32_Pipeline_VITIS_LOOP_72_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft32_Pipeline_VITIS_LOOP_72_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.441 seconds; current allocated memory: 210.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_128_ROM_AUTO_1R' to 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctanbkb' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1' pipeline 'VITIS_LOOP_87_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1'.
+INFO: [RTMG 210-279] Implementing memory 'fft32_generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctanbkb' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 215.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_sincos_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_2ns_16ns_18ns_18_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_14ns_22ns_35_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_sincos_16_4_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.202 seconds; current allocated memory: 216.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft32_Pipeline_VITIS_LOOP_146_7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft32_Pipeline_VITIS_LOOP_146_7' pipeline 'VITIS_LOOP_146_7' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_32_5_16_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft32_Pipeline_VITIS_LOOP_146_7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.193 seconds; current allocated memory: 217.695 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft32/in_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft32/out_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft32' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_14s_28s_28_4_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_16s_14s_28s_28_4_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_14s_28_1_1': 80 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft32'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.431 seconds; current allocated memory: 230.730 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.942 seconds; current allocated memory: 249.977 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.013 seconds; current allocated memory: 263.281 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft32.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft32.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 144.20 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9 seconds. CPU system time: 1 seconds. Elapsed time: 48.284 seconds; current allocated memory: 156.109 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbv485-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z030sbv485-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 51.454 seconds; current allocated memory: 14.082 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbv485-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z030sbv485-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: source ./FFT_sol_2/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fft32 fft32 
+INFO: [HLS 200-1510] Running: set_directive_inline cmul 
+INFO: [HLS 200-1510] Running: set_directive_inline radix4_bfly 
+INFO: [HLS 200-1510] Running: set_directive_inline radix2_bfly 
+INFO: [HLS 200-1510] Running: set_directive_inline bit_reverse 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_ctrl_none fft32 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register_mode both -register fft32 in_stream 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register_mode both -register fft32 out_stream 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete fft32 data 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete fft32 stage0 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete fft32 stage1 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete fft32 stage2 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/bit_rev_assign_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage1_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage2_loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete fft32/stage2_loop w 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/twiddle_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage3_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 fft32/output_loop 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 107.930 MB.
+INFO: [HLS 200-10] Analyzing design file 'FFT32_check.cpp' ... 
+ERROR: [HLS 207-1186] expected expression (FFT32_check.cpp:107:58)
+WARNING: [HLS 207-5169] shift count is negative (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_fixed_base.h:992:13)
+INFO: [HLS 207-4526] in instantiation of member function 'ap_fixed_base<21, 4, false, AP_TRN, AP_WRAP, 0>::to_ap_int_base' requested here (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\etc/ap_int_base.h:353:18)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_int_base<4, false>::ap_int_base<21, 4, false, AP_TRN, AP_WRAP, 0>' requested here (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\ap_int.h:237:9)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'ap_uint<4>::ap_uint<21, 4, AP_TRN, AP_WRAP, 0>' requested here (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:65:23)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'cordic_apfixed::circ_range_redux<16, 4, 17>' requested here (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:243:5)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'cordic_apfixed::generic_sincos<16, 4>' requested here (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1956:25)
+INFO: [HLS 207-4235] in instantiation of function template specialization 'hls::cos<16, 4>' requested here (FFT32_check.cpp:125:30)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.478 seconds; current allocated memory: 1.074 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbv485-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z030sbv485-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: source ./FFT_sol_2/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fft32 fft32 
+INFO: [HLS 200-1510] Running: set_directive_inline cmul 
+INFO: [HLS 200-1510] Running: set_directive_inline radix4_bfly 
+INFO: [HLS 200-1510] Running: set_directive_inline radix2_bfly 
+INFO: [HLS 200-1510] Running: set_directive_inline bit_reverse 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_ctrl_none fft32 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register_mode both -register fft32 in_stream 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register_mode both -register fft32 out_stream 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32 data 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32 stage0 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32 stage1 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete fft32 stage2 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/bit_rev_assign_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage1_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage2_loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32/stage2_loop w 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/twiddle_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage3_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 fft32/output_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 fft32/input_loop 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.132 seconds; current allocated memory: 108.129 MB.
+INFO: [HLS 200-10] Analyzing design file 'FFT32_check.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 28.378 seconds; current allocated memory: 113.848 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'radix2_bfly(complex_t&, complex_t&, complex_t const&)' (FFT32_check.cpp:43:19)
+INFO: [HLS 214-131] Inlining function 'radix2_bfly(complex_t&, complex_t&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:151:9)
+INFO: [HLS 214-131] Inlining function 'bit_reverse(unsigned int, int)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:86:26)
+INFO: [HLS 214-131] Inlining function 'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:133:9)
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:132:23)
+INFO: [HLS 214-131] Inlining function 'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:97:9)
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:131:23)
+INFO: [HLS 214-131] Inlining function 'cmul(complex_t const&, complex_t const&)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:130:23)
+INFO: [HLS 214-186] Unrolling loop 'stage3_loop' (FFT32_check.cpp:145:5) in function 'fft32' completely with a factor of 16 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'stage2_loop' (FFT32_check.cpp:110:5) in function 'fft32' completely with a factor of 8 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'twiddle_loop' (FFT32_check.cpp:122:9) in function 'fft32' completely with a factor of 3 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'stage1_loop' (FFT32_check.cpp:94:5) in function 'fft32' completely with a factor of 8 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'bit_rev_assign_loop' (FFT32_check.cpp:84:5) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:117:19)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:68:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:81:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:90:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:106:15)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'axis_data::axis_data()' (./FFT32.h:50:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::circ_range_redux<16, 4, 17>(ap_ufixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<17, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.55)' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.55)' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.106)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-178] Inlining function 'axis_data::axis_data()' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-248] Applying array_partition to 'data.real': Complete partitioning on dimension 1. (FFT32_check.cpp:68:15)
+INFO: [HLS 214-248] Applying array_partition to 'data.imag': Complete partitioning on dimension 1. (FFT32_check.cpp:68:15)
+INFO: [HLS 214-248] Applying array_partition to 'stage2.real': Complete partitioning on dimension 1. (FFT32_check.cpp:106:15)
+INFO: [HLS 214-248] Applying array_partition to 'stage2.imag': Complete partitioning on dimension 1. (FFT32_check.cpp:106:15)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.637 seconds; current allocated memory: 114.984 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 114.984 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.117 seconds; current allocated memory: 123.832 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hls::cos<16, 4>' into 'fft32' (FFT32_check.cpp:124) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sin<16, 4>' into 'fft32' (FFT32_check.cpp:125) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 127.793 MB.
+INFO: [XFORM 203-602] Inlining function 'hls::cos<16, 4>' into 'fft32' (FFT32_check.cpp:124) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sin<16, 4>' into 'fft32' (FFT32_check.cpp:125) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:88:9) to (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<16, 4>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::generic_sincos<16, 4>'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.341 seconds; current allocated memory: 153.594 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 189.379 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fft32' ...
+WARNING: [SYN 201-103] Legalizing function name 'generic_sincos<16, 4>_Pipeline_VITIS_LOOP_87_1' to 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1'.
+WARNING: [SYN 201-103] Legalizing function name 'generic_sincos<16, 4>' to 'generic_sincos_16_4_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft32_Pipeline_input_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'input_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'input_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.369 seconds; current allocated memory: 196.363 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 197.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_87_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'VITIS_LOOP_87_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.252 seconds; current allocated memory: 198.035 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.093 seconds; current allocated memory: 198.297 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'generic_sincos_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.153 seconds; current allocated memory: 198.742 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 198.805 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft32_Pipeline_output_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'output_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'output_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.145 seconds; current allocated memory: 199.293 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 199.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_79) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_79) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_77) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_77) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_73) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_73) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_71) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_69) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_69) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_67) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_65) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_65) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_63) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_63) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_55) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_47) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_39) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_31) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_23) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 3.649 seconds; current allocated memory: 210.062 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.593 seconds; current allocated memory: 210.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft32_Pipeline_input_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft32_Pipeline_input_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.388 seconds; current allocated memory: 211.633 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctan_128_ROM_AUTO_1R' to 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctanbkb' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1' pipeline 'VITIS_LOOP_87_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1'.
+INFO: [RTMG 210-279] Implementing memory 'fft32_generic_sincos_16_4_Pipeline_VITIS_LOOP_87_1_cordic_apfixed_circ_table_arctanbkb' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.397 seconds; current allocated memory: 216.184 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'generic_sincos_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_2ns_16ns_18ns_18_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_14ns_22ns_35_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'generic_sincos_16_4_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.186 seconds; current allocated memory: 217.535 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft32_Pipeline_output_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft32_Pipeline_output_loop' pipeline 'output_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mux_32_5_16_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft32_Pipeline_output_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.179 seconds; current allocated memory: 219.316 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft32/in_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft32/out_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft32' to 'ap_ctrl_none'.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_14s_28s_28_4_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_16s_14s_28s_28_4_1': 40 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_14s_28_1_1': 80 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft32'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.415 seconds; current allocated memory: 231.883 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.812 seconds; current allocated memory: 249.777 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.911 seconds; current allocated memory: 263.543 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft32.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft32.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 144.20 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9 seconds. CPU system time: 1 seconds. Elapsed time: 44.051 seconds; current allocated memory: 155.918 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbv485-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1510] Running: set_part xc7z030sbv485-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: source ./FFT_sol_2/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name fft32 fft32 
+INFO: [HLS 200-1510] Running: set_directive_inline cmul 
+INFO: [HLS 200-1510] Running: set_directive_inline radix4_bfly 
+INFO: [HLS 200-1510] Running: set_directive_inline radix2_bfly 
+INFO: [HLS 200-1510] Running: set_directive_inline bit_reverse 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_ctrl_none fft32 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register_mode both -register fft32 in_stream 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register_mode both -register fft32 out_stream 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32 data 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32 stage0 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32 stage1 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete fft32 stage2 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/bit_rev_assign_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage1_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage2_loop 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type complete -dim 1 fft32/stage2_loop w 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/twiddle_loop 
+INFO: [HLS 200-1510] Running: set_directive_unroll fft32/stage3_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 fft32/output_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 1 fft32/input_loop 
+INFO: [HLS 200-1510] Running: cosim_design 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 49.554 seconds; current allocated memory: 14.105 MB.

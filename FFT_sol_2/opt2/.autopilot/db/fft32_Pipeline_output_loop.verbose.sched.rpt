@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft32_Pipeline_output_loop'
+================================================================
+* Date:           Wed Jun 25 08:49:51 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        FFT_sol_2
+* Solution:       opt2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbv485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.910 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       34|       34|  0.340 us|  0.340 us|   34|   34|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- output_loop  |       32|       32|         2|          1|          1|    32|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.41>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i48 %out_stream, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_1, void @empty_1, i32 0, i32 0, i32 0, i32 0, void @empty_1, void @empty_1, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln0 = store i6 0, i6 %i"   --->   Operation 7 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc194"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%i_1 = load i6 %i" [FFT32_check.cpp:157]   --->   Operation 9 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.82ns)   --->   "%icmp_ln157 = icmp_eq  i6 %i_1, i6 32" [FFT32_check.cpp:157]   --->   Operation 10 'icmp' 'icmp_ln157' <Predicate = true> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (1.82ns)   --->   "%add_ln157 = add i6 %i_1, i6 1" [FFT32_check.cpp:157]   --->   Operation 11 'add' 'add_ln157' <Predicate = true> <Delay = 1.82> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln157 = br i1 %icmp_ln157, void %for.inc194.split, void %for.end196.exitStub" [FFT32_check.cpp:157]   --->   Operation 12 'br' 'br_ln157' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln157 = trunc i6 %i_1" [FFT32_check.cpp:157]   --->   Operation 13 'trunc' 'trunc_ln157' <Predicate = (!icmp_ln157)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%lshr_ln1 = partselect i4 @_ssdm_op_PartSelect.i4.i6.i32.i32, i6 %i_1, i32 1, i32 4" [FFT32_check.cpp:157]   --->   Operation 14 'partselect' 'lshr_ln1' <Predicate = (!icmp_ln157)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln157 = zext i4 %lshr_ln1" [FFT32_check.cpp:157]   --->   Operation 15 'zext' 'zext_ln157' <Predicate = (!icmp_ln157)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%stage2_real_addr = getelementptr i16 %stage2_real, i64 0, i64 %zext_ln157" [FFT32_check.cpp:160]   --->   Operation 16 'getelementptr' 'stage2_real_addr' <Predicate = (!icmp_ln157)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%stage2_real_1_addr = getelementptr i16 %stage2_real_1, i64 0, i64 %zext_ln157" [FFT32_check.cpp:160]   --->   Operation 17 'getelementptr' 'stage2_real_1_addr' <Predicate = (!icmp_ln157)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%stage2_imag_addr = getelementptr i16 %stage2_imag, i64 0, i64 %zext_ln157" [FFT32_check.cpp:160]   --->   Operation 18 'getelementptr' 'stage2_imag_addr' <Predicate = (!icmp_ln157)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%stage2_imag_1_addr = getelementptr i16 %stage2_imag_1, i64 0, i64 %zext_ln157" [FFT32_check.cpp:160]   --->   Operation 19 'getelementptr' 'stage2_imag_1_addr' <Predicate = (!icmp_ln157)> <Delay = 0.00>
+ST_1 : Operation 20 [2/2] (2.32ns)   --->   "%stage2_real_load = load i4 %stage2_real_addr" [FFT32_check.cpp:160]   --->   Operation 20 'load' 'stage2_real_load' <Predicate = (!icmp_ln157)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 21 [2/2] (2.32ns)   --->   "%stage2_real_1_load = load i4 %stage2_real_1_addr" [FFT32_check.cpp:160]   --->   Operation 21 'load' 'stage2_real_1_load' <Predicate = (!icmp_ln157)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 22 [2/2] (2.32ns)   --->   "%stage2_imag_load = load i4 %stage2_imag_addr" [FFT32_check.cpp:160]   --->   Operation 22 'load' 'stage2_imag_load' <Predicate = (!icmp_ln157)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 23 [2/2] (2.32ns)   --->   "%stage2_imag_1_load = load i4 %stage2_imag_1_addr" [FFT32_check.cpp:160]   --->   Operation 23 'load' 'stage2_imag_1_load' <Predicate = (!icmp_ln157)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 24 [1/1] (1.82ns)   --->   "%icmp_ln161 = icmp_eq  i6 %i_1, i6 31" [FFT32_check.cpp:161]   --->   Operation 24 'icmp' 'icmp_ln161' <Predicate = (!icmp_ln157)> <Delay = 1.82> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (1.58ns)   --->   "%store_ln157 = store i6 %add_ln157, i6 %i" [FFT32_check.cpp:157]   --->   Operation 25 'store' 'store_ln157' <Predicate = (!icmp_ln157)> <Delay = 1.58>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 39 'ret' 'ret_ln0' <Predicate = (icmp_ln157)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.91>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%specpipeline_ln25 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_1" [D:/Vivado/FFT_sol/FFT_sol_2/opt2/directives.tcl:25]   --->   Operation 26 'specpipeline' 'specpipeline_ln25' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%speclooptripcount_ln157 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32" [FFT32_check.cpp:157]   --->   Operation 27 'speclooptripcount' 'speclooptripcount_ln157' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specloopname_ln157 = specloopname void @_ssdm_op_SpecLoopName, void @empty_4" [FFT32_check.cpp:157]   --->   Operation 28 'specloopname' 'specloopname_ln157' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/2] (2.32ns)   --->   "%stage2_real_load = load i4 %stage2_real_addr" [FFT32_check.cpp:160]   --->   Operation 29 'load' 'stage2_real_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 30 [1/2] (2.32ns)   --->   "%stage2_real_1_load = load i4 %stage2_real_1_addr" [FFT32_check.cpp:160]   --->   Operation 30 'load' 'stage2_real_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 31 [1/1] (1.58ns)   --->   "%tmp = mux i16 @_ssdm_op_Mux.ap_auto.2i16.i1, i16 %stage2_real_load, i16 %stage2_real_1_load, i1 %trunc_ln157" [FFT32_check.cpp:160]   --->   Operation 31 'mux' 'tmp' <Predicate = true> <Delay = 1.58> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/2] (2.32ns)   --->   "%stage2_imag_load = load i4 %stage2_imag_addr" [FFT32_check.cpp:160]   --->   Operation 32 'load' 'stage2_imag_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 33 [1/2] (2.32ns)   --->   "%stage2_imag_1_load = load i4 %stage2_imag_1_addr" [FFT32_check.cpp:160]   --->   Operation 33 'load' 'stage2_imag_1_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_2 : Operation 34 [1/1] (1.58ns)   --->   "%tmp_1 = mux i16 @_ssdm_op_Mux.ap_auto.2i16.i1, i16 %stage2_imag_load, i16 %stage2_imag_1_load, i1 %trunc_ln157" [FFT32_check.cpp:160]   --->   Operation 34 'mux' 'tmp_1' <Predicate = true> <Delay = 1.58> <CoreInst = "Multiplexer">   --->   Core 76 'Multiplexer' <Latency = 0> <II = 1> <Delay = 1.58> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i33 @_ssdm_op_BitConcatenate.i33.i1.i16.i16, i1 %icmp_ln161, i16 %tmp_1, i16 %tmp" [FFT32_check.cpp:162]   --->   Operation 35 'bitconcatenate' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln162 = zext i33 %tmp_2" [FFT32_check.cpp:162]   --->   Operation 36 'zext' 'zext_ln162' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%write_ln162 = write void @_ssdm_op_Write.axis.volatile.i48P128A, i48 %out_stream, i48 %zext_ln162" [FFT32_check.cpp:162]   --->   Operation 37 'write' 'write_ln162' <Predicate = true> <Delay = 0.00> <CoreInst = "axis">   --->   Core 115 'axis' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%br_ln157 = br void %for.inc194" [FFT32_check.cpp:157]   --->   Operation 38 'br' 'br_ln157' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.413ns
+The critical path consists of the following:
+	'alloca' operation ('i') [6]  (0.000 ns)
+	'load' operation ('i', FFT32_check.cpp:157) on local variable 'i' [11]  (0.000 ns)
+	'add' operation ('add_ln157', FFT32_check.cpp:157) [13]  (1.825 ns)
+	'store' operation ('store_ln157', FFT32_check.cpp:157) of variable 'add_ln157', FFT32_check.cpp:157 on local variable 'i' [36]  (1.588 ns)
+
+ <State 2>: 3.910ns
+The critical path consists of the following:
+	'load' operation ('stage2_real_load', FFT32_check.cpp:160) on array 'stage2_real' [26]  (2.322 ns)
+	'mux' operation ('tmp', FFT32_check.cpp:160) [28]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

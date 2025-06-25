@@ -1,0 +1,619 @@
+<profile>
+
+<RTLDesignHierarchy>
+<TopModule>
+<ModuleName>fft32</ModuleName>
+<InstancesList>
+<Instance>
+<InstName>grp_cos_16_4_s_fu_101</InstName>
+<ModuleName>cos_16_4_s</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>101</ID>
+<InstancesList>
+<Instance>
+<InstName>grp_cordic_circ_apfixed_18_3_0_s_fu_59</InstName>
+<ModuleName>cordic_circ_apfixed_18_3_0_s</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>59</ID>
+</Instance>
+</InstancesList>
+</Instance>
+<Instance>
+<InstName>grp_sin_16_4_s_fu_122</InstName>
+<ModuleName>sin_16_4_s</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>122</ID>
+<InstancesList>
+<Instance>
+<InstName>grp_cordic_circ_apfixed_18_3_0_s_fu_48</InstName>
+<ModuleName>cordic_circ_apfixed_18_3_0_s</ModuleName>
+<IsCompInst>true</IsCompInst>
+<ID>48</ID>
+</Instance>
+</InstancesList>
+</Instance>
+</InstancesList>
+</TopModule>
+</RTLDesignHierarchy>
+
+<ModuleInformation>
+<Module>
+<Name>cordic_circ_apfixed_18_3_0_s</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<TargetInitiationInterval>2</TargetInitiationInterval>
+<EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>13</Best-caseLatency>
+<Average-caseLatency>13</Average-caseLatency>
+<Worst-caseLatency>13</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>2</PipelineInitiationInterval>
+<PipelineDepth>14</PipelineDepth>
+<PipelineType>yes</PipelineType>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<FF>931</FF>
+<AVAIL_FF>157200</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>2964</LUT>
+<AVAIL_LUT>78600</AVAIL_LUT>
+<UTIL_LUT>3</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>530</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
+<DSP>0</DSP>
+<AVAIL_DSP>400</AVAIL_DSP>
+<UTIL_DSP>0</UTIL_DSP>
+<URAM>0</URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
+<UTIL_URAM>0</UTIL_URAM>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ce</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_0</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>18</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_1</name>
+<Object>cordic_circ_apfixed&lt;18, 3, 0&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>18</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>z_read</name>
+<Object>z_read</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>17</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
+<Module>
+<Name>cos_16_4_s</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<TargetInitiationInterval>2</TargetInitiationInterval>
+<EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>20</Best-caseLatency>
+<Average-caseLatency>20</Average-caseLatency>
+<Worst-caseLatency>20</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.200 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.200 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>2</PipelineInitiationInterval>
+<PipelineDepth>21</PipelineDepth>
+<PipelineType>yes</PipelineType>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<DSP>2</DSP>
+<AVAIL_DSP>400</AVAIL_DSP>
+<UTIL_DSP>~0</UTIL_DSP>
+<FF>1086</FF>
+<AVAIL_FF>157200</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>3161</LUT>
+<AVAIL_LUT>78600</AVAIL_LUT>
+<UTIL_LUT>4</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>530</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
+<URAM>0</URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
+<UTIL_URAM>0</UTIL_URAM>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ce</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<Object>cos&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>14</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>x_val</name>
+<Object>x_val</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>14</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
+<Module>
+<Name>sin_16_4_s</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<TargetInitiationInterval>2</TargetInitiationInterval>
+<EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>20</Best-caseLatency>
+<Average-caseLatency>20</Average-caseLatency>
+<Worst-caseLatency>20</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.200 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.200 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>2</PipelineInitiationInterval>
+<PipelineDepth>21</PipelineDepth>
+<PipelineType>yes</PipelineType>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<DSP>2</DSP>
+<AVAIL_DSP>400</AVAIL_DSP>
+<UTIL_DSP>~0</UTIL_DSP>
+<FF>1024</FF>
+<AVAIL_FF>157200</AVAIL_FF>
+<UTIL_FF>~0</UTIL_FF>
+<LUT>3108</LUT>
+<AVAIL_LUT>78600</AVAIL_LUT>
+<UTIL_LUT>3</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>530</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
+<URAM>0</URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
+<UTIL_URAM>0</UTIL_URAM>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ce</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return</name>
+<Object>sin&lt;16, 4&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>14</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>x_val</name>
+<Object>x_val</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>14</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
+<Module>
+<Name>fft32</Name>
+<PerformanceEstimates>
+<SummaryOfTimingAnalysis>
+<TargetClockPeriod>10.00</TargetClockPeriod>
+<ClockUncertainty>2.70</ClockUncertainty>
+<TargetInitiationInterval>32</TargetInitiationInterval>
+<EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<Best-caseLatency>72</Best-caseLatency>
+<Average-caseLatency>72</Average-caseLatency>
+<Worst-caseLatency>72</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.720 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.720 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.720 us</Worst-caseRealTimeLatency>
+<PipelineInitiationInterval>32</PipelineInitiationInterval>
+<PipelineDepth>73</PipelineDepth>
+<PipelineType>yes</PipelineType>
+</SummaryOfOverallLatency>
+</PerformanceEstimates>
+<AreaEstimates>
+<Resources>
+<DSP>164</DSP>
+<AVAIL_DSP>400</AVAIL_DSP>
+<UTIL_DSP>41</UTIL_DSP>
+<FF>10982</FF>
+<AVAIL_FF>157200</AVAIL_FF>
+<UTIL_FF>6</UTIL_FF>
+<LUT>14606</LUT>
+<AVAIL_LUT>78600</AVAIL_LUT>
+<UTIL_LUT>18</UTIL_LUT>
+<BRAM_18K>0</BRAM_18K>
+<AVAIL_BRAM>530</AVAIL_BRAM>
+<UTIL_BRAM>0</UTIL_BRAM>
+<URAM>0</URAM>
+<AVAIL_URAM>0</AVAIL_URAM>
+<UTIL_URAM>0</UTIL_URAM>
+</Resources>
+</AreaEstimates>
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>fft32</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst_n</name>
+<Object>fft32</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>in_stream_TDATA</name>
+<Object>in_stream</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>48</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>in_stream_TVALID</name>
+<Object>in_stream</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>in_stream_TREADY</name>
+<Object>in_stream</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>out_stream_TDATA</name>
+<Object>out_stream</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>48</Bits>
+<Attribute>data</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>out_stream_TVALID</name>
+<Object>out_stream</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+<RtlPorts>
+<name>out_stream_TREADY</name>
+<Object>out_stream</Object>
+<Type>pointer</Type>
+<Scope></Scope>
+<IOProtocol>axis</IOProtocol>
+<IOConfig>register, both mode</IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+<CType>int</CType>
+</RtlPorts>
+</InterfaceSummary>
+</Module>
+</ModuleInformation>
+
+<FIFOInformation>
+</FIFOInformation>
+
+</profile>

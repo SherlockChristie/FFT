@@ -1,0 +1,1159 @@
+INFO-FLOW: Workspace D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all opened at Wed Jun 25 09:28:37 +0800 2025
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z030sbv485-1 
+Execute       create_platform xc7z030sbv485-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Vivado/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Vivado/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbv485-1'
+Command       create_platform done; 0.926 sec.
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.119 sec.
+Execute       ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.067 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Command   open_solution done; 1.206 sec.
+Execute   set_part xc7z030sbv485-1 
+INFO: [HLS 200-1510] Running: set_part xc7z030sbv485-1 
+Execute     create_platform xc7z030sbv485-1 -board  
+Execute     source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.129 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+Execute   source ./FFT_sol_2/opt4_just_pipe_all/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./FFT_sol_2/opt4_just_pipe_all/directives.tcl
+Execute     set_directive_top -name fft32 fft32 
+INFO: [HLS 200-1510] Running: set_directive_top -name fft32 fft32 
+Execute     set_directive_pipeline -II 32 fft32 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 32 fft32 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.133 seconds; current allocated memory: 107.418 MB.
+Execute       set_directive_top fft32 -name=fft32 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO: [HLS 200-10] Analyzing design file 'FFT32_check.cpp' ... 
+INFO-FLOW: Compiling one TU...
+INFO-FLOW: Handling FFT32_check.cpp as C++
+Execute       ap_part_info -name xc7z030-sbv485-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang FFT32_check.cpp -foptimization-record-file=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot D:/Vivado/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp {-hls-platform-db-name=D:/Vivado/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_530.000000_DSP_400.000000_FF_157200.000000_LUT_78600.000000_SLICE_19650.000000_URAM_0.000000 -device-name-info=xc7z030sbv485-1 > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.cpp.clang.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.4 seconds per iteration
+INFO-FLOW: Source syntax check for synthesis
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp {-hls-platform-db-name=D:/Vivado/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_530.000000_DSP_400.000000_FF_157200.000000_LUT_78600.000000_SLICE_19650.000000_URAM_0.000000 -device-name-info=xc7z030sbv485-1 > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/clang.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/.systemc_flag -fix-errors D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 4.463 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp std=gnu++14 -target fpga  -directive=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/all.directive.json -fix-errors D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 4.693 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 4.7 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.clang-tidy.loop-label.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute         source D:/Vivado/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 7.514 sec.
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Execute       ap_part_info -name xc7z030-sbv485-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot -I D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.bc {-hls-platform-db-name=D:/Vivado/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_530.000000_DSP_400.000000_FF_157200.000000_LUT_78600.000000_SLICE_19650.000000_URAM_0.000000 -device-name-info=xc7z030sbv485-1 > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.clang.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 29.243 seconds; current allocated memory: 112.684 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc -args  "D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.g.bc"  
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/FFT32_check.g.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.1.lower.bc -args D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.1.lower.bc > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.2.m1.bc -args D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Vivado/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc D:/Vivado/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.1.lower.bc -only-needed D:/Vivado/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc D:/Vivado/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.2.m1.bc > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.685 sec.
+Execute       run_link_or_opt -opt -out D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.3.fpc.bc -args D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fft32 -reflow-float-conversion 
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=fft32 -reflow-float-conversion -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.3.fpc.bc > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Command       run_link_or_opt done; 0.804 sec.
+Execute       run_link_or_opt -out D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.4.m2.bc -args D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Vivado/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.3.fpc.bc -only-needed D:/Vivado/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.4.m2.bc > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.5.gdce.bc -args D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fft32 
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.5.gdce.bc > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+INFO-FLOW: 
+INFO-FLOW: Running: gen_design_size_report post-opt
+INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
+Execute       send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+Execute       is_m_axi_addr64 
+INFO-FLOW: Doing LTO.
+INFO-FLOW: run_clang exec: D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=fft32 -mllvm -hls-db-dir -mllvm D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1024 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=1024 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=10 -x ir D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.5.gdce.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=D:/Vivado/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_530.000000_DSP_400.000000_FF_157200.000000_LUT_78600.000000_SLICE_19650.000000_URAM_0.000000 -device-name-info=xc7z030sbv485-1 > D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc.clang.reflow.out.log 2> D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log
+INFO: [HLS 214-291] Loop 'output_loop' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:157:5)
+INFO: [HLS 214-291] Loop 'stage3_loop' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:145:5)
+INFO: [HLS 214-291] Loop 'stage2_loop' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:110:5)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:117:19)
+INFO: [HLS 214-291] Loop 'twiddle_loop' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:122:9)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:106:15)
+INFO: [HLS 214-291] Loop 'stage1_loop' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:94:5)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:90:15)
+INFO: [HLS 214-291] Loop 'bit_rev_assign_loop' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:84:5)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:81:15)
+INFO: [HLS 214-291] Loop 'input_loop' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:73:5)
+INFO: [HLS 214-291] Loop 'anonymous' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:68:15)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_87_1' is marked as complete unroll implied by the pipeline pragma (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_55_1' is marked as complete unroll implied by the pipeline pragma (FFT32_check.cpp:55:22)
+INFO: [HLS 214-186] Unrolling loop 'output_loop' (FFT32_check.cpp:157:5) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'stage3_loop' (FFT32_check.cpp:145:5) in function 'fft32' completely with a factor of 16 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'stage2_loop' (FFT32_check.cpp:110:5) in function 'fft32' completely with a factor of 8 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'twiddle_loop' (FFT32_check.cpp:122:9) in function 'fft32' completely with a factor of 3 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (FFT32_check.cpp:117:19) in function 'fft32' completely with a factor of 4 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (FFT32_check.cpp:106:15) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'stage1_loop' (FFT32_check.cpp:94:5) in function 'fft32' completely with a factor of 8 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (FFT32_check.cpp:90:15) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'bit_rev_assign_loop' (FFT32_check.cpp:84:5) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (FFT32_check.cpp:81:15) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'input_loop' (FFT32_check.cpp:73:5) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'anonymous' (FFT32_check.cpp:68:15) in function 'fft32' completely with a factor of 32 (FFT32_check.cpp:63:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_87_1' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::cordic_circ_apfixed<18, 3, 0>' completely with a factor of 18 (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:79:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'VITIS_LOOP_87_1' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22) in function 'cordic_apfixed::cordic_circ_apfixed<18, 3, 0>' has been removed because the loop is unrolled completely (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:79:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_55_1' (FFT32_check.cpp:55:22) in function 'bit_reverse' completely with a factor of 5 (FFT32_check.cpp:52:0)
+WARNING: [HLS 214-366] Duplicating function 'cmul(complex_t const&, complex_t const&)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:43:19)
+WARNING: [HLS 214-366] Duplicating function 'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:133:9)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:68:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:81:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:90:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:106:15)
+WARNING: [HLS 214-366] Duplicating function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (FFT32_check.cpp:117:19)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' into 'axis_data::axis_data()' (./FFT32.h:50:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::circ_range_redux<16, 4, 17>(ap_ufixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<17, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:228:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)' into 'ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1953:0)
+INFO: [HLS 214-178] Inlining function 'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)' into 'ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)' (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h:1934:0)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' into 'cmul(complex_t const&, complex_t const&)' (FFT32_check.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' into 'cmul(complex_t const&, complex_t const&) (.201)' (FFT32_check.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'cmul(complex_t const&, complex_t const&) (.201)' into 'radix2_bfly(complex_t&, complex_t&, complex_t const&)' (FFT32_check.cpp:41:0)
+INFO: [HLS 214-178] Inlining function 'axis_data::axis_data()' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-178] Inlining function 'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)' into 'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)' (FFT32_check.cpp:63:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_stream' with compact=bit mode in 33-bits (FFT32_check.cpp:63:0)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'in_stream' with compact=bit mode in 33-bits (FFT32_check.cpp:63:0)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 7.665 seconds; current allocated memory: 114.672 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 114.672 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fft32 -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.0.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.487 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.538 seconds; current allocated memory: 127.133 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.1.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.276 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.2.prechk.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 132.625 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.g.1.bc to D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.o.1.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-102] Partitioning array 'stage0.real' (FFT32_check.cpp:81) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stage0.imag' (FFT32_check.cpp:81) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stage1.real' (FFT32_check.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stage1.imag' (FFT32_check.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stage2.real' (FFT32_check.cpp:106) automatically.
+INFO: [XFORM 203-102] Partitioning array 'stage2.imag' (FFT32_check.cpp:106) automatically.
+INFO: [XFORM 203-102] Partitioning array 'w.real' (FFT32_check.cpp:117) automatically.
+INFO: [XFORM 203-102] Partitioning array 'w.imag' (FFT32_check.cpp:117) automatically.
+Command         transform done; 1.044 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.o.1.tmp.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274:8) in function 'hls::sin<16, 4>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:274:8) in function 'hls::cos<16, 4>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:79:44) in function 'cordic_apfixed::cordic_circ_apfixed<18, 3, 0>'... converting 46 basic blocks.
+Command         transform done; 0.172 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.221 seconds; current allocated memory: 159.371 MB.
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.o.2.bc -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-603] Evaluating the output(s) of a call to function 'bit_reverse' (FFT32_check.cpp:86:26) in function 'fft32' and propagating its result(s) since all actual argument(s) to the function are constants.
+Execute           auto_get_db
+Command         transform done; 0.463 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.464 seconds; current allocated memory: 217.137 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 2.539 sec.
+Command     elaborate done; 39.481 sec.
+Execute     ap_eval exec zip -j D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'fft32' ...
+Execute       ap_set_top_model fft32 
+WARNING: [SYN 201-103] Legalizing function name 'cordic_circ_apfixed<18, 3, 0>' to 'cordic_circ_apfixed_18_3_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'cos<16, 4>' to 'cos_16_4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'sin<16, 4>' to 'sin_16_4_s'.
+WARNING: [SYN 201-103] Legalizing function name 'radix4_bfly.1' to 'radix4_bfly_1'.
+Execute       get_model_list fft32 -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model fft32 
+Execute       preproc_iomode -model radix2_bfly 
+Execute       preproc_iomode -model radix4_bfly.1 
+Execute       preproc_iomode -model cmul 
+Execute       preproc_iomode -model sin<16, 4> 
+Execute       preproc_iomode -model cos<16, 4> 
+Execute       preproc_iomode -model cordic_circ_apfixed<18, 3, 0> 
+Execute       preproc_iomode -model radix4_bfly 
+Execute       get_model_list fft32 -filter all-wo-channel 
+INFO-FLOW: Model list for configure: radix4_bfly {cordic_circ_apfixed<18, 3, 0>} {cos<16, 4>} {sin<16, 4>} cmul radix4_bfly.1 radix2_bfly fft32
+INFO-FLOW: Configuring Module : radix4_bfly ...
+Execute       set_default_model radix4_bfly 
+Execute       apply_spec_resource_limit radix4_bfly 
+INFO-FLOW: Configuring Module : cordic_circ_apfixed<18, 3, 0> ...
+Execute       set_default_model cordic_circ_apfixed<18, 3, 0> 
+Execute       apply_spec_resource_limit cordic_circ_apfixed<18, 3, 0> 
+INFO-FLOW: Configuring Module : cos<16, 4> ...
+Execute       set_default_model cos<16, 4> 
+Execute       apply_spec_resource_limit cos<16, 4> 
+INFO-FLOW: Configuring Module : sin<16, 4> ...
+Execute       set_default_model sin<16, 4> 
+Execute       apply_spec_resource_limit sin<16, 4> 
+INFO-FLOW: Configuring Module : cmul ...
+Execute       set_default_model cmul 
+Execute       apply_spec_resource_limit cmul 
+INFO-FLOW: Configuring Module : radix4_bfly.1 ...
+Execute       set_default_model radix4_bfly.1 
+Execute       apply_spec_resource_limit radix4_bfly.1 
+INFO-FLOW: Configuring Module : radix2_bfly ...
+Execute       set_default_model radix2_bfly 
+Execute       apply_spec_resource_limit radix2_bfly 
+INFO-FLOW: Configuring Module : fft32 ...
+Execute       set_default_model fft32 
+Execute       apply_spec_resource_limit fft32 
+INFO-FLOW: Model list for preprocess: radix4_bfly {cordic_circ_apfixed<18, 3, 0>} {cos<16, 4>} {sin<16, 4>} cmul radix4_bfly.1 radix2_bfly fft32
+INFO-FLOW: Preprocessing Module: radix4_bfly ...
+Execute       set_default_model radix4_bfly 
+Execute       cdfg_preprocess -model radix4_bfly 
+Execute       rtl_gen_preprocess radix4_bfly 
+INFO-FLOW: Preprocessing Module: cordic_circ_apfixed<18, 3, 0> ...
+Execute       set_default_model cordic_circ_apfixed<18, 3, 0> 
+Execute       cdfg_preprocess -model cordic_circ_apfixed<18, 3, 0> 
+Execute       rtl_gen_preprocess cordic_circ_apfixed<18, 3, 0> 
+INFO-FLOW: Preprocessing Module: cos<16, 4> ...
+Execute       set_default_model cos<16, 4> 
+Execute       cdfg_preprocess -model cos<16, 4> 
+Execute       rtl_gen_preprocess cos<16, 4> 
+INFO-FLOW: Preprocessing Module: sin<16, 4> ...
+Execute       set_default_model sin<16, 4> 
+Execute       cdfg_preprocess -model sin<16, 4> 
+Execute       rtl_gen_preprocess sin<16, 4> 
+INFO-FLOW: Preprocessing Module: cmul ...
+Execute       set_default_model cmul 
+Execute       cdfg_preprocess -model cmul 
+Execute       rtl_gen_preprocess cmul 
+INFO-FLOW: Preprocessing Module: radix4_bfly.1 ...
+Execute       set_default_model radix4_bfly.1 
+Execute       cdfg_preprocess -model radix4_bfly.1 
+Execute       rtl_gen_preprocess radix4_bfly.1 
+INFO-FLOW: Preprocessing Module: radix2_bfly ...
+Execute       set_default_model radix2_bfly 
+Execute       cdfg_preprocess -model radix2_bfly 
+Execute       rtl_gen_preprocess radix2_bfly 
+INFO-FLOW: Preprocessing Module: fft32 ...
+Execute       set_default_model fft32 
+Execute       cdfg_preprocess -model fft32 
+Execute       rtl_gen_preprocess fft32 
+INFO-FLOW: Model list for synthesis: radix4_bfly {cordic_circ_apfixed<18, 3, 0>} {cos<16, 4>} {sin<16, 4>} cmul radix4_bfly.1 radix2_bfly fft32
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix4_bfly' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model radix4_bfly 
+Execute       schedule -model radix4_bfly 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'radix4_bfly'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 1, Depth = 1, function 'radix4_bfly'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.169 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.376 seconds; current allocated memory: 220.785 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.sched.adb -f 
+INFO-FLOW: Finish scheduling radix4_bfly.
+Execute       set_default_model radix4_bfly 
+Execute       bind -model radix4_bfly 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 221.906 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.bind.adb -f 
+INFO-FLOW: Finish binding radix4_bfly.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cordic_circ_apfixed_18_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model cordic_circ_apfixed<18, 3, 0> 
+Execute       schedule -model cordic_circ_apfixed<18, 3, 0> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'cordic_circ_apfixed<18, 3, 0>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 14, function 'cordic_circ_apfixed<18, 3, 0>'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.834 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.875 seconds; current allocated memory: 226.227 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.117 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.sched.adb -f 
+INFO-FLOW: Finish scheduling cordic_circ_apfixed<18, 3, 0>.
+Execute       set_default_model cordic_circ_apfixed<18, 3, 0> 
+Execute       bind -model cordic_circ_apfixed<18, 3, 0> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.124 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.278 seconds; current allocated memory: 226.383 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.119 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.bind.adb -f 
+INFO-FLOW: Finish binding cordic_circ_apfixed<18, 3, 0>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cos_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model cos<16, 4> 
+Execute       schedule -model cos<16, 4> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'cos<16, 4>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 21, function 'cos<16, 4>'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.164 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.349 seconds; current allocated memory: 226.477 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.145 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.sched.adb -f 
+INFO-FLOW: Finish scheduling cos<16, 4>.
+Execute       set_default_model cos<16, 4> 
+Execute       bind -model cos<16, 4> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.138 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.289 seconds; current allocated memory: 226.547 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.111 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.bind.adb -f 
+INFO-FLOW: Finish binding cos<16, 4>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sin<16, 4> 
+Execute       schedule -model sin<16, 4> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln68) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'sin<16, 4>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 21, function 'sin<16, 4>'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.16 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.301 seconds; current allocated memory: 226.566 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.141 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.sched.adb -f 
+INFO-FLOW: Finish scheduling sin<16, 4>.
+Execute       set_default_model sin<16, 4> 
+Execute       bind -model sin<16, 4> 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.142 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.291 seconds; current allocated memory: 226.570 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.111 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.bind.adb -f 
+INFO-FLOW: Finish binding sin<16, 4>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model cmul 
+Execute       schedule -model cmul 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_2) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'cmul'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, function 'cmul'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.232 seconds; current allocated memory: 226.590 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.sched.adb -f 
+INFO-FLOW: Finish scheduling cmul.
+Execute       set_default_model cmul 
+Execute       bind -model cmul 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 226.594 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.bind.adb -f 
+INFO-FLOW: Finish binding cmul.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix4_bfly_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model radix4_bfly.1 
+Execute       schedule -model radix4_bfly.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'radix4_bfly.1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 4, Final II = 1, Depth = 1, function 'radix4_bfly.1'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.146 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 226.699 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.sched.adb -f 
+INFO-FLOW: Finish scheduling radix4_bfly.1.
+Execute       set_default_model radix4_bfly.1 
+Execute       bind -model radix4_bfly.1 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.068 seconds; current allocated memory: 226.801 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.bind.adb -f 
+INFO-FLOW: Finish binding radix4_bfly.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'radix2_bfly' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model radix2_bfly 
+Execute       schedule -model radix2_bfly 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln10_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'radix2_bfly'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 2, Final II = 2, Depth = 5, function 'radix2_bfly'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.128 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.171 seconds; current allocated memory: 227.305 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.sched.adb -f 
+INFO-FLOW: Finish scheduling radix2_bfly.
+Execute       set_default_model radix2_bfly 
+Execute       bind -model radix2_bfly 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.107 seconds; current allocated memory: 227.305 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.bind.adb -f 
+INFO-FLOW: Finish binding radix2_bfly.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fft32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model fft32 
+Execute       schedule -model fft32 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'fft32'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 32, Final II = 32, Depth = 88, function 'fft32'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.793 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.844 seconds; current allocated memory: 234.699 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.verbose.sched.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.608 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.sched.adb -f 
+INFO-FLOW: Finish scheduling fft32.
+Execute       set_default_model fft32 
+Execute       bind -model fft32 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.473 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.165 seconds; current allocated memory: 234.746 MB.
+Execute       syn_report -verbosereport -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.verbose.bind.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.334 sec.
+Execute       db_write -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.bind.adb -f 
+INFO-FLOW: Finish binding fft32.
+Execute       get_model_list fft32 -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess radix4_bfly 
+Execute       rtl_gen_preprocess cordic_circ_apfixed<18, 3, 0> 
+Execute       rtl_gen_preprocess cos<16, 4> 
+Execute       rtl_gen_preprocess sin<16, 4> 
+Execute       rtl_gen_preprocess cmul 
+Execute       rtl_gen_preprocess radix4_bfly.1 
+Execute       rtl_gen_preprocess radix2_bfly 
+Execute       rtl_gen_preprocess fft32 
+INFO-FLOW: Model list for RTL generation: radix4_bfly {cordic_circ_apfixed<18, 3, 0>} {cos<16, 4>} {sin<16, 4>} cmul radix4_bfly.1 radix2_bfly fft32
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix4_bfly' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model radix4_bfly -top_prefix fft32_ -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix4_bfly'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.462 seconds; current allocated memory: 235.926 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl radix4_bfly -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32_radix4_bfly 
+Execute       gen_rtl radix4_bfly -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32_radix4_bfly 
+Execute       syn_report -csynth -model radix4_bfly -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/radix4_bfly_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -rtlxml -model radix4_bfly -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/radix4_bfly_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model radix4_bfly -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -model radix4_bfly -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.adb 
+Execute       db_write -model radix4_bfly -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info radix4_bfly -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cordic_circ_apfixed_18_3_0_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model cordic_circ_apfixed<18, 3, 0> -top_prefix fft32_ -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cordic_circ_apfixed_18_3_0_s' pipeline 'cordic_circ_apfixed<18, 3, 0>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cordic_circ_apfixed_18_3_0_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 237.691 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl cordic_circ_apfixed<18, 3, 0> -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32_cordic_circ_apfixed_18_3_0_s 
+Execute       gen_rtl cordic_circ_apfixed<18, 3, 0> -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32_cordic_circ_apfixed_18_3_0_s 
+Execute       syn_report -csynth -model cordic_circ_apfixed<18, 3, 0> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/cordic_circ_apfixed_18_3_0_s_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.231 sec.
+Execute       syn_report -rtlxml -model cordic_circ_apfixed<18, 3, 0> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/cordic_circ_apfixed_18_3_0_s_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model cordic_circ_apfixed<18, 3, 0> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.291 sec.
+Execute       db_write -model cordic_circ_apfixed<18, 3, 0> -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.adb 
+Command       db_write done; 0.215 sec.
+Execute       db_write -model cordic_circ_apfixed<18, 3, 0> -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info cordic_circ_apfixed<18, 3, 0> -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cos_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model cos<16, 4> -top_prefix fft32_ -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cos_16_4_s' pipeline 'cos<16, 4>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_2ns_16ns_18ns_18_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_14ns_22ns_35_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cos_16_4_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.054 seconds; current allocated memory: 243.352 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl cos<16, 4> -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32_cos_16_4_s 
+Execute       gen_rtl cos<16, 4> -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32_cos_16_4_s 
+Execute       syn_report -csynth -model cos<16, 4> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/cos_16_4_s_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -rtlxml -model cos<16, 4> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/cos_16_4_s_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model cos<16, 4> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.274 sec.
+Execute       db_write -model cos<16, 4> -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.adb 
+Execute       db_write -model cos<16, 4> -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info cos<16, 4> -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_16_4_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model sin<16, 4> -top_prefix fft32_ -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sin_16_4_s' pipeline 'sin<16, 4>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_2ns_16ns_18ns_18_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_14ns_22ns_35_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_16_4_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.455 seconds; current allocated memory: 244.023 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl sin<16, 4> -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32_sin_16_4_s 
+Execute       gen_rtl sin<16, 4> -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32_sin_16_4_s 
+Execute       syn_report -csynth -model sin<16, 4> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/sin_16_4_s_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -rtlxml -model sin<16, 4> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/sin_16_4_s_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model sin<16, 4> -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.131 sec.
+Execute       db_write -model sin<16, 4> -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.adb 
+Execute       db_write -model sin<16, 4> -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info sin<16, 4> -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cmul' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model cmul -top_prefix fft32_ -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_14s_16s_28s_28_4_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_14s_16s_28s_28_4_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_14s_16s_28_1_0': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cmul'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.287 seconds; current allocated memory: 244.902 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl cmul -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32_cmul 
+Execute       gen_rtl cmul -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32_cmul 
+Execute       syn_report -csynth -model cmul -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/cmul_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -rtlxml -model cmul -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/cmul_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model cmul -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -model cmul -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.adb 
+Execute       db_write -model cmul -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info cmul -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix4_bfly_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model radix4_bfly.1 -top_prefix fft32_ -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix4_bfly_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.122 seconds; current allocated memory: 245.578 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl radix4_bfly.1 -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32_radix4_bfly_1 
+Execute       gen_rtl radix4_bfly.1 -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32_radix4_bfly_1 
+Execute       syn_report -csynth -model radix4_bfly.1 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/radix4_bfly_1_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -rtlxml -model radix4_bfly.1 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/radix4_bfly_1_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model radix4_bfly.1 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -model radix4_bfly.1 -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.adb 
+Execute       db_write -model radix4_bfly.1 -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info radix4_bfly.1 -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'radix2_bfly' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model radix2_bfly -top_prefix fft32_ -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'radix2_bfly' pipeline 'radix2_bfly' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_14s_28s_28_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_mulsub_16s_14s_28s_28_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_14s_28_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'radix2_bfly'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 246.855 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl radix2_bfly -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32_radix2_bfly 
+Execute       gen_rtl radix2_bfly -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32_radix2_bfly 
+Execute       syn_report -csynth -model radix2_bfly -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/radix2_bfly_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -rtlxml -model radix2_bfly -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/radix2_bfly_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model radix2_bfly -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       db_write -model radix2_bfly -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.adb 
+Execute       db_write -model radix2_bfly -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info radix2_bfly -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fft32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model fft32 -top_prefix  -sub_prefix fft32_ -mg_file D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft32/in_stream' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fft32/out_stream' to 'ap_fifo'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fft32' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'fft32' pipeline 'fft32' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fft32'.
+Command       create_rtl_model done; 0.195 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.319 seconds; current allocated memory: 253.949 MB.
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       gen_rtl fft32 -istop -style xilinx -f -lang vhdl -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/vhdl/fft32 
+Execute       gen_rtl fft32 -istop -style xilinx -f -lang vlog -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/verilog/fft32 
+Execute       syn_report -csynth -model fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/fft32_csynth.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -rtlxml -model fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/fft32_csynth.xml 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -verbosereport -model fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.verbose.rpt 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Command       syn_report done; 0.35 sec.
+Execute       db_write -model fft32 -f -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.adb 
+Command       db_write done; 0.137 sec.
+Execute       db_write -model fft32 -bindview -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info fft32 -p D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32 
+Execute       export_constraint_db -f -tool general -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.constraint.tcl 
+Execute       syn_report -designview -model fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.design.xml 
+Command       syn_report done; 0.305 sec.
+Execute       syn_report -csynthDesign -model fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/csynth.rpt -MHOut D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute         list_part -family xc7z030-sbv485-1 
+Execute           ap_family_info -name xc7z030-sbv485-1 -data names 
+Execute           ap_part_info -quiet -name xc7z030-sbv485-1 -data family 
+Execute       syn_report -wcfg -model fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model fft32 -o D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.protoinst 
+Execute       sc_get_clocks fft32 
+Execute       sc_get_portdomain fft32 
+INFO-FLOW: Model list for RTL component generation: radix4_bfly {cordic_circ_apfixed<18, 3, 0>} {cos<16, 4>} {sin<16, 4>} cmul radix4_bfly.1 radix2_bfly fft32
+INFO-FLOW: Handling components in module [radix4_bfly] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.compgen.tcl 
+INFO-FLOW: Handling components in module [cordic_circ_apfixed_18_3_0_s] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.compgen.tcl 
+INFO-FLOW: Handling components in module [cos_16_4_s] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.compgen.tcl 
+INFO-FLOW: Found component fft32_mul_14ns_22ns_35_1_1.
+INFO-FLOW: Append model fft32_mul_14ns_22ns_35_1_1
+INFO-FLOW: Found component fft32_mac_muladd_2ns_16ns_18ns_18_4_1.
+INFO-FLOW: Append model fft32_mac_muladd_2ns_16ns_18ns_18_4_1
+INFO-FLOW: Handling components in module [sin_16_4_s] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.compgen.tcl 
+INFO-FLOW: Handling components in module [cmul] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.compgen.tcl 
+INFO-FLOW: Found component fft32_mul_14s_16s_28_1_0.
+INFO-FLOW: Append model fft32_mul_14s_16s_28_1_0
+INFO-FLOW: Found component fft32_mac_mulsub_14s_16s_28s_28_4_0.
+INFO-FLOW: Append model fft32_mac_mulsub_14s_16s_28s_28_4_0
+INFO-FLOW: Found component fft32_mac_muladd_14s_16s_28s_28_4_0.
+INFO-FLOW: Append model fft32_mac_muladd_14s_16s_28s_28_4_0
+INFO-FLOW: Handling components in module [radix4_bfly_1] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.compgen.tcl 
+INFO-FLOW: Handling components in module [radix2_bfly] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.compgen.tcl 
+INFO-FLOW: Found component fft32_mul_16s_14s_28_1_1.
+INFO-FLOW: Append model fft32_mul_16s_14s_28_1_1
+INFO-FLOW: Found component fft32_mac_mulsub_16s_14s_28s_28_4_1.
+INFO-FLOW: Append model fft32_mac_mulsub_16s_14s_28s_28_4_1
+INFO-FLOW: Found component fft32_mac_muladd_16s_14s_28s_28_4_1.
+INFO-FLOW: Append model fft32_mac_muladd_16s_14s_28s_28_4_1
+INFO-FLOW: Handling components in module [fft32] ... 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.compgen.tcl 
+INFO-FLOW: Append model radix4_bfly
+INFO-FLOW: Append model cordic_circ_apfixed_18_3_0_s
+INFO-FLOW: Append model cos_16_4_s
+INFO-FLOW: Append model sin_16_4_s
+INFO-FLOW: Append model cmul
+INFO-FLOW: Append model radix4_bfly_1
+INFO-FLOW: Append model radix2_bfly
+INFO-FLOW: Append model fft32
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: fft32_mul_14ns_22ns_35_1_1 fft32_mac_muladd_2ns_16ns_18ns_18_4_1 fft32_mul_14s_16s_28_1_0 fft32_mac_mulsub_14s_16s_28s_28_4_0 fft32_mac_muladd_14s_16s_28s_28_4_0 fft32_mul_16s_14s_28_1_1 fft32_mac_mulsub_16s_14s_28s_28_4_1 fft32_mac_muladd_16s_14s_28s_28_4_1 radix4_bfly cordic_circ_apfixed_18_3_0_s cos_16_4_s sin_16_4_s cmul radix4_bfly_1 radix2_bfly fft32
+INFO-FLOW: Generating D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model fft32_mul_14ns_22ns_35_1_1
+INFO-FLOW: To file: write model fft32_mac_muladd_2ns_16ns_18ns_18_4_1
+INFO-FLOW: To file: write model fft32_mul_14s_16s_28_1_0
+INFO-FLOW: To file: write model fft32_mac_mulsub_14s_16s_28s_28_4_0
+INFO-FLOW: To file: write model fft32_mac_muladd_14s_16s_28s_28_4_0
+INFO-FLOW: To file: write model fft32_mul_16s_14s_28_1_1
+INFO-FLOW: To file: write model fft32_mac_mulsub_16s_14s_28s_28_4_1
+INFO-FLOW: To file: write model fft32_mac_muladd_16s_14s_28s_28_4_1
+INFO-FLOW: To file: write model radix4_bfly
+INFO-FLOW: To file: write model cordic_circ_apfixed_18_3_0_s
+INFO-FLOW: To file: write model cos_16_4_s
+INFO-FLOW: To file: write model sin_16_4_s
+INFO-FLOW: To file: write model cmul
+INFO-FLOW: To file: write model radix4_bfly_1
+INFO-FLOW: To file: write model radix2_bfly
+INFO-FLOW: To file: write model fft32
+INFO-FLOW: Generating D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/vhdl' dstVlogDir='D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/vlog' tclDir='D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db' modelList='fft32_mul_14ns_22ns_35_1_1
+fft32_mac_muladd_2ns_16ns_18ns_18_4_1
+fft32_mul_14s_16s_28_1_0
+fft32_mac_mulsub_14s_16s_28s_28_4_0
+fft32_mac_muladd_14s_16s_28s_28_4_0
+fft32_mul_16s_14s_28_1_1
+fft32_mac_mulsub_16s_14s_28s_28_4_1
+fft32_mac_muladd_16s_14s_28s_28_4_1
+radix4_bfly
+cordic_circ_apfixed_18_3_0_s
+cos_16_4_s
+sin_16_4_s
+cmul
+radix4_bfly_1
+radix2_bfly
+fft32
+' expOnly='0'
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute       ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.compgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.compgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.compgen.tcl 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.compgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.compgen.tcl 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.compgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.compgen.tcl 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute         ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.808 seconds; current allocated memory: 263.801 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='fft32_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name fft32
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+INFO-FLOW: Done: create_csynth_xml config info time: 0.2 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='fft32_mul_14ns_22ns_35_1_1
+fft32_mac_muladd_2ns_16ns_18ns_18_4_1
+fft32_mul_14s_16s_28_1_0
+fft32_mac_mulsub_14s_16s_28s_28_4_0
+fft32_mac_muladd_14s_16s_28s_28_4_0
+fft32_mul_16s_14s_28_1_1
+fft32_mac_mulsub_16s_14s_28s_28_4_1
+fft32_mac_muladd_16s_14s_28s_28_4_1
+radix4_bfly
+cordic_circ_apfixed_18_3_0_s
+cos_16_4_s
+sin_16_4_s
+cmul
+radix4_bfly_1
+radix2_bfly
+fft32
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/top-io-be.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.compgen.dataonly.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cordic_circ_apfixed_18_3_0_s.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cos_16_4_s.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/sin_16_4_s.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/cmul.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix4_bfly_1.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/radix2_bfly.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute       ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.constraint.tcl 
+Execute       sc_get_clocks fft32 
+Execute       source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST fft32 MODULE2INSTS {fft32 fft32 cos_16_4_s grp_cos_16_4_s_fu_97 cordic_circ_apfixed_18_3_0_s {grp_cordic_circ_apfixed_18_3_0_s_fu_59 grp_cordic_circ_apfixed_18_3_0_s_fu_48} sin_16_4_s grp_sin_16_4_s_fu_118 radix4_bfly grp_radix4_bfly_fu_139 cmul grp_cmul_fu_151 radix4_bfly_1 grp_radix4_bfly_1_fu_159 radix2_bfly grp_radix2_bfly_fu_171} INST2MODULE {fft32 fft32 grp_cos_16_4_s_fu_97 cos_16_4_s grp_cordic_circ_apfixed_18_3_0_s_fu_59 cordic_circ_apfixed_18_3_0_s grp_sin_16_4_s_fu_118 sin_16_4_s grp_cordic_circ_apfixed_18_3_0_s_fu_48 cordic_circ_apfixed_18_3_0_s grp_radix4_bfly_fu_139 radix4_bfly grp_cmul_fu_151 cmul grp_radix4_bfly_1_fu_159 radix4_bfly_1 grp_radix2_bfly_fu_171 radix2_bfly} INSTDATA {fft32 {DEPTH 1 CHILDREN {grp_cos_16_4_s_fu_97 grp_sin_16_4_s_fu_118 grp_radix4_bfly_fu_139 grp_cmul_fu_151 grp_radix4_bfly_1_fu_159 grp_radix2_bfly_fu_171}} grp_cos_16_4_s_fu_97 {DEPTH 2 CHILDREN grp_cordic_circ_apfixed_18_3_0_s_fu_59} grp_cordic_circ_apfixed_18_3_0_s_fu_59 {DEPTH 3 CHILDREN {}} grp_sin_16_4_s_fu_118 {DEPTH 2 CHILDREN grp_cordic_circ_apfixed_18_3_0_s_fu_48} grp_cordic_circ_apfixed_18_3_0_s_fu_48 {DEPTH 3 CHILDREN {}} grp_radix4_bfly_fu_139 {DEPTH 2 CHILDREN {}} grp_cmul_fu_151 {DEPTH 2 CHILDREN {}} grp_radix4_bfly_1_fu_159 {DEPTH 2 CHILDREN {}} grp_radix2_bfly_fu_171 {DEPTH 2 CHILDREN {}}} MODULEDATA {radix4_bfly {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ar0_fu_68_p2 SOURCE FFT32_check.cpp:24 VARIABLE ar0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ai0_fu_74_p2 SOURCE FFT32_check.cpp:25 VARIABLE ai0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ar1_fu_80_p2 SOURCE FFT32_check.cpp:26 VARIABLE ar1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ai1_fu_86_p2 SOURCE FFT32_check.cpp:27 VARIABLE ai1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cr0_fu_92_p2 SOURCE FFT32_check.cpp:28 VARIABLE cr0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ci0_fu_98_p2 SOURCE FFT32_check.cpp:29 VARIABLE ci0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME cr1_fu_104_p2 SOURCE FFT32_check.cpp:30 VARIABLE cr1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ci1_fu_110_p2 SOURCE FFT32_check.cpp:31 VARIABLE ci1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_fu_116_p2 SOURCE FFT32_check.cpp:34 VARIABLE add_ln34 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_2_fu_122_p2 SOURCE FFT32_check.cpp:34 VARIABLE add_ln34_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_128_p2 SOURCE FFT32_check.cpp:35 VARIABLE add_ln35 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln35_fu_134_p2 SOURCE FFT32_check.cpp:35 VARIABLE sub_ln35 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln36_fu_140_p2 SOURCE FFT32_check.cpp:36 VARIABLE sub_ln36 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln36_2_fu_146_p2 SOURCE FFT32_check.cpp:36 VARIABLE sub_ln36_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln37_fu_152_p2 SOURCE FFT32_check.cpp:37 VARIABLE sub_ln37 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln37_fu_158_p2 SOURCE FFT32_check.cpp:37 VARIABLE add_ln37 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} cordic_circ_apfixed_18_3_0_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME tz_fu_178_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:101 VARIABLE tz LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_fu_484_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_fu_490_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_fu_496_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_fu_502_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_1_fu_554_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_1_fu_560_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_1_fu_566_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_1_fu_572_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_2_fu_652_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_2_fu_657_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_2_fu_662_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_2_fu_667_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_3_fu_714_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_3_fu_720_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_3_fu_726_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_3_fu_732_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_4_fu_812_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_4_fu_817_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_4_fu_822_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_4_fu_827_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_5_fu_874_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_5_fu_880_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_5_fu_886_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_5_fu_892_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_6_fu_972_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_6_fu_977_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_6_fu_982_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_6_fu_987_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_7_fu_1034_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_7_fu_1040_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_7_fu_1046_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_7_fu_1052_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_8_fu_1132_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_8_fu_1137_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_8_fu_1142_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_8_fu_1147_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_9_fu_1194_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_9_fu_1200_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_9_fu_1206_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_9_fu_1212_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_10_fu_1292_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_10_fu_1297_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_10_fu_1302_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_10_fu_1307_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_11_fu_1380_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_11_fu_1386_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_11_fu_1392_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_11_fu_1398_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_12_fu_1480_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_12_fu_1485_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_12_fu_1490_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_12_fu_1495_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_13_fu_1576_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_13_fu_1581_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_14_fu_1618_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_14_fu_1624_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln102_15_fu_1662_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102 VARIABLE add_ln102_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln103_15_fu_1668_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103 VARIABLE sub_ln103_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_13_fu_1674_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_13_fu_1679_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_14_fu_1716_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_14_fu_1722_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln107_15_fu_1760_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107 VARIABLE sub_ln107_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln108_15_fu_1766_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108 VARIABLE add_ln108_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} cos_16_4_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME x_fu_64_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:237 VARIABLE x LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_14ns_22ns_35_1_1_U10 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64 VARIABLE mul_ln64 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_2ns_16ns_18ns_18_4_1_U11 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68 VARIABLE mul_ln68 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_2ns_16ns_18ns_18_4_1_U11 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68 VARIABLE add_ln68 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln254_fu_121_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:254 VARIABLE sub_ln254 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln280_fu_165_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:280 VARIABLE sub_ln280 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}}} AREA {DSP 2 BRAM 0 URAM 0}} sin_16_4_s {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME x_fu_53_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:237 VARIABLE x LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_14ns_22ns_35_1_1_U15 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64 VARIABLE mul_ln64 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_2ns_16ns_18ns_18_4_1_U16 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68 VARIABLE mul_ln68 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_2ns_16ns_18ns_18_4_1_U16 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68 VARIABLE add_ln68 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln254_fu_110_p2 SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:254 VARIABLE sub_ln254 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ap_return SOURCE D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:292 VARIABLE sub_ln292 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}}} AREA {DSP 2 BRAM 0 URAM 0}} cmul {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_14s_16s_28_1_0_U18 SOURCE FFT32_check.cpp:10 VARIABLE mul_ln10 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_mulsub_14s_16s_28s_28_4_0_U20 SOURCE FFT32_check.cpp:10 VARIABLE mul_ln10_2 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE sub PRAGMA {} RTLNAME mac_mulsub_14s_16s_28s_28_4_0_U20 SOURCE FFT32_check.cpp:10 VARIABLE sub_ln10 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_14s_16s_28_1_0_U19 SOURCE FFT32_check.cpp:11 VARIABLE mul_ln11 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_14s_16s_28s_28_4_0_U21 SOURCE FFT32_check.cpp:11 VARIABLE mul_ln11_2 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_14s_16s_28s_28_4_0_U21 SOURCE FFT32_check.cpp:11 VARIABLE add_ln11 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 4 BRAM 0 URAM 0}} radix4_bfly_1 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ar0_fu_68_p2 SOURCE FFT32_check.cpp:24 VARIABLE ar0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ai0_fu_74_p2 SOURCE FFT32_check.cpp:25 VARIABLE ai0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ar1_fu_80_p2 SOURCE FFT32_check.cpp:26 VARIABLE ar1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ai1_fu_86_p2 SOURCE FFT32_check.cpp:27 VARIABLE ai1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME cr0_fu_92_p2 SOURCE FFT32_check.cpp:28 VARIABLE cr0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ci0_fu_98_p2 SOURCE FFT32_check.cpp:29 VARIABLE ci0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME cr1_fu_104_p2 SOURCE FFT32_check.cpp:30 VARIABLE cr1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME ci1_fu_110_p2 SOURCE FFT32_check.cpp:31 VARIABLE ci1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_fu_116_p2 SOURCE FFT32_check.cpp:34 VARIABLE add_ln34 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln34_1_fu_122_p2 SOURCE FFT32_check.cpp:34 VARIABLE add_ln34_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln35_fu_128_p2 SOURCE FFT32_check.cpp:35 VARIABLE add_ln35 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln35_fu_134_p2 SOURCE FFT32_check.cpp:35 VARIABLE sub_ln35 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln36_fu_140_p2 SOURCE FFT32_check.cpp:36 VARIABLE sub_ln36 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln36_1_fu_146_p2 SOURCE FFT32_check.cpp:36 VARIABLE sub_ln36_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln37_fu_152_p2 SOURCE FFT32_check.cpp:37 VARIABLE sub_ln37 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln37_fu_158_p2 SOURCE FFT32_check.cpp:37 VARIABLE add_ln37 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} radix2_bfly {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_16s_14s_28_1_1_U37 SOURCE FFT32_check.cpp:10 VARIABLE mul_ln10 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_mulsub_16s_14s_28s_28_4_1_U39 SOURCE FFT32_check.cpp:10 VARIABLE mul_ln10_1 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE sub PRAGMA {} RTLNAME mac_mulsub_16s_14s_28s_28_4_1_U39 SOURCE FFT32_check.cpp:10 VARIABLE sub_ln10 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16s_14s_28s_28_4_1_U40 SOURCE FFT32_check.cpp:11 VARIABLE mul_ln11 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_16s_14s_28_1_1_U38 SOURCE FFT32_check.cpp:11 VARIABLE mul_ln11_1 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16s_14s_28s_28_4_1_U40 SOURCE FFT32_check.cpp:11 VARIABLE add_ln11 LOOP {} BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln45_fu_104_p2 SOURCE FFT32_check.cpp:45 VARIABLE add_ln45 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln46_fu_108_p2 SOURCE FFT32_check.cpp:46 VARIABLE add_ln46 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln47_fu_113_p2 SOURCE FFT32_check.cpp:47 VARIABLE sub_ln47 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln48_fu_117_p2 SOURCE FFT32_check.cpp:48 VARIABLE sub_ln48 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}}} AREA {DSP 4 BRAM 0 URAM 0}} fft32 {AREA {DSP 12 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.1 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.909 seconds; current allocated memory: 270.918 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for fft32.
+INFO: [VLOG 209-307] Generating Verilog RTL for fft32.
+Execute       syn_report -model fft32 -printsummary 
+INFO: [HLS 200-789] **** Estimated Fmax: 140.83 MHz
+Command     autosyn done; 11.582 sec.
+Command   csynth_design done; 51.256 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 14 seconds. CPU system time: 1 seconds. Elapsed time: 51.256 seconds; current allocated memory: 164.047 MB.
+Command ap_source done; 52.71 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all opened at Wed Jun 25 09:38:49 +0800 2025
+Execute     ap_set_clock -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_part xc7z030sbv485-1 
+Execute       create_platform xc7z030sbv485-1 -board  
+DBG:HLSDevice: Trying to load device library: D:/Vivado/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: D:/Vivado/Vivado/2023.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z030-sbv485-1'
+Command       create_platform done; 0.761 sec.
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.101 sec.
+Execute       ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 0.881 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Command   open_solution done; 1.004 sec.
+Execute   set_part xc7z030sbv485-1 
+INFO: [HLS 200-1510] Running: set_part xc7z030sbv485-1 
+Execute     create_platform xc7z030sbv485-1 -board  
+Execute     source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.128 sec.
+Execute   create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+Execute   config_cosim -tool xsim 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim 
+Execute   source ./FFT_sol_2/opt4_just_pipe_all/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./FFT_sol_2/opt4_just_pipe_all/directives.tcl
+Execute     set_directive_top -name fft32 fft32 
+INFO: [HLS 200-1510] Running: set_directive_top -name fft32 fft32 
+Execute     set_directive_pipeline -II 32 fft32 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -II 32 fft32 
+Execute   cosim_design 
+INFO: [HLS 200-1510] Running: cosim_design 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl
+Execute     source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source D:/Vivado/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute     source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source D:/Vivado/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.112 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+Execute     ap_part_info -name xc7z030-sbv485-1 -data names -quiet 
+Execute     ap_part_info -name xc7z030-sbv485-1 -data info -quiet 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7z030-sbv485-1 -data info 
+INFO-FLOW: TB processing: D:/Vivado/FFT_sol/testbench.cpp D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/./sim/autowrap/testbench/testbench.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/./sim/autowrap/testbench/testbench.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/./sim/autowrap/testbench/testbench.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 2.109 sec.
+Execute     ap_part_info -name xc7z030-sbv485-1 -data info 
+INFO-FLOW: TB processing: D:/Vivado/FFT_sol/FFT32_check.cpp D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/./sim/autowrap/testbench/FFT32_check.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/./sim/autowrap/testbench/FFT32_check.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec D:/Vivado/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/./sim/autowrap/testbench/FFT32_check.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 5.259 sec.
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/global.setting.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.rtl_wrap.cfg.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     ap_part_info -name xc7z030-sbv485-1 -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 0.383 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.DependenceCheck.tcl 
+Execute     source D:/Vivado/FFT_sol/FFT_sol_2/opt4_just_pipe_all/.autopilot/db/fft32.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source dataflow_monitor_API.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 12.051 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 49.37 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 49.37 seconds; current allocated memory: 14.504 MB.
+Command ap_source done; 50.602 sec.
+Execute cleanup_all 

@@ -1,0 +1,110 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 2 2 2 2 2 2 2 2 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 3 3 3 1 4 4 4 4 3 3 3 1 4 4 4 4 3 3 3 1 4 4 4 4 3 3 3 1 4 4 4 4 3 3 3 1 4 4 4 4 3 3 3 1 4 4 4 4 3 3 3 1 4 4 4 4 3 3 3 1 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+    "file": "FFT32_check.cpp",
+    "fileloc": 63,
+    "instructions": 2103,
+    "loads": {
+      "L": 336
+    },
+    "name": "fft32",
+    "stores": {
+      "L": 272
+    },
+    "total_instructions": 88167
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 16,
+    "instructions": 97,
+    "loads": {
+      "L": 8
+    },
+    "name": "radix4_bfly",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 97
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 16,
+    "instructions": 97,
+    "loads": {
+      "L": 8
+    },
+    "name": "radix4_bfly",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 97
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 7,
+    "instructions": 21,
+    "name": "cmul",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 21
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32.h",
+    "fileloc": 18,
+    "instructions": 3,
+    "name": "complex_t",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 3
+  },
+  "5": {
+    "basicblocks": 49,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 77,
+    "instructions": 922,
+    "loads": {
+      "L": 3
+    },
+    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "stores": {
+      "L": 48
+    },
+    "total_instructions": 922
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 52,
+    "instructions": 18,
+    "name": "bit_reverse",
+    "total_instructions": 18
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 41,
+    "instructions": 47,
+    "loads": {
+      "L": 4
+    },
+    "name": "radix2_bfly",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 47
+  }
+}

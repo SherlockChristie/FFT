@@ -1,0 +1,586 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 43, Column: 19 }
+Function:        _ZL11radix2_bflyR9complex_tS0_RKS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cmul(complex_t const&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'radix2_bfly(complex_t&, complex_t&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 151, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'radix2_bfly(complex_t&, complex_t&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 41, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 86, Column: 26 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'bit_reverse(unsigned int, int)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 52, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 132, Column: 23 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cmul(complex_t const&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 97, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 131, Column: 23 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cmul(complex_t const&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 130, Column: 23 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cmul(complex_t const&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        stage3_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:145:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        stage2_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:110:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        stage1_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:94:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        bit_rev_assign_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:84:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+Function:        _ZN9axis_dataC2Ev
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'axis_data::axis_data()'
+    DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 228, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi16ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.55
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::circ_range_redux<16, 4, 17>(ap_ufixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<17, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 60, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.55)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 228, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi16ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.55
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::cordic_circ_apfixed<18, 3, 0>(ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<18, 3, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 79, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.55)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.106)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'axis_data::axis_data()'
+    DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          data.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          data.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          stage2.real
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          stage2.imag
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...

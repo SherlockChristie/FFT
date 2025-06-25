@@ -1,0 +1,201 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "D:/Vivado/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_fft32_util.cpp
+   Compiling testbench.cpp_pre.cpp.tb.cpp
+   Compiling FFT32_check.cpp_pre.cpp.tb.cpp
+   Compiling apatb_fft32.cpp
+   Compiling apatb_fft32_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Mismatch at index 0: Expected (-0, 0), Got (3.44092, -2.68042)
+Mismatch at index 1: Expected (0.02108, -0.214028), Got (-1.5752, 2.44604)
+Mismatch at index 2: Expected (0.094312, -0.474139), Got (1.97412, -3.31982)
+Mismatch at index 3: Expected (0.266137, -0.877338), Got (-1.79346, 4.36035)
+Mismatch at index 4: Expected (0.754939, -1.82258), Got (-1.63037, 3.48853)
+Mismatch at index 5: Expected (7.18802, -13.4478), Got (5.0376, -2.65845)
+Mismatch at index 6: Expected (-1.62233, 2.428), Got (-5.99829, 2.0271)
+Mismatch at index 7: Expected (-0.738673, 0.900076), Got (0.0253906, 0.0178223)
+Mismatch at index 8: Expected (-0.292516, 0.292516), Got (2.50879, 0.245361)
+Mismatch at index 9: Expected (0.393132, -0.322635), Got (-1.44995, 4.29004)
+Mismatch at index 10: Expected (4.73403, -3.16318), Got (4.99927, 1.00684)
+Mismatch at index 11: Expected (-3.64005, 1.94565), Got (-4.92285, -5.1106)
+Mismatch at index 12: Expected (-2.02263, 0.837801), Got (-4.56641, 1.01709)
+Mismatch at index 13: Expected (-1.62238, 0.492144), Got (-2.05347, 2.30298)
+Mismatch at index 14: Expected (-1.45503, 0.289423), Got (-4.11621, -6.21533)
+Mismatch at index 15: Expected (-1.37943, 0.135862), Got (4.92529, 0.0471191)
+Mismatch at index 16: Expected (-1.35722, 0), Got (-3.44141, 2.68042)
+Mismatch at index 17: Expected (-1.37943, -0.135862), Got (-3.56689, 0.698486)
+Mismatch at index 18: Expected (-1.45503, -0.289423), Got (-3.96875, -4.479)
+Mismatch at index 19: Expected (-1.62238, -0.492144), Got (4.4502, 0.293945)
+Mismatch at index 20: Expected (-2.02263, -0.837801), Got (-0.825195, -3.48999)
+Mismatch at index 21: Expected (-3.64005, -1.94565), Got (-0.486816, -4.91968)
+Mismatch at index 22: Expected (4.73403, 3.16318), Got (2.96753, 0.996826)
+Mismatch at index 23: Expected (0.393132, 0.322635), Got (1.49805, 4.53784)
+Mismatch at index 24: Expected (-0.292516, -0.292516), Got (0.15625, -0.879639)
+Mismatch at index 25: Expected (-0.738673, -0.900076), Got (4.3396, -2.44971)
+Mismatch at index 26: Expected (-1.62233, -2.428), Got (1.76831, 3.99463)
+Mismatch at index 27: Expected (7.18802, 13.4478), Got (-2.85449, -1.09692)
+Mismatch at index 28: Expected (0.754939, 1.82258), Got (3.14746, -1.06299)
+Mismatch at index 29: Expected (0.266137, 0.877338), Got (-1.95142, 3.92261)
+Mismatch at index 30: Expected (0.094312, 0.474139), Got (-0.77832, -2.24756)
+Mismatch at index 31: Expected (0.02108, 0.214028), Got (-0.70459, 2.23608)
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 32
+
+D:\Vivado\FFT_sol\FFT_sol_2\opt3_overall_pipeline\sim\verilog>set PATH= 
+
+D:\Vivado\FFT_sol\FFT_sol_2\opt3_overall_pipeline\sim\verilog>call D:/Vivado/Vivado/2023.1/bin/xelab xil_defaultlib.apatb_fft32_top glbl -Oenable_linking_all_libraries  -prj fft32.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib "ieee_proposed=./ieee_proposed" -s fft32  
+ECHO 处于关闭状态。
+ECHO 处于关闭状态。
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/Vivado/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_fft32_top glbl -Oenable_linking_all_libraries -prj fft32.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_15 -L floating_point_v7_0_20 --lib ieee_proposed=./ieee_proposed -s fft32 
+Multi-threading is on. Using 10 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/AESL_axi_s_in_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_in_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/AESL_axi_s_out_stream.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_out_stream
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_fft32_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_cordic_circ_apfixed_18_3_0_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_cordic_circ_apfixed_18_3_0_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_cos_16_4_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_cos_16_4_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_mac_muladd_16s_14s_28s_28_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_16s_14s_28s_28_4_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_16s_14s_28s_28_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_mac_muladd_2ns_16ns_18ns_18_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_2ns_16ns_18ns_18_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module fft32_mac_muladd_2ns_16ns_18ns_18_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_mac_mulsub_16s_14s_28s_28_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mac_mulsub_16s_14s_28s_28_4_1_DSP48_2
+INFO: [VRFC 10-311] analyzing module fft32_mac_mulsub_16s_14s_28s_28_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_mul_14ns_22ns_35_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mul_14ns_22ns_35_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_mul_16s_14s_28_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_mul_16s_14s_28_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_regslice_both
+INFO: [VRFC 10-311] analyzing module fft32_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32_sin_16_4_s.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fft32_sin_16_4_s
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.fft32_cordic_circ_apfixed_18_3_0...
+Compiling module xil_defaultlib.fft32_mul_14ns_22ns_35_1_1(NUM_S...
+Compiling module xil_defaultlib.fft32_mac_muladd_2ns_16ns_18ns_1...
+Compiling module xil_defaultlib.fft32_mac_muladd_2ns_16ns_18ns_1...
+Compiling module xil_defaultlib.fft32_cos_16_4_s
+Compiling module xil_defaultlib.fft32_sin_16_4_s
+Compiling module xil_defaultlib.fft32_mul_16s_14s_28_1_1(NUM_STA...
+Compiling module xil_defaultlib.fft32_mac_muladd_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_muladd_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_mulsub_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_mac_mulsub_16s_14s_28s_28_...
+Compiling module xil_defaultlib.fft32_regslice_both(DataWidth=48...
+Compiling module xil_defaultlib.fft32
+Compiling module xil_defaultlib.fifo(DEPTH=32,WIDTH=48)
+Compiling module xil_defaultlib.AESL_axi_s_in_stream
+Compiling module xil_defaultlib.AESL_axi_s_out_stream
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_fft32_top
+Compiling module work.glbl
+Built simulation snapshot fft32
+ECHO 处于关闭状态。
+ECHO 处于关闭状态。
+
+****** xsim v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/fft32/xsim_script.tcl
+# xsim {fft32} -autoloadwcfg -tclbatch {fft32.tcl}
+Time resolution is 1 ps
+source fft32.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+
+//////////////////////////////////////////////////////////////////////////////
+// Following axis ports can not be accessed by kernel 'fft32' 
+//    port 'in_stream' can not be read
+//    port 'out_stream' can not be written
+//
+//    Because the top pipeline FSM is blocked by following axis ports
+//////////////////////////////////////////////////////////////////////////////
+
+// RTL Simulation : 1 / 1 [100.00%] @ "875000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 935 ns : File "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32.autotb.v" Line 196
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Jun 25 08:58:45 2025...
+Mismatch at index 0: Expected (-0, 0), Got (3.44092, -2.68042)
+Mismatch at index 1: Expected (0.02108, -0.214028), Got (-1.5752, 2.44604)
+Mismatch at index 2: Expected (0.094312, -0.474139), Got (1.97412, -3.31982)
+Mismatch at index 3: Expected (0.266137, -0.877338), Got (-1.79346, 4.36035)
+Mismatch at index 4: Expected (0.754939, -1.82258), Got (-1.63037, 3.48853)
+Mismatch at index 5: Expected (7.18802, -13.4478), Got (5.0376, -2.65845)
+Mismatch at index 6: Expected (-1.62233, 2.428), Got (-5.99829, 2.0271)
+Mismatch at index 7: Expected (-0.738673, 0.900076), Got (0.0253906, 0.0178223)
+Mismatch at index 8: Expected (-0.292516, 0.292516), Got (2.50879, 0.245361)
+Mismatch at index 9: Expected (0.393132, -0.322635), Got (-1.44995, 4.29004)
+Mismatch at index 10: Expected (4.73403, -3.16318), Got (4.99927, 1.00684)
+Mismatch at index 11: Expected (-3.64005, 1.94565), Got (-4.92285, -5.1106)
+Mismatch at index 12: Expected (-2.02263, 0.837801), Got (-4.56641, 1.01709)
+Mismatch at index 13: Expected (-1.62238, 0.492144), Got (-2.05347, 2.30298)
+Mismatch at index 14: Expected (-1.45503, 0.289423), Got (-4.11621, -6.21533)
+Mismatch at index 15: Expected (-1.37943, 0.135862), Got (4.92529, 0.0471191)
+Mismatch at index 16: Expected (-1.35722, 0), Got (-3.44141, 2.68042)
+Mismatch at index 17: Expected (-1.37943, -0.135862), Got (-3.56689, 0.698486)
+Mismatch at index 18: Expected (-1.45503, -0.289423), Got (-3.96875, -4.479)
+Mismatch at index 19: Expected (-1.62238, -0.492144), Got (4.4502, 0.293945)
+Mismatch at index 20: Expected (-2.02263, -0.837801), Got (-0.825195, -3.48999)
+Mismatch at index 21: Expected (-3.64005, -1.94565), Got (-0.486816, -4.91968)
+Mismatch at index 22: Expected (4.73403, 3.16318), Got (2.96753, 0.996826)
+Mismatch at index 23: Expected (0.393132, 0.322635), Got (1.49805, 4.53784)
+Mismatch at index 24: Expected (-0.292516, -0.292516), Got (0.15625, -0.879639)
+Mismatch at index 25: Expected (-0.738673, -0.900076), Got (4.3396, -2.44971)
+Mismatch at index 26: Expected (-1.62233, -2.428), Got (1.76831, 3.99463)
+Mismatch at index 27: Expected (7.18802, 13.4478), Got (-2.85449, -1.09692)
+Mismatch at index 28: Expected (0.754939, 1.82258), Got (3.14746, -1.06299)
+Mismatch at index 29: Expected (0.266137, 0.877338), Got (-1.95142, 3.92261)
+Mismatch at index 30: Expected (0.094312, 0.474139), Got (-0.77832, -2.24756)
+Mismatch at index 31: Expected (0.02108, 0.214028), Got (-0.70459, 2.23608)
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 32
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

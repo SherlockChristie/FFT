@@ -1,0 +1,32 @@
+{
+  "0": {
+    "basicblocks": 46,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 63,
+    "instructions": 2980,
+    "loads": {
+      "L": 89
+    },
+    "name": "fft32",
+    "stores": {
+      "L": 101
+    },
+    "total_instructions": 17060
+  },
+  "1": {
+    "basicblocks": 20,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 227,
+    "instructions": 173,
+    "loads": {
+      "G": 1
+    },
+    "name": "generic_sincos<16, 4>",
+    "stores": {
+      "L": 9
+    },
+    "total_instructions": 173
+  }
+}

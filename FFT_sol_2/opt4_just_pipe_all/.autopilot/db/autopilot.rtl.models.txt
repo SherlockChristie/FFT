@@ -1,0 +1,16 @@
+fft32_mul_14ns_22ns_35_1_1
+fft32_mac_muladd_2ns_16ns_18ns_18_4_1
+fft32_mul_14s_16s_28_1_0
+fft32_mac_mulsub_14s_16s_28s_28_4_0
+fft32_mac_muladd_14s_16s_28s_28_4_0
+fft32_mul_16s_14s_28_1_1
+fft32_mac_mulsub_16s_14s_28s_28_4_1
+fft32_mac_muladd_16s_14s_28s_28_4_1
+radix4_bfly
+cordic_circ_apfixed_18_3_0_s
+cos_16_4_s
+sin_16_4_s
+cmul
+radix4_bfly_1
+radix2_bfly
+fft32

@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Jun 25 08:58:43 2025
+# Process ID: 2072
+# Current directory: D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/fft32/xsim_script.tcl}
+# Log file: D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/xsim.log
+# Journal file: D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog\xsim.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17014 MB
+#-----------------------------------------------------------
+source xsim.dir/fft32/xsim_script.tcl
+# xsim {fft32} -autoloadwcfg -tclbatch {fft32.tcl}
+Time resolution is 1 ps
+source fft32.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+
+//////////////////////////////////////////////////////////////////////////////
+// Following axis ports can not be accessed by kernel 'fft32' 
+//    port 'in_stream' can not be read
+//    port 'out_stream' can not be written
+//
+//    Because the top pipeline FSM is blocked by following axis ports
+//////////////////////////////////////////////////////////////////////////////
+
+// RTL Simulation : 1 / 1 [100.00%] @ "875000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 935 ns : File "D:/Vivado/FFT_sol/FFT_sol_2/opt3_overall_pipeline/sim/verilog/fft32.autotb.v" Line 196
+## quit
+INFO: [Common 17-206] Exiting xsim at Wed Jun 25 08:58:45 2025...

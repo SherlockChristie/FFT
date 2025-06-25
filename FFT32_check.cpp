@@ -5,7 +5,7 @@
 
 // 复数乘法：r = x * w
 static complex_t cmul(const complex_t& x, const complex_t& w) {
-   #pragma HLS INLINE
+
     complex_t r;
     r.real = x.real * w.real - x.imag * w.imag;
     r.imag = x.real * w.imag + x.imag * w.real;
@@ -14,7 +14,7 @@ static complex_t cmul(const complex_t& x, const complex_t& w) {
 
 // Radix-4 蝶形运算（无旋转因子版本）
 static void radix4_bfly(complex_t& a, complex_t& b, complex_t& c, complex_t& d) {
-    #pragma HLS INLINE
+
     data_t ar = a.real, ai = a.imag;
     data_t br = b.real, bi = b.imag;
     data_t cr = c.real, ci = c.imag;
@@ -39,7 +39,7 @@ static void radix4_bfly(complex_t& a, complex_t& b, complex_t& c, complex_t& d) 
 
 // Radix-2 蝶形运算（带旋转因子）
 static void radix2_bfly(complex_t& a, complex_t& b, const complex_t& w) {
-    #pragma HLS INLINE
+
     complex_t t = cmul(b, w);
     data_t ar = a.real, ai = a.imag;
     a.real = ar + t.real;
@@ -50,7 +50,7 @@ static void radix2_bfly(complex_t& a, complex_t& b, const complex_t& w) {
 
 // 位反转（自然顺序输入→比特逆序输出）
 static unsigned bit_reverse(unsigned x, int bits = 5) {
-    #pragma HLS INLINE
+
     unsigned r = 0;
     for (int i = 0; i < bits; i++) {
         r = (r << 1) | (x & 1);
@@ -61,16 +61,17 @@ static unsigned bit_reverse(unsigned x, int bits = 5) {
 
 // FFT32主函数
 void fft32(hls::stream<axis_data>& in_stream, hls::stream<axis_data>& out_stream) {
-    #pragma HLS INTERFACE axis port=in_stream
-    #pragma HLS INTERFACE axis port=out_stream
-    #pragma HLS INTERFACE ap_ctrl_none port=return
+
+
+
 
     complex_t data[N];
-    #pragma HLS ARRAY_PARTITION variable=data complete dim=1
+
 
     // 1. 输入加载
+    input_loop:
     for (int i = 0; i < N; i++) {
-        #pragma HLS PIPELINE II=1
+
 
         axis_data val = in_stream.read();
         data[i] = val.data;
@@ -78,17 +79,20 @@ void fft32(hls::stream<axis_data>& in_stream, hls::stream<axis_data>& out_stream
 
     // 2. 位反转重排序
     complex_t stage0[N];
-    #pragma HLS ARRAY_PARTITION variable=stage0 complete dim=1
+
+    bit_rev_assign_loop:
     for (int i = 0; i < N; i++) {
-        #pragma HLS UNROLL
+
         stage0[i] = data[bit_reverse(i)];
     }
 
     // 3. 第一级：Radix-4（8组，每组4点）
     complex_t stage1[N];
-    #pragma HLS ARRAY_PARTITION variable=stage1 complete dim=1
+
+
+    stage1_loop:
     for (int block = 0; block < N/4; block++) {
-        #pragma HLS UNROLL
+
         int base = block * 4;
         radix4_bfly(stage0[base], stage0[base+1], stage0[base+2], stage0[base+3]);
         // 复制到下一级（实际可优化为原位计算）
@@ -100,19 +104,22 @@ void fft32(hls::stream<axis_data>& in_stream, hls::stream<axis_data>& out_stream
 
     // 4. 第二级：Radix-4（8组，正确分组+旋转因子）
     complex_t stage2[N];
-    #pragma HLS ARRAY_PARTITION variable=stage2 complete dim=1
+
+
+    stage2_loop:
     for (int block = 0; block < N/4; block++) {
-        #pragma HLS UNROLL
+
         int group = block / 2;    // 0,0,1,1,2,2,3,3
         int subgroup = block % 2; // 0,1,0,1,0,1,0,1
         int base = subgroup * 4 + group * 8;
 
         // 准备旋转因子（k=1,2,3）
         complex_t w[4];
-        #pragma HLS ARRAY_PARTITION variable=w complete dim=1
+
         w[0].real = 1.0; w[0].imag = 0.0; // W^0
+
+        twiddle_loop:
         for (int k = 1; k < 4; k++) {
-#pragma HLS UNROLL
             data_t angle = -2 * PI * k * group / N;
             w[k].real = hls::cos(angle);
             w[k].imag = hls::sin(angle);
@@ -133,8 +140,10 @@ void fft32(hls::stream<axis_data>& in_stream, hls::stream<axis_data>& out_stream
     }
 
     // 5. 第三级：Radix-2（16组）
+
+    stage3_loop:
     for (int k = 0; k < N/2; k++) {
-        #pragma HLS UNROLL
+
         data_t angle = -2 * PI * k / N;
         complex_t w;
         w.real = hls::cos(angle);
@@ -143,8 +152,10 @@ void fft32(hls::stream<axis_data>& in_stream, hls::stream<axis_data>& out_stream
     }
 
     // 6. 输出
+
+    output_loop:
     for (int i = 0; i < N; i++) {
-        #pragma HLS PIPELINE II=1
+
         axis_data val;
         val.data = stage2[i];
         val.last = (i == N-1);

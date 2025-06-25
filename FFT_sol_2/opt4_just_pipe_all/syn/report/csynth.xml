@@ -1,0 +1,851 @@
+<profile>
+    <ReportVersion>
+        <Version>2023.1</Version>
+    </ReportVersion>
+    <UserAssignments>
+        <unit>ns</unit>
+        <ProductFamily>zynq</ProductFamily>
+        <Part>xc7z030-sbv485-1</Part>
+        <TopModelName>fft32</TopModelName>
+        <TargetClockPeriod>10.00</TargetClockPeriod>
+        <ClockUncertainty>2.70</ClockUncertainty>
+        <TargetInitiationInterval>32</TargetInitiationInterval>
+        <FlowTarget>vivado</FlowTarget>
+    </UserAssignments>
+    <PerformanceEstimates>
+        <PipelineType>yes</PipelineType>
+        <SummaryOfTimingAnalysis>
+            <unit>ns</unit>
+            <EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+        </SummaryOfTimingAnalysis>
+        <SummaryOfOverallLatency>
+            <unit>clock cycles</unit>
+            <Best-caseLatency>87</Best-caseLatency>
+            <Average-caseLatency>87</Average-caseLatency>
+            <Worst-caseLatency>87</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.870 us</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.870 us</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.870 us</Worst-caseRealTimeLatency>
+            <PipelineInitiationInterval>32</PipelineInitiationInterval>
+            <PipelineDepth>88</PipelineDepth>
+            <Interval-min>32</Interval-min>
+            <Interval-max>32</Interval-max>
+        </SummaryOfOverallLatency>
+    </PerformanceEstimates>
+    <AreaEstimates>
+        <Resources>
+            <DSP>12</DSP>
+            <FF>6122</FF>
+            <LUT>8819</LUT>
+            <BRAM_18K>0</BRAM_18K>
+            <URAM>0</URAM>
+        </Resources>
+        <AvailableResources>
+            <BRAM_18K>530</BRAM_18K>
+            <DSP>400</DSP>
+            <FF>157200</FF>
+            <LUT>78600</LUT>
+            <URAM>0</URAM>
+        </AvailableResources>
+    </AreaEstimates>
+    <InterfaceSummary>
+        <RtlPorts>
+            <name>ap_clk</name>
+            <Object>fft32</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_rst</name>
+            <Object>fft32</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_start</name>
+            <Object>fft32</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_done</name>
+            <Object>fft32</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_idle</name>
+            <Object>fft32</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>ap_ready</name>
+            <Object>fft32</Object>
+            <Type>return value</Type>
+            <Scope/>
+            <IOProtocol>ap_ctrl_hs</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_dout</name>
+            <Object>in_stream</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>33</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_empty_n</name>
+            <Object>in_stream</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>in_stream_read</name>
+            <Object>in_stream</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_din</name>
+            <Object>out_stream</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>33</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_full_n</name>
+            <Object>out_stream</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>in</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+        <RtlPorts>
+            <name>out_stream_write</name>
+            <Object>out_stream</Object>
+            <Type>pointer</Type>
+            <Scope/>
+            <IOProtocol>ap_fifo</IOProtocol>
+            <IOConfig/>
+            <Dir>out</Dir>
+            <Bits>1</Bits>
+            <Attribute>control</Attribute>
+            <CType>int</CType>
+        </RtlPorts>
+    </InterfaceSummary>
+    <RTLDesignHierarchy>
+        <TopModule MAX_DEPTH="4">
+            <ModuleName>fft32</ModuleName>
+            <InstancesList>
+                <Instance>
+                    <InstName>grp_cos_16_4_s_fu_97</InstName>
+                    <ModuleName>cos_16_4_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>97</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_cordic_circ_apfixed_18_3_0_s_fu_59</InstName>
+                            <ModuleName>cordic_circ_apfixed_18_3_0_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>59</ID>
+                            <BindInstances>tz_fu_178_p2 add_ln102_fu_484_p2 sub_ln103_fu_490_p2 sub_ln107_fu_496_p2 add_ln108_fu_502_p2 add_ln102_1_fu_554_p2 sub_ln103_1_fu_560_p2 sub_ln107_1_fu_566_p2 add_ln108_1_fu_572_p2 add_ln102_2_fu_652_p2 sub_ln103_2_fu_657_p2 sub_ln107_2_fu_662_p2 add_ln108_2_fu_667_p2 add_ln102_3_fu_714_p2 sub_ln103_3_fu_720_p2 sub_ln107_3_fu_726_p2 add_ln108_3_fu_732_p2 add_ln102_4_fu_812_p2 sub_ln103_4_fu_817_p2 sub_ln107_4_fu_822_p2 add_ln108_4_fu_827_p2 add_ln102_5_fu_874_p2 sub_ln103_5_fu_880_p2 sub_ln107_5_fu_886_p2 add_ln108_5_fu_892_p2 add_ln102_6_fu_972_p2 sub_ln103_6_fu_977_p2 sub_ln107_6_fu_982_p2 add_ln108_6_fu_987_p2 add_ln102_7_fu_1034_p2 sub_ln103_7_fu_1040_p2 sub_ln107_7_fu_1046_p2 add_ln108_7_fu_1052_p2 add_ln102_8_fu_1132_p2 sub_ln103_8_fu_1137_p2 sub_ln107_8_fu_1142_p2 add_ln108_8_fu_1147_p2 add_ln102_9_fu_1194_p2 sub_ln103_9_fu_1200_p2 sub_ln107_9_fu_1206_p2 add_ln108_9_fu_1212_p2 add_ln102_10_fu_1292_p2 sub_ln103_10_fu_1297_p2 sub_ln107_10_fu_1302_p2 add_ln108_10_fu_1307_p2 add_ln102_11_fu_1380_p2 sub_ln103_11_fu_1386_p2 sub_ln107_11_fu_1392_p2 add_ln108_11_fu_1398_p2 add_ln102_12_fu_1480_p2 sub_ln103_12_fu_1485_p2 sub_ln107_12_fu_1490_p2 add_ln108_12_fu_1495_p2 add_ln102_13_fu_1576_p2 sub_ln103_13_fu_1581_p2 add_ln102_14_fu_1618_p2 sub_ln103_14_fu_1624_p2 add_ln102_15_fu_1662_p2 sub_ln103_15_fu_1668_p2 sub_ln107_13_fu_1674_p2 add_ln108_13_fu_1679_p2 sub_ln107_14_fu_1716_p2 add_ln108_14_fu_1722_p2 sub_ln107_15_fu_1760_p2 add_ln108_15_fu_1766_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>x_fu_64_p2 mul_14ns_22ns_35_1_1_U10 mac_muladd_2ns_16ns_18ns_18_4_1_U11 mac_muladd_2ns_16ns_18ns_18_4_1_U11 sub_ln254_fu_121_p2 sub_ln280_fu_165_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_sin_16_4_s_fu_118</InstName>
+                    <ModuleName>sin_16_4_s</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>118</ID>
+                    <InstancesList>
+                        <Instance>
+                            <InstName>grp_cordic_circ_apfixed_18_3_0_s_fu_48</InstName>
+                            <ModuleName>cordic_circ_apfixed_18_3_0_s</ModuleName>
+                            <IsCompInst>true</IsCompInst>
+                            <ID>48</ID>
+                            <BindInstances>tz_fu_178_p2 add_ln102_fu_484_p2 sub_ln103_fu_490_p2 sub_ln107_fu_496_p2 add_ln108_fu_502_p2 add_ln102_1_fu_554_p2 sub_ln103_1_fu_560_p2 sub_ln107_1_fu_566_p2 add_ln108_1_fu_572_p2 add_ln102_2_fu_652_p2 sub_ln103_2_fu_657_p2 sub_ln107_2_fu_662_p2 add_ln108_2_fu_667_p2 add_ln102_3_fu_714_p2 sub_ln103_3_fu_720_p2 sub_ln107_3_fu_726_p2 add_ln108_3_fu_732_p2 add_ln102_4_fu_812_p2 sub_ln103_4_fu_817_p2 sub_ln107_4_fu_822_p2 add_ln108_4_fu_827_p2 add_ln102_5_fu_874_p2 sub_ln103_5_fu_880_p2 sub_ln107_5_fu_886_p2 add_ln108_5_fu_892_p2 add_ln102_6_fu_972_p2 sub_ln103_6_fu_977_p2 sub_ln107_6_fu_982_p2 add_ln108_6_fu_987_p2 add_ln102_7_fu_1034_p2 sub_ln103_7_fu_1040_p2 sub_ln107_7_fu_1046_p2 add_ln108_7_fu_1052_p2 add_ln102_8_fu_1132_p2 sub_ln103_8_fu_1137_p2 sub_ln107_8_fu_1142_p2 add_ln108_8_fu_1147_p2 add_ln102_9_fu_1194_p2 sub_ln103_9_fu_1200_p2 sub_ln107_9_fu_1206_p2 add_ln108_9_fu_1212_p2 add_ln102_10_fu_1292_p2 sub_ln103_10_fu_1297_p2 sub_ln107_10_fu_1302_p2 add_ln108_10_fu_1307_p2 add_ln102_11_fu_1380_p2 sub_ln103_11_fu_1386_p2 sub_ln107_11_fu_1392_p2 add_ln108_11_fu_1398_p2 add_ln102_12_fu_1480_p2 sub_ln103_12_fu_1485_p2 sub_ln107_12_fu_1490_p2 add_ln108_12_fu_1495_p2 add_ln102_13_fu_1576_p2 sub_ln103_13_fu_1581_p2 add_ln102_14_fu_1618_p2 sub_ln103_14_fu_1624_p2 add_ln102_15_fu_1662_p2 sub_ln103_15_fu_1668_p2 sub_ln107_13_fu_1674_p2 add_ln108_13_fu_1679_p2 sub_ln107_14_fu_1716_p2 add_ln108_14_fu_1722_p2 sub_ln107_15_fu_1760_p2 add_ln108_15_fu_1766_p2</BindInstances>
+                        </Instance>
+                    </InstancesList>
+                    <BindInstances>x_fu_53_p2 mul_14ns_22ns_35_1_1_U15 mac_muladd_2ns_16ns_18ns_18_4_1_U16 mac_muladd_2ns_16ns_18ns_18_4_1_U16 sub_ln254_fu_110_p2 ap_return</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix4_bfly_fu_139</InstName>
+                    <ModuleName>radix4_bfly</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>139</ID>
+                    <BindInstances>ar0_fu_68_p2 ai0_fu_74_p2 ar1_fu_80_p2 ai1_fu_86_p2 cr0_fu_92_p2 ci0_fu_98_p2 cr1_fu_104_p2 ci1_fu_110_p2 add_ln34_fu_116_p2 add_ln34_2_fu_122_p2 add_ln35_fu_128_p2 sub_ln35_fu_134_p2 sub_ln36_fu_140_p2 sub_ln36_2_fu_146_p2 sub_ln37_fu_152_p2 add_ln37_fu_158_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_cmul_fu_151</InstName>
+                    <ModuleName>cmul</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>151</ID>
+                    <BindInstances>mul_14s_16s_28_1_0_U18 mac_mulsub_14s_16s_28s_28_4_0_U20 mac_mulsub_14s_16s_28s_28_4_0_U20 mul_14s_16s_28_1_0_U19 mac_muladd_14s_16s_28s_28_4_0_U21 mac_muladd_14s_16s_28s_28_4_0_U21</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix4_bfly_1_fu_159</InstName>
+                    <ModuleName>radix4_bfly_1</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>159</ID>
+                    <BindInstances>ar0_fu_68_p2 ai0_fu_74_p2 ar1_fu_80_p2 ai1_fu_86_p2 cr0_fu_92_p2 ci0_fu_98_p2 cr1_fu_104_p2 ci1_fu_110_p2 add_ln34_fu_116_p2 add_ln34_1_fu_122_p2 add_ln35_fu_128_p2 sub_ln35_fu_134_p2 sub_ln36_fu_140_p2 sub_ln36_1_fu_146_p2 sub_ln37_fu_152_p2 add_ln37_fu_158_p2</BindInstances>
+                </Instance>
+                <Instance>
+                    <InstName>grp_radix2_bfly_fu_171</InstName>
+                    <ModuleName>radix2_bfly</ModuleName>
+                    <IsCompInst>true</IsCompInst>
+                    <ID>171</ID>
+                    <BindInstances>mul_16s_14s_28_1_1_U37 mac_mulsub_16s_14s_28s_28_4_1_U39 mac_mulsub_16s_14s_28s_28_4_1_U39 mac_muladd_16s_14s_28s_28_4_1_U40 mul_16s_14s_28_1_1_U38 mac_muladd_16s_14s_28s_28_4_1_U40 add_ln45_fu_104_p2 add_ln46_fu_108_p2 sub_ln47_fu_113_p2 sub_ln48_fu_117_p2</BindInstances>
+                </Instance>
+            </InstancesList>
+        </TopModule>
+    </RTLDesignHierarchy>
+    <ModuleInformation>
+        <Module>
+            <Name>radix4_bfly</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4</TargetInitiationInterval>
+                    <EstimatedClockPeriod>4.154</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>368</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ar0_fu_68_p2" SOURCE="FFT32_check.cpp:24" URAM="0" VARIABLE="ar0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ai0_fu_74_p2" SOURCE="FFT32_check.cpp:25" URAM="0" VARIABLE="ai0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ar1_fu_80_p2" SOURCE="FFT32_check.cpp:26" URAM="0" VARIABLE="ar1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ai1_fu_86_p2" SOURCE="FFT32_check.cpp:27" URAM="0" VARIABLE="ai1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="cr0_fu_92_p2" SOURCE="FFT32_check.cpp:28" URAM="0" VARIABLE="cr0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ci0_fu_98_p2" SOURCE="FFT32_check.cpp:29" URAM="0" VARIABLE="ci0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="cr1_fu_104_p2" SOURCE="FFT32_check.cpp:30" URAM="0" VARIABLE="cr1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ci1_fu_110_p2" SOURCE="FFT32_check.cpp:31" URAM="0" VARIABLE="ci1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_116_p2" SOURCE="FFT32_check.cpp:34" URAM="0" VARIABLE="add_ln34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_2_fu_122_p2" SOURCE="FFT32_check.cpp:34" URAM="0" VARIABLE="add_ln34_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln35_fu_128_p2" SOURCE="FFT32_check.cpp:35" URAM="0" VARIABLE="add_ln35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln35_fu_134_p2" SOURCE="FFT32_check.cpp:35" URAM="0" VARIABLE="sub_ln35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln36_fu_140_p2" SOURCE="FFT32_check.cpp:36" URAM="0" VARIABLE="sub_ln36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln36_2_fu_146_p2" SOURCE="FFT32_check.cpp:36" URAM="0" VARIABLE="sub_ln36_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln37_fu_152_p2" SOURCE="FFT32_check.cpp:37" URAM="0" VARIABLE="sub_ln37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_158_p2" SOURCE="FFT32_check.cpp:37" URAM="0" VARIABLE="add_ln37"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>cordic_circ_apfixed_18_3_0_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>2</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>13</Best-caseLatency>
+                    <Average-caseLatency>13</Average-caseLatency>
+                    <Worst-caseLatency>13</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.130 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.130 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.130 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineDepth>14</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>931</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>2964</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="tz_fu_178_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:101" URAM="0" VARIABLE="tz"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_fu_484_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_fu_490_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_fu_496_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_fu_502_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_1_fu_554_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_1_fu_560_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_1_fu_566_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_1_fu_572_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_2_fu_652_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_2_fu_657_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_2_fu_662_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_2_fu_667_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_3_fu_714_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_3_fu_720_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_3_fu_726_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_3_fu_732_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_3"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_4_fu_812_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_4_fu_817_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_4_fu_822_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_4_fu_827_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_4"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_5_fu_874_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_5_fu_880_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_5_fu_886_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_5_fu_892_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_5"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_6_fu_972_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_6_fu_977_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_6_fu_982_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_6_fu_987_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_6"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_7_fu_1034_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_7_fu_1040_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_7_fu_1046_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_7_fu_1052_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_7"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_8_fu_1132_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_8_fu_1137_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_8_fu_1142_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_8_fu_1147_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_8"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_9_fu_1194_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_9_fu_1200_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_9_fu_1206_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_9_fu_1212_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_9"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_10_fu_1292_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_10_fu_1297_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_10_fu_1302_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_10_fu_1307_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_11_fu_1380_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_11_fu_1386_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_11_fu_1392_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_11_fu_1398_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_12_fu_1480_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_12_fu_1485_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_12_fu_1490_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_12_fu_1495_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_12"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_13_fu_1576_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_13_fu_1581_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_14_fu_1618_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_14_fu_1624_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_15_fu_1662_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:102" URAM="0" VARIABLE="add_ln102_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln103_15_fu_1668_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:103" URAM="0" VARIABLE="sub_ln103_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_13_fu_1674_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_13_fu_1679_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_13"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_14_fu_1716_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_14_fu_1722_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_14"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln107_15_fu_1760_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:107" URAM="0" VARIABLE="sub_ln107_15"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln108_15_fu_1766_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:108" URAM="0" VARIABLE="add_ln108_15"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>cos_16_4_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>2</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>20</Best-caseLatency>
+                    <Average-caseLatency>20</Average-caseLatency>
+                    <Worst-caseLatency>20</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.200 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.200 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineDepth>21</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>2</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>1086</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>3161</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>4</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="x_fu_64_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:237" URAM="0" VARIABLE="x"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_14ns_22ns_35_1_1_U10" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64" URAM="0" VARIABLE="mul_ln64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_2ns_16ns_18ns_18_4_1_U11" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68" URAM="0" VARIABLE="mul_ln68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_2ns_16ns_18ns_18_4_1_U11" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68" URAM="0" VARIABLE="add_ln68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln254_fu_121_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:254" URAM="0" VARIABLE="sub_ln254"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln280_fu_165_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:280" URAM="0" VARIABLE="sub_ln280"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>sin_16_4_s</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>2</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>20</Best-caseLatency>
+                    <Average-caseLatency>20</Average-caseLatency>
+                    <Worst-caseLatency>20</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.200 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.200 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.200 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineDepth>21</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>2</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>~0</UTIL_DSP>
+                    <FF>1024</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>3108</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>3</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="x_fu_53_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:237" URAM="0" VARIABLE="x"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_14ns_22ns_35_1_1_U15" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:64" URAM="0" VARIABLE="mul_ln64"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_2ns_16ns_18ns_18_4_1_U16" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68" URAM="0" VARIABLE="mul_ln68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_2ns_16ns_18ns_18_4_1_U16" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:68" URAM="0" VARIABLE="add_ln68"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln254_fu_110_p2" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:254" URAM="0" VARIABLE="sub_ln254"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ap_return" SOURCE="D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:292" URAM="0" VARIABLE="sub_ln292"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>cmul</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>1</TargetInitiationInterval>
+                    <EstimatedClockPeriod>5.580</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>3</Best-caseLatency>
+                    <Average-caseLatency>3</Average-caseLatency>
+                    <Worst-caseLatency>3</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>30.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>30.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>30.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>4</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>205</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>40</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_14s_16s_28_1_0_U18" SOURCE="FFT32_check.cpp:10" URAM="0" VARIABLE="mul_ln10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_14s_16s_28s_28_4_0_U20" SOURCE="FFT32_check.cpp:10" URAM="0" VARIABLE="mul_ln10_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_14s_16s_28s_28_4_0_U20" SOURCE="FFT32_check.cpp:10" URAM="0" VARIABLE="sub_ln10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_14s_16s_28_1_0_U19" SOURCE="FFT32_check.cpp:11" URAM="0" VARIABLE="mul_ln11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_14s_16s_28s_28_4_0_U21" SOURCE="FFT32_check.cpp:11" URAM="0" VARIABLE="mul_ln11_2"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_14s_16s_28s_28_4_0_U21" SOURCE="FFT32_check.cpp:11" URAM="0" VARIABLE="add_ln11"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>radix4_bfly_1</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>4</TargetInitiationInterval>
+                    <EstimatedClockPeriod>4.154</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>0</Best-caseLatency>
+                    <Average-caseLatency>0</Average-caseLatency>
+                    <Worst-caseLatency>0</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>1</PipelineInitiationInterval>
+                    <PipelineDepth>1</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <FF>0</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>0</UTIL_FF>
+                    <LUT>368</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <DSP>0</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>0</UTIL_DSP>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ar0_fu_68_p2" SOURCE="FFT32_check.cpp:24" URAM="0" VARIABLE="ar0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ai0_fu_74_p2" SOURCE="FFT32_check.cpp:25" URAM="0" VARIABLE="ai0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ar1_fu_80_p2" SOURCE="FFT32_check.cpp:26" URAM="0" VARIABLE="ar1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ai1_fu_86_p2" SOURCE="FFT32_check.cpp:27" URAM="0" VARIABLE="ai1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="cr0_fu_92_p2" SOURCE="FFT32_check.cpp:28" URAM="0" VARIABLE="cr0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="ci0_fu_98_p2" SOURCE="FFT32_check.cpp:29" URAM="0" VARIABLE="ci0"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="cr1_fu_104_p2" SOURCE="FFT32_check.cpp:30" URAM="0" VARIABLE="cr1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="ci1_fu_110_p2" SOURCE="FFT32_check.cpp:31" URAM="0" VARIABLE="ci1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_fu_116_p2" SOURCE="FFT32_check.cpp:34" URAM="0" VARIABLE="add_ln34"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln34_1_fu_122_p2" SOURCE="FFT32_check.cpp:34" URAM="0" VARIABLE="add_ln34_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln35_fu_128_p2" SOURCE="FFT32_check.cpp:35" URAM="0" VARIABLE="add_ln35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln35_fu_134_p2" SOURCE="FFT32_check.cpp:35" URAM="0" VARIABLE="sub_ln35"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln36_fu_140_p2" SOURCE="FFT32_check.cpp:36" URAM="0" VARIABLE="sub_ln36"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln36_1_fu_146_p2" SOURCE="FFT32_check.cpp:36" URAM="0" VARIABLE="sub_ln36_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln37_fu_152_p2" SOURCE="FFT32_check.cpp:37" URAM="0" VARIABLE="sub_ln37"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln37_fu_158_p2" SOURCE="FFT32_check.cpp:37" URAM="0" VARIABLE="add_ln37"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>radix2_bfly</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>2</TargetInitiationInterval>
+                    <EstimatedClockPeriod>5.580</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>4</Best-caseLatency>
+                    <Average-caseLatency>4</Average-caseLatency>
+                    <Worst-caseLatency>4</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>40.000 ns</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>40.000 ns</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>2</PipelineInitiationInterval>
+                    <PipelineDepth>5</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>4</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>1</UTIL_DSP>
+                    <FF>285</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>~0</UTIL_FF>
+                    <LUT>138</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>~0</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+            <BindNodes>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_14s_28_1_1_U37" SOURCE="FFT32_check.cpp:10" URAM="0" VARIABLE="mul_ln10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_mulsub_16s_14s_28s_28_4_1_U39" SOURCE="FFT32_check.cpp:10" URAM="0" VARIABLE="mul_ln10_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="mac_mulsub_16s_14s_28s_28_4_1_U39" SOURCE="FFT32_check.cpp:10" URAM="0" VARIABLE="sub_ln10"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_14s_28s_28_4_1_U40" SOURCE="FFT32_check.cpp:11" URAM="0" VARIABLE="mul_ln11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="1" ID="" IMPL="auto" LATENCY="0" LOOP="" OPTYPE="mul" PRAGMA="" RTLNAME="mul_16s_14s_28_1_1_U38" SOURCE="FFT32_check.cpp:11" URAM="0" VARIABLE="mul_ln11_1"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="1" ID="" IMPL="dsp48" LATENCY="3" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_14s_28s_28_4_1_U40" SOURCE="FFT32_check.cpp:11" URAM="0" VARIABLE="add_ln11"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln45_fu_104_p2" SOURCE="FFT32_check.cpp:45" URAM="0" VARIABLE="add_ln45"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln46_fu_108_p2" SOURCE="FFT32_check.cpp:46" URAM="0" VARIABLE="add_ln46"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln47_fu_113_p2" SOURCE="FFT32_check.cpp:47" URAM="0" VARIABLE="sub_ln47"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="sub" PRAGMA="" RTLNAME="sub_ln48_fu_117_p2" SOURCE="FFT32_check.cpp:48" URAM="0" VARIABLE="sub_ln48"/>
+            </BindNodes>
+        </Module>
+        <Module>
+            <Name>fft32</Name>
+            <PerformanceEstimates>
+                <SummaryOfTimingAnalysis>
+                    <TargetClockPeriod>10.00</TargetClockPeriod>
+                    <ClockUncertainty>2.70</ClockUncertainty>
+                    <TargetInitiationInterval>32</TargetInitiationInterval>
+                    <EstimatedClockPeriod>7.101</EstimatedClockPeriod>
+                </SummaryOfTimingAnalysis>
+                <SummaryOfOverallLatency>
+                    <Best-caseLatency>87</Best-caseLatency>
+                    <Average-caseLatency>87</Average-caseLatency>
+                    <Worst-caseLatency>87</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.870 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.870 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.870 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>32</PipelineInitiationInterval>
+                    <PipelineDepth>88</PipelineDepth>
+                    <PipelineType>yes</PipelineType>
+                </SummaryOfOverallLatency>
+            </PerformanceEstimates>
+            <AreaEstimates>
+                <Resources>
+                    <DSP>12</DSP>
+                    <AVAIL_DSP>400</AVAIL_DSP>
+                    <UTIL_DSP>3</UTIL_DSP>
+                    <FF>6122</FF>
+                    <AVAIL_FF>157200</AVAIL_FF>
+                    <UTIL_FF>3</UTIL_FF>
+                    <LUT>8819</LUT>
+                    <AVAIL_LUT>78600</AVAIL_LUT>
+                    <UTIL_LUT>11</UTIL_LUT>
+                    <BRAM_18K>0</BRAM_18K>
+                    <AVAIL_BRAM>530</AVAIL_BRAM>
+                    <UTIL_BRAM>0</UTIL_BRAM>
+                    <URAM>0</URAM>
+                    <AVAIL_URAM>0</AVAIL_URAM>
+                    <UTIL_URAM>0</UTIL_URAM>
+                </Resources>
+            </AreaEstimates>
+        </Module>
+    </ModuleInformation>
+    <FIFOInformation/>
+    <UserConfigCommands/>
+    <Args>
+        <Arg ArgName="in_stream" index="0" direction="in" srcType="stream&lt;axis_data, 0&gt;&amp;" srcSize="48">
+            <hwRefs>
+                <hwRef type="interface" interface="in_stream" name="" usage="data" direction="in"/>
+            </hwRefs>
+        </Arg>
+        <Arg ArgName="out_stream" index="1" direction="out" srcType="stream&lt;axis_data, 0&gt;&amp;" srcSize="48">
+            <hwRefs>
+                <hwRef type="interface" interface="out_stream" name="" usage="data" direction="out"/>
+            </hwRefs>
+        </Arg>
+    </Args>
+    <Interfaces>
+        <Interface InterfaceName="ap_clk" type="clock" busTypeName="clock" mode="slave">
+            <busParams>
+                <busParam busParamName="ASSOCIATED_RESET">ap_rst</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_clk">CLK</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_clk</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_rst" type="reset" busTypeName="reset" mode="slave">
+            <busParams>
+                <busParam busParamName="POLARITY">ACTIVE_HIGH</busParam>
+            </busParams>
+            <portMaps>
+                <portMap portMapName="ap_rst">RST</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_rst</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="ap_ctrl" type="ap_ctrl" busTypeName="acc_handshake" mode="slave">
+            <portMaps>
+                <portMap portMapName="ap_start">start</portMap>
+                <portMap portMapName="ap_done">done</portMap>
+                <portMap portMapName="ap_idle">idle</portMap>
+                <portMap portMapName="ap_ready">ready</portMap>
+            </portMaps>
+            <ports>
+                <port>ap_done</port>
+                <port>ap_idle</port>
+                <port>ap_ready</port>
+                <port>ap_start</port>
+            </ports>
+        </Interface>
+        <Interface InterfaceName="in_stream" type="ap_fifo" busTypeName="acc_fifo_read" mode="master" dataWidth="33" portPrefix="in_stream_">
+            <portMaps>
+                <portMap portMapName="in_stream_dout">RD_DATA</portMap>
+                <portMap portMapName="in_stream_empty_n">EMPTY_N</portMap>
+                <portMap portMapName="in_stream_read">RD_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>in_stream_dout</port>
+                <port>in_stream_empty_n</port>
+                <port>in_stream_read</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="in_stream"/>
+            </constraints>
+        </Interface>
+        <Interface InterfaceName="out_stream" type="ap_fifo" busTypeName="acc_fifo_write" mode="master" dataWidth="33" portPrefix="out_stream_">
+            <portMaps>
+                <portMap portMapName="out_stream_din">WR_DATA</portMap>
+                <portMap portMapName="out_stream_full_n">FULL_N</portMap>
+                <portMap portMapName="out_stream_write">WR_EN</portMap>
+            </portMaps>
+            <ports>
+                <port>out_stream_din</port>
+                <port>out_stream_full_n</port>
+                <port>out_stream_write</port>
+            </ports>
+            <constraints>
+                <constraint constraint_type="pragma interface" mode="ap_fifo" register_option="0" argName="out_stream"/>
+            </constraints>
+        </Interface>
+    </Interfaces>
+    <ReportHWInterface>
+        <section name="HW Interfaces" level="0">
+            <item name="AP_FIFO">
+                <table>
+                    <keys size="3">Interface, Direction, Data Width</keys>
+                    <column name="in_stream">out, 33</column>
+                    <column name="out_stream">out, 33</column>
+                </table>
+            </item>
+            <item name="TOP LEVEL CONTROL">
+                <table>
+                    <keys size="3">Interface, Type, Ports</keys>
+                    <column name="ap_clk">clock, ap_clk</column>
+                    <column name="ap_rst">reset, ap_rst</column>
+                    <column name="ap_ctrl">ap_ctrl_hs, ap_done ap_idle ap_ready ap_start</column>
+                </table>
+            </item>
+        </section>
+    </ReportHWInterface>
+    <ReportSWInterface>
+        <section name="SW I/O Information" level="0">
+            <item name="Top Function Arguments">
+                <table>
+                    <keys size="3">Argument, Direction, Datatype</keys>
+                    <column name="in_stream">in, stream&lt;axis_data 0&gt;&amp;</column>
+                    <column name="out_stream">out, stream&lt;axis_data 0&gt;&amp;</column>
+                </table>
+            </item>
+            <item name="SW-to-HW Mapping">
+                <table>
+                    <keys size="3">Argument, HW Interface, HW Type</keys>
+                    <column name="in_stream">in_stream, interface</column>
+                    <column name="out_stream">out_stream, interface</column>
+                </table>
+            </item>
+        </section>
+    </ReportSWInterface>
+    <ResolutionUrl key="ZZZ">www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=ZZZ.html</ResolutionUrl>
+    <PragmaReport>
+        <Pragma type="pipeline" location="FFT_sol_2/opt4_just_pipe_all/directives.tcl:8" status="valid" parentFunction="fft32" variable="" isDirective="1" options="II=32"/>
+    </PragmaReport>
+</profile>
+

@@ -1,0 +1,2463 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 157, Column: 5 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        output_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 145, Column: 5 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        stage3_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 110, Column: 5 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        stage2_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 122, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 94, Column: 5 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        stage1_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 84, Column: 5 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        bit_rev_assign_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 73, Column: 5 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        input_loop
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        anonymous
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 87, Column: 22 }
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi18ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_87_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 55, Column: 22 }
+Function:        _ZL11bit_reverseji
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_55_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        output_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:157:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        stage3_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:145:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        stage2_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:110:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        twiddle_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:122:9'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:117:19'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:106:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        stage1_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:94:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '8'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:90:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        bit_rev_assign_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:84:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:81:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        input_loop
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:73:5'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        anonymous
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:68:15'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fft32
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 79, Column: 0 }
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi18ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_87_1
+  - String:          ''' ('
+  - LoopLoc:         'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'cordic_apfixed::cordic_circ_apfixed<18, 3, 0>'
+  - String:          ''' completely with a factor of '
+  - Factor:          '18'
+...
+--- !Missed
+Pass:            reflow-pragma-loop-unroll
+Name:            PipelineRemovedByUnroll
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 79, Column: 0 }
+Function:        _ZN14cordic_apfixed19cordic_circ_apfixedILi18ELi3ELi0EEEvR8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EES5_S5_
+Args:            
+  - String:          'Pipeline directive for loop '''
+  - LoopName:        VITIS_LOOP_87_1
+  - String:          ''' ('
+  - LoopLoc:         'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h:87:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'cordic_apfixed::cordic_circ_apfixed<18, 3, 0>'
+  - String:          ''' has been removed because the loop is unrolled completely'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: FFT32_check.cpp, Line: 52, Column: 0 }
+Function:        _ZL11bit_reverseji
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_55_1
+  - String:          ''' ('
+  - LoopLoc:         'FFT32_check.cpp:55:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          bit_reverse
+  - String:          ''' completely with a factor of '
+  - Factor:          '5'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 43, Column: 19 }
+Function:        _ZL11radix2_bflyR9complex_tS0_RKS_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'cmul(complex_t const&, complex_t const&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 133, Column: 9 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'radix4_bfly(complex_t&, complex_t&, complex_t&, complex_t&)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 68, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 81, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 90, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 106, Column: 15 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Failure
+Pass:            reflow-function-uniquification
+Name:            FunctionUniquification
+DebugLoc:        { File: FFT32_check.cpp, Line: 117, Column: 19 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Duplicating function '''
+  - Name:            'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+  - String:          ''' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design.'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+Function:        _ZN9axis_dataC2Ev
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'axis_data::axis_data()'
+    DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                   Line: 228, Column: 0 }
+Function:        _ZN14cordic_apfixed14generic_sincosILi16ELi4EEEv8ap_fixedIXT_EXT0_EL9ap_q_mode5EL9ap_o_mode3ELi0EERS1_IXplmiT_T0_Li2EELi2ELS2_5ELS3_3ELi0EES6_.65
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::circ_range_redux<16, 4, 17>(ap_ufixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<2>&, ap_ufixed<17, 1, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 60, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                   Line: 1953, Column: 0 }
+Function:        _ZN3hls3cosILi16ELi4EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::cos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1953, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                   Line: 1934, Column: 0 }
+Function:        _ZN3hls3sinILi16ELi4EEE8ap_fixedIXplmiT_T0_Li2EELi2EL9ap_q_mode5EL9ap_o_mode3ELi0EES1_IXT_EXT0_ELS2_5ELS3_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void cordic_apfixed::generic_sincos<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0>&) (.65)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot/etc/hls_cordic_apfixed.h', 
+                       Line: 228, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_fixed<((16) - (4)) + (2), 2, (ap_q_mode)5, (ap_o_mode)3, 0> hls::sin<16, 4>(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: 'D:/Vivado/Vitis_HLS/2023.1/common/technology/autopilot\hls_math.h', 
+                       Line: 1934, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+Function:        _ZL4cmulRK9complex_tS1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cmul(complex_t const&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+Function:        _ZL4cmulRK9complex_tS1_.201
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cmul(complex_t const&, complex_t const&) (.201)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 41, Column: 0 }
+Function:        _ZL11radix2_bflyR9complex_tS0_RKS_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'cmul(complex_t const&, complex_t const&) (.201)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 7, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'radix2_bfly(complex_t&, complex_t&, complex_t const&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 41, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'axis_data::axis_data()'
+    DebugLoc:        { File: ./FFT32.h, Line: 50, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'complex_t::complex_t(ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<16, 4, (ap_q_mode)5, (ap_o_mode)3, 0>) (.3.6.29.35.41)'
+    DebugLoc:        { File: ./FFT32.h, Line: 18, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fft32(hls::stream<axis_data, 0>&, hls::stream<axis_data, 0>&)'
+    DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            out_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '33'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: FFT32_check.cpp, Line: 63, Column: 0 }
+Function:        _Z5fft32RN3hls6streamI9axis_dataLi0EEES3_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            in_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '33'
+  - String:          '-bits'
+...

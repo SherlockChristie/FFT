@@ -1,0 +1,90 @@
+{
+  "0": {
+    "basicblocks": 8537,
+    "calls": "1 5 1 1 1 1 1 1 1 1 1 5 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "FFT32_check.cpp",
+    "fileloc": 63,
+    "instructions": 19970,
+    "loads": {
+      "L": 1191
+    },
+    "name": "fft32",
+    "stores": {
+      "L": 904
+    },
+    "total_instructions": 77948
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32.h",
+    "fileloc": 18,
+    "instructions": 5,
+    "loads": {
+      "L": 2
+    },
+    "name": "complex_t",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "2": {
+    "basicblocks": 112,
+    "calls": "3 4",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 227,
+    "instructions": 332,
+    "loads": {
+      "L": 45
+    },
+    "name": "generic_sincos<16, 4>",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 665
+  },
+  "3": {
+    "basicblocks": 39,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 58,
+    "instructions": 82,
+    "loads": {
+      "L": 4
+    },
+    "name": "circ_range_redux<16, 4, 17>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 82
+  },
+  "4": {
+    "basicblocks": 100,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 77,
+    "instructions": 251,
+    "loads": {
+      "G": 3,
+      "L": 21
+    },
+    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 251
+  },
+  "5": {
+    "basicblocks": 7,
+    "calls": "1",
+    "file": "FFT32.h",
+    "fileloc": 50,
+    "instructions": 14,
+    "name": "axis_data",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 19
+  }
+}

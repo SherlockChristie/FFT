@@ -1,0 +1,89 @@
+{
+  "0": {
+    "basicblocks": 9083,
+    "calls": "1 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "FFT32_check.cpp",
+    "fileloc": 63,
+    "instructions": 22414,
+    "loads": {
+      "L": 1408
+    },
+    "name": "fft32",
+    "stores": {
+      "L": 1744
+    },
+    "total_instructions": 384790
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32.h",
+    "fileloc": 18,
+    "instructions": 5,
+    "loads": {
+      "L": 2
+    },
+    "name": "complex_t",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 5
+  },
+  "2": {
+    "basicblocks": 112,
+    "calls": "5 3",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 227,
+    "instructions": 332,
+    "loads": {
+      "L": 45
+    },
+    "name": "generic_sincos<16, 4>",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 4446
+  },
+  "3": {
+    "basicblocks": 1714,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 77,
+    "instructions": 4032,
+    "loads": {
+      "L": 378
+    },
+    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "stores": {
+      "L": 54
+    },
+    "total_instructions": 4032
+  },
+  "4": {
+    "basicblocks": 7,
+    "calls": "1",
+    "file": "FFT32.h",
+    "fileloc": 50,
+    "instructions": 14,
+    "name": "axis_data",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 19
+  },
+  "5": {
+    "basicblocks": 39,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 58,
+    "instructions": 82,
+    "loads": {
+      "L": 4
+    },
+    "name": "circ_range_redux<16, 4, 17>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 82
+  }
+}

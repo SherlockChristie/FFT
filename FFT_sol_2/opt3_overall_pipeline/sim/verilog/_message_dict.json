@@ -1,0 +1,24 @@
+{
+	"version" : {"major" : "1", "minor" : "0"},
+	"kernels" : 
+	[{
+		"name" : "",
+		"deadlock_register_list" : 
+		[
+			{"register_name" : "dl_diagnosis_info_P0_blocks",
+			"register_word_offset" : "0xFFFFFFFF",
+			"register_bit_info" : 
+			[
+				{"bit" : "0", "message" : "The top pipeline FSM in kernel 'fft32' blocks port 'in_stream'"},
+				{"bit" : "1", "message" : "The top pipeline FSM in kernel 'fft32' blocks port 'out_stream'"}
+			]},
+			{"register_name" : "dl_diagnosis_info_P0_is_blocked_by",
+			"register_word_offset" : "0x-1",
+			"register_bit_info" : 
+			[
+				{"bit" : "0", "message" : "The top pipeline FSM in kernel 'fft32' is blocked by port 'in_stream'"},
+				{"bit" : "1", "message" : "The top pipeline FSM in kernel 'fft32' is blocked by port 'out_stream'"}
+			]}
+		]
+	}]
+}

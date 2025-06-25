@@ -1,0 +1,141 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft32_Pipeline_2'
+================================================================
+* Date:           Wed Jun 25 08:49:50 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        FFT_sol_2
+* Solution:       opt2 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbv485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.368 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       33|       33|  0.330 us|  0.330 us|   33|   33|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |       31|       31|         1|          1|          1|    32|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.36>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%indvars_iv4378 = alloca i32 1"   --->   Operation 4 'alloca' 'indvars_iv4378' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %indvars_iv4378"   --->   Operation 5 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%br_ln0 = br void %arrayctor.loop77"   --->   Operation 6 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%indvars_iv4378_load = load i5 %indvars_iv4378"   --->   Operation 7 'load' 'indvars_iv4378_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%empty = trunc i5 %indvars_iv4378_load"   --->   Operation 8 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 9 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%speclooptripcount_ln106 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 32, i64 32, i64 32" [FFT32_check.cpp:106]   --->   Operation 10 'speclooptripcount' 'speclooptripcount_ln106' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%lshr_ln = partselect i4 @_ssdm_op_PartSelect.i4.i5.i32.i32, i5 %indvars_iv4378_load, i32 1, i32 4" [FFT32_check.cpp:106]   --->   Operation 11 'partselect' 'lshr_ln' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln106 = zext i4 %lshr_ln" [FFT32_check.cpp:106]   --->   Operation 12 'zext' 'zext_ln106' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (1.78ns)   --->   "%add_ln106 = add i5 %indvars_iv4378_load, i5 1" [FFT32_check.cpp:106]   --->   Operation 13 'add' 'add_ln106' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%stage2_real_addr = getelementptr i16 %stage2_real, i64 0, i64 %zext_ln106" [FFT32_check.cpp:106]   --->   Operation 14 'getelementptr' 'stage2_real_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%stage2_real_1_addr = getelementptr i16 %stage2_real_1, i64 0, i64 %zext_ln106" [FFT32_check.cpp:106]   --->   Operation 15 'getelementptr' 'stage2_real_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%stage2_imag_addr = getelementptr i16 %stage2_imag, i64 0, i64 %zext_ln106" [FFT32_check.cpp:106]   --->   Operation 16 'getelementptr' 'stage2_imag_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%stage2_imag_1_addr = getelementptr i16 %stage2_imag_1, i64 0, i64 %zext_ln106" [FFT32_check.cpp:106]   --->   Operation 17 'getelementptr' 'stage2_imag_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%br_ln18 = br i1 %empty, void %array.src80.1.case.0, void %array.src80.1.case.1" [./FFT32.h:18->FFT32_check.cpp:106]   --->   Operation 18 'br' 'br_ln18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (2.32ns)   --->   "%store_ln18 = store i16 0, i4 %stage2_real_addr" [./FFT32.h:18->FFT32_check.cpp:106]   --->   Operation 19 'store' 'store_ln18' <Predicate = (!empty)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 20 [1/1] (2.32ns)   --->   "%store_ln18 = store i16 0, i4 %stage2_imag_addr" [./FFT32.h:18->FFT32_check.cpp:106]   --->   Operation 20 'store' 'store_ln18' <Predicate = (!empty)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%br_ln18 = br void %array.src80.1.exit" [./FFT32.h:18->FFT32_check.cpp:106]   --->   Operation 21 'br' 'br_ln18' <Predicate = (!empty)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (2.32ns)   --->   "%store_ln18 = store i16 0, i4 %stage2_real_1_addr" [./FFT32.h:18->FFT32_check.cpp:106]   --->   Operation 22 'store' 'store_ln18' <Predicate = (empty)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 23 [1/1] (2.32ns)   --->   "%store_ln18 = store i16 0, i4 %stage2_imag_1_addr" [./FFT32.h:18->FFT32_check.cpp:106]   --->   Operation 23 'store' 'store_ln18' <Predicate = (empty)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 16> <RAM>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%br_ln18 = br void %array.src80.1.exit" [./FFT32.h:18->FFT32_check.cpp:106]   --->   Operation 24 'br' 'br_ln18' <Predicate = (empty)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (1.78ns)   --->   "%icmp_ln106 = icmp_eq  i5 %indvars_iv4378_load, i5 31" [FFT32_check.cpp:106]   --->   Operation 25 'icmp' 'icmp_ln106' <Predicate = true> <Delay = 1.78> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (1.58ns)   --->   "%store_ln106 = store i5 %add_ln106, i5 %indvars_iv4378" [FFT32_check.cpp:106]   --->   Operation 26 'store' 'store_ln106' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%br_ln106 = br i1 %icmp_ln106, void %arrayctor.loop77, void %for.end7375.exitStub" [FFT32_check.cpp:106]   --->   Operation 27 'br' 'br_ln106' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln106)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 3.368ns
+The critical path consists of the following:
+	'alloca' operation ('indvars_iv4378') [5]  (0.000 ns)
+	'load' operation ('indvars_iv4378_load') on local variable 'indvars_iv4378' [9]  (0.000 ns)
+	'add' operation ('add_ln106', FFT32_check.cpp:106) [15]  (1.780 ns)
+	'store' operation ('store_ln106', FFT32_check.cpp:106) of variable 'add_ln106', FFT32_check.cpp:106 on local variable 'indvars_iv4378' [31]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,215 @@
+
+
+================================================================
+== Vitis HLS Report for 'fft32_Pipeline_output_loop'
+================================================================
+* Date:           Wed Jun 25 08:09:17 2025
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        FFT_sol_2
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z030-sbv485-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.413 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       34|       34|  0.340 us|  0.340 us|   34|   34|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- output_loop  |       32|       32|         2|          1|          1|    32|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     46|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       0|    284|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|     45|    -|
+|Register         |        -|    -|      42|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      42|    375|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      530|  400|  157200|  78600|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+-----------------+---------+----+---+-----+-----+
+    |       Instance      |      Module     | BRAM_18K| DSP| FF| LUT | URAM|
+    +---------------------+-----------------+---------+----+---+-----+-----+
+    |mux_32_5_16_1_1_U75  |mux_32_5_16_1_1  |        0|   0|  0|  142|    0|
+    |mux_32_5_16_1_1_U76  |mux_32_5_16_1_1  |        0|   0|  0|  142|    0|
+    +---------------------+-----------------+---------+----+---+-----+-----+
+    |Total                |                 |        0|   0|  0|  284|    0|
+    +---------------------+-----------------+---------+----+---+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln157_fu_579_p2        |         +|   0|  0|  14|           6|           1|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln157_fu_573_p2       |      icmp|   0|  0|  14|           6|           7|
+    |icmp_ln161_fu_729_p2       |      icmp|   0|  0|  14|           6|           5|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  46|          20|          16|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|    6|         12|
+    |i_fu_170                 |   9|          2|    6|         12|
+    |out_stream_TDATA_blk_n   |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   15|         30|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+----+----+-----+-----------+
+    |           Name          | FF | LUT| Bits| Const Bits|
+    +-------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                |   1|   0|    1|          0|
+    |ap_done_reg              |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |   1|   0|    1|          0|
+    |i_fu_170                 |   6|   0|    6|          0|
+    |icmp_ln161_reg_772       |   1|   0|    1|          0|
+    |tmp_1_reg_767            |  16|   0|   16|          0|
+    |tmp_reg_762              |  16|   0|   16|          0|
+    +-------------------------+----+----+-----+-----------+
+    |Total                    |  42|   0|   42|          0|
+    +-------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+----------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |        Source Object       |    C Type    |
++-------------------+-----+-----+------------+----------------------------+--------------+
+|ap_clk             |   in|    1|  ap_ctrl_hs|  fft32_Pipeline_output_loop|  return value|
+|ap_rst             |   in|    1|  ap_ctrl_hs|  fft32_Pipeline_output_loop|  return value|
+|ap_start           |   in|    1|  ap_ctrl_hs|  fft32_Pipeline_output_loop|  return value|
+|ap_done            |  out|    1|  ap_ctrl_hs|  fft32_Pipeline_output_loop|  return value|
+|ap_idle            |  out|    1|  ap_ctrl_hs|  fft32_Pipeline_output_loop|  return value|
+|ap_ready           |  out|    1|  ap_ctrl_hs|  fft32_Pipeline_output_loop|  return value|
+|out_stream_TREADY  |   in|    1|        axis|                  out_stream|       pointer|
+|out_stream_TDATA   |  out|   48|        axis|                  out_stream|       pointer|
+|out_stream_TVALID  |  out|    1|        axis|                  out_stream|       pointer|
+|stage2_real        |   in|   16|     ap_none|                 stage2_real|        scalar|
+|stage2_real_18     |   in|   16|     ap_none|              stage2_real_18|        scalar|
+|stage2_real_20     |   in|   16|     ap_none|              stage2_real_20|        scalar|
+|stage2_real_22     |   in|   16|     ap_none|              stage2_real_22|        scalar|
+|stage2_real_24     |   in|   16|     ap_none|              stage2_real_24|        scalar|
+|stage2_real_26     |   in|   16|     ap_none|              stage2_real_26|        scalar|
+|stage2_real_28     |   in|   16|     ap_none|              stage2_real_28|        scalar|
+|stage2_real_30     |   in|   16|     ap_none|              stage2_real_30|        scalar|
+|stage2_real_32     |   in|   16|     ap_none|              stage2_real_32|        scalar|
+|stage2_real_34     |   in|   16|     ap_none|              stage2_real_34|        scalar|
+|stage2_real_36     |   in|   16|     ap_none|              stage2_real_36|        scalar|
+|stage2_real_38     |   in|   16|     ap_none|              stage2_real_38|        scalar|
+|stage2_real_40     |   in|   16|     ap_none|              stage2_real_40|        scalar|
+|stage2_real_42     |   in|   16|     ap_none|              stage2_real_42|        scalar|
+|stage2_real_44     |   in|   16|     ap_none|              stage2_real_44|        scalar|
+|stage2_real_46     |   in|   16|     ap_none|              stage2_real_46|        scalar|
+|stage2_real_17     |   in|   16|     ap_none|              stage2_real_17|        scalar|
+|stage2_real_19     |   in|   16|     ap_none|              stage2_real_19|        scalar|
+|stage2_real_21     |   in|   16|     ap_none|              stage2_real_21|        scalar|
+|stage2_real_23     |   in|   16|     ap_none|              stage2_real_23|        scalar|
+|stage2_real_25     |   in|   16|     ap_none|              stage2_real_25|        scalar|
+|stage2_real_27     |   in|   16|     ap_none|              stage2_real_27|        scalar|
+|stage2_real_29     |   in|   16|     ap_none|              stage2_real_29|        scalar|
+|stage2_real_31     |   in|   16|     ap_none|              stage2_real_31|        scalar|
+|stage2_real_33     |   in|   16|     ap_none|              stage2_real_33|        scalar|
+|stage2_real_35     |   in|   16|     ap_none|              stage2_real_35|        scalar|
+|stage2_real_37     |   in|   16|     ap_none|              stage2_real_37|        scalar|
+|stage2_real_39     |   in|   16|     ap_none|              stage2_real_39|        scalar|
+|stage2_real_41     |   in|   16|     ap_none|              stage2_real_41|        scalar|
+|stage2_real_43     |   in|   16|     ap_none|              stage2_real_43|        scalar|
+|stage2_real_45     |   in|   16|     ap_none|              stage2_real_45|        scalar|
+|stage2_real_47     |   in|   16|     ap_none|              stage2_real_47|        scalar|
+|stage2_imag        |   in|   16|     ap_none|                 stage2_imag|        scalar|
+|stage2_imag_18     |   in|   16|     ap_none|              stage2_imag_18|        scalar|
+|stage2_imag_20     |   in|   16|     ap_none|              stage2_imag_20|        scalar|
+|stage2_imag_22     |   in|   16|     ap_none|              stage2_imag_22|        scalar|
+|stage2_imag_24     |   in|   16|     ap_none|              stage2_imag_24|        scalar|
+|stage2_imag_26     |   in|   16|     ap_none|              stage2_imag_26|        scalar|
+|stage2_imag_28     |   in|   16|     ap_none|              stage2_imag_28|        scalar|
+|stage2_imag_30     |   in|   16|     ap_none|              stage2_imag_30|        scalar|
+|stage2_imag_32     |   in|   16|     ap_none|              stage2_imag_32|        scalar|
+|stage2_imag_34     |   in|   16|     ap_none|              stage2_imag_34|        scalar|
+|stage2_imag_36     |   in|   16|     ap_none|              stage2_imag_36|        scalar|
+|stage2_imag_38     |   in|   16|     ap_none|              stage2_imag_38|        scalar|
+|stage2_imag_40     |   in|   16|     ap_none|              stage2_imag_40|        scalar|
+|stage2_imag_42     |   in|   16|     ap_none|              stage2_imag_42|        scalar|
+|stage2_imag_44     |   in|   16|     ap_none|              stage2_imag_44|        scalar|
+|stage2_imag_46     |   in|   16|     ap_none|              stage2_imag_46|        scalar|
+|stage2_imag_17     |   in|   16|     ap_none|              stage2_imag_17|        scalar|
+|stage2_imag_19     |   in|   16|     ap_none|              stage2_imag_19|        scalar|
+|stage2_imag_21     |   in|   16|     ap_none|              stage2_imag_21|        scalar|
+|stage2_imag_23     |   in|   16|     ap_none|              stage2_imag_23|        scalar|
+|stage2_imag_25     |   in|   16|     ap_none|              stage2_imag_25|        scalar|
+|stage2_imag_27     |   in|   16|     ap_none|              stage2_imag_27|        scalar|
+|stage2_imag_29     |   in|   16|     ap_none|              stage2_imag_29|        scalar|
+|stage2_imag_31     |   in|   16|     ap_none|              stage2_imag_31|        scalar|
+|stage2_imag_33     |   in|   16|     ap_none|              stage2_imag_33|        scalar|
+|stage2_imag_35     |   in|   16|     ap_none|              stage2_imag_35|        scalar|
+|stage2_imag_37     |   in|   16|     ap_none|              stage2_imag_37|        scalar|
+|stage2_imag_39     |   in|   16|     ap_none|              stage2_imag_39|        scalar|
+|stage2_imag_41     |   in|   16|     ap_none|              stage2_imag_41|        scalar|
+|stage2_imag_43     |   in|   16|     ap_none|              stage2_imag_43|        scalar|
+|stage2_imag_45     |   in|   16|     ap_none|              stage2_imag_45|        scalar|
+|stage2_imag_47     |   in|   16|     ap_none|              stage2_imag_47|        scalar|
++-------------------+-----+-----+------------+----------------------------+--------------+
+

@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'fft32'" level="0">
+<item name = "Date">Wed Jun 25 09:29:24 2025
+</item>
+<item name = "Version">2023.1 (Build 3854077 on May  4 2023)</item>
+<item name = "Project">FFT_sol_2</item>
+<item name = "Solution">opt4_just_pipe_all (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z030-sbv485-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.101 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">87, 87, 0.870 us, 0.870 us, 32, 32, yes</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_cos_16_4_s_fu_97">cos_16_4_s, 20, 20, 0.200 us, 0.200 us, 2, 2, yes</column>
+<column name="grp_sin_16_4_s_fu_118">sin_16_4_s, 20, 20, 0.200 us, 0.200 us, 2, 2, yes</column>
+<column name="grp_radix4_bfly_fu_139">radix4_bfly, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_cmul_fu_151">cmul, 3, 3, 30.000 ns, 30.000 ns, 1, 1, yes</column>
+<column name="grp_radix4_bfly_1_fu_159">radix4_bfly_1, 0, 0, 0 ns, 0 ns, 1, 1, yes</column>
+<column name="grp_radix2_bfly_fu_171">radix2_bfly, 4, 4, 40.000 ns, 40.000 ns, 2, 2, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

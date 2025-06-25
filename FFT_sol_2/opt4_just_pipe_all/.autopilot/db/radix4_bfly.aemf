@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1750814965072">
+  <ports id="1" name="a_real_read" type="PortType" originalName="a.real" coreId="537528891" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="a_imag_read" type="PortType" originalName="a.imag" coreId="1702129263" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="b_real_read" type="PortType" originalName="b.real" coreId="1702129263" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="b_imag_read" type="PortType" originalName="b.imag" coreId="1702129263" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="c_real_read" type="PortType" originalName="c.real" coreId="2109306304" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="c_imag_read" type="PortType" originalName="c.imag" coreId="1702129263" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="d_real_read" type="PortType" originalName="d.real" coreId="1717924464" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="d_imag_read" type="PortType" originalName="d.imag" coreId="997420912" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="18" name="ap_return_0" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="19" name="ap_return_1" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="20" name="ap_return_2" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="21" name="ap_return_3" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="22" name="ap_return_4" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="23" name="ap_return_5" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="24" name="ap_return_6" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <ports id="25" name="ap_return_7" direction="DirOut">
+    <dataInputObjs>ret</dataInputObjs>
+  </ports>
+  <edges id="45" source_obj="//@ports.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="47" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="49" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="51" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="53" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="55" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="57" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="59" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="60" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="61" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="62" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="63" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="64" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="65" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="66" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="68" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="69" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="70" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="71" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="72" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="74" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="75" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="77" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="78" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="82" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="84" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="85" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="86" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="87" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="88" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="98" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="101" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="103" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="107" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="108" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <edges id="109" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.32"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.8"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.9"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.10"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.11"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.12"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.13"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.14"/>
+  <edges source_obj="//@regions.0/@basic_blocks.0/@node_objs.32" sink_obj="//@ports.15"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="138" pipe_depth="1" RegionName="radix4_bfly">
+    <basic_blocks id="42" name="radix4_bfly" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="9" name="d_imag_read_2" lineNumber="16" originalName="d.imag" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1954864296" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>d_imag_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="10" name="d_real_read_2" lineNumber="16" originalName="d.real" fileName="FFT32_check.cpp" fileDirectory="../." coreId="2045038454" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>d_real_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="11" name="c_imag_read_2" lineNumber="16" originalName="c.imag" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1954863176" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>c_imag_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="12" name="c_real_read_2" lineNumber="16" originalName="c.real" fileName="FFT32_check.cpp" fileDirectory="../." coreId="2099131104" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>c_real_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="13" name="b_imag_read_2" lineNumber="16" originalName="b.imag" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1954868776" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>b_imag_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="14" name="b_real_read_2" lineNumber="16" originalName="b.real" fileName="FFT32_check.cpp" fileDirectory="../." coreId="2103511264" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>b_real_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="a_imag_read_2" lineNumber="16" originalName="a.imag" fileName="FFT32_check.cpp" fileDirectory="../." coreId="113" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>a_imag_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="a_real_read_2" lineNumber="16" originalName="a.real" fileName="FFT32_check.cpp" fileDirectory="../." coreId="2103970416" contextFuncName="radix4_bfly" bitwidth="16" opcode="read" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="16" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>a_real_read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="17" name="ar0" lineNumber="24" originalName="ar0" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="ar0_fu_68_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="24" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="ai0" lineNumber="25" originalName="ai0" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="ai0_fu_74_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="25" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="19" name="ar1" lineNumber="26" originalName="ar1" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="ar1_fu_80_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="26" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="ai1" lineNumber="27" originalName="ai1" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="ai1_fu_86_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="27" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="21" name="cr0" lineNumber="28" originalName="cr0" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="cr0_fu_92_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="28" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="ci0" lineNumber="29" originalName="ci0" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="ci0_fu_98_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="29" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="cr1" lineNumber="30" originalName="cr1" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="cr1_fu_104_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="30" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="ci1" lineNumber="31" originalName="ci1" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="ci1_fu_110_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="31" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>sub</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="add_ln34" lineNumber="34" originalName="a.real" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="add_ln34_fu_116_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="34" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="add_ln34_2" lineNumber="34" originalName="a.imag" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="add_ln34_2_fu_122_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="34" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="27" name="add_ln35" lineNumber="35" originalName="b.real" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="add_ln35_fu_128_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="35" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="sub_ln35" lineNumber="35" originalName="b.imag" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="sub_ln35_fu_134_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="35" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="sub_ln36" lineNumber="36" originalName="c.real" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="sub_ln36_fu_140_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="36" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sub_ln36_2" lineNumber="36" originalName="c.imag" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="sub_ln36_2_fu_146_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="36" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="sub_ln37" lineNumber="37" originalName="d.real" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="sub_ln37_fu_152_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="sub" m_display="0" m_delay="2.07" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="37" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="add_ln37" lineNumber="37" originalName="d.imag" fileName="FFT32_check.cpp" fileDirectory="../." rtlName="add_ln37_fu_158_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="radix4_bfly" bitwidth="16" opcode="add" m_display="0" m_delay="2.07" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="37" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="mrv" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1819243365" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="mrv_1" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1936942413" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="mrv_2" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="0" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="mrv_3" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1868525665" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="37" name="mrv_4" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1885429603" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="mrv_5" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="mrv_6" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="1734439795" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataInputObjs>sub</dataInputObjs>
+        <dataOutputObjs>insertvalue</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="mrv_7" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="4228300630" contextFuncName="radix4_bfly" bitwidth="128" opcode="insertvalue" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>ret</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="_ln38" lineNumber="38" fileName="FFT32_check.cpp" fileDirectory="../." coreId="542329928" contextFuncName="radix4_bfly" opcode="ret" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT32_check.cpp" linenumber="38" fileDirectory="D:\Vivado\FFT_sol" functionName="radix4_bfly"/>
+        <dataInputObjs>insertvalue</dataInputObjs>
+        <dataOutputObjs>ap_return_0</dataOutputObjs>
+        <dataOutputObjs>ap_return_1</dataOutputObjs>
+        <dataOutputObjs>ap_return_2</dataOutputObjs>
+        <dataOutputObjs>ap_return_3</dataOutputObjs>
+        <dataOutputObjs>ap_return_4</dataOutputObjs>
+        <dataOutputObjs>ap_return_5</dataOutputObjs>
+        <dataOutputObjs>ap_return_6</dataOutputObjs>
+        <dataOutputObjs>ap_return_7</dataOutputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="FFT32_check.cpp">
+        <validLinenumbers>16</validLinenumbers>
+        <validLinenumbers>24</validLinenumbers>
+        <validLinenumbers>25</validLinenumbers>
+        <validLinenumbers>26</validLinenumbers>
+        <validLinenumbers>27</validLinenumbers>
+        <validLinenumbers>28</validLinenumbers>
+        <validLinenumbers>29</validLinenumbers>
+        <validLinenumbers>30</validLinenumbers>
+        <validLinenumbers>31</validLinenumbers>
+        <validLinenumbers>34</validLinenumbers>
+        <validLinenumbers>35</validLinenumbers>
+        <validLinenumbers>36</validLinenumbers>
+        <validLinenumbers>37</validLinenumbers>
+        <validLinenumbers>38</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="add_ln34_2_fu_122">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln34_fu_116">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln35_fu_128">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln36_2_fu_146">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_3_fu_182">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_5_fu_194">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_4_fu_188">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_fu_164">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_2_fu_176">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_7_fu_206">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_6_fu_200">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln36_fu_140">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ai0_fu_74">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln37_fu_152">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ai1_fu_86">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cr0_fu_92">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="cr1_fu_104">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sub_ln35_fu_134">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln37_fu_158">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ci0_fu_98">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ci1_fu_110">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="mrv_1_fu_170">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ar1_fu_80">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ar0_fu_68">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="c_real_read_2_read_fu_38">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="d_real_read_2_read_fu_26">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="c_imag_read_2_read_fu_32">
+    <nodeIds>11</nodeIds>
+  </ioNodes>
+  <ioNodes realName="d_imag_read_2_read_fu_20">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_real_read_2_read_fu_62">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_real_read_2_read_fu_50">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_imag_read_2_read_fu_56">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_imag_read_2_read_fu_44">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioPorts name="a_imag_read">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_real_read">
+    <contents name="read">
+      <nodeIds>16</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_imag_read">
+    <contents name="read">
+      <nodeIds>13</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_real_read">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c_imag_read">
+    <contents name="read">
+      <nodeIds>11</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c_real_read">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_imag_read">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="d_real_read">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_0">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_1">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_2">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_3">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_4">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_5">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_6">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="ap_return_7">
+    <contents name="ret">
+      <nodeIds>41</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="radix4_bfly" mII="1" mDepth="1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>42</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

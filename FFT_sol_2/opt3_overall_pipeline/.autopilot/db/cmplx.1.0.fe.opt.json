@@ -1,0 +1,158 @@
+{
+  "0": {
+    "basicblocks": 58,
+    "calls": "4 4 9 4 3 4 4 8 8 8 3 4 7 10",
+    "file": "FFT32_check.cpp",
+    "fileloc": 63,
+    "instructions": 447,
+    "loads": {
+      "L": 23
+    },
+    "name": "fft32",
+    "stores": {
+      "L": 23
+    },
+    "total_instructions": 36038
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "5",
+    "file": "hls_cordic_apfixed.pp.cpp",
+    "fileloc": 0,
+    "instructions": 2,
+    "name": "",
+    "total_instructions": 2435
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "4",
+    "file": "FFT32.h",
+    "fileloc": 50,
+    "instructions": 9,
+    "name": "axis_data",
+    "total_instructions": 137
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 58,
+    "instructions": 67,
+    "loads": {
+      "L": 2
+    },
+    "name": "circ_range_redux<16, 4, 17>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 901
+  },
+  "2": {
+    "basicblocks": 10,
+    "calls": "",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 77,
+    "instructions": 222,
+    "loads": {
+      "L": 13
+    },
+    "name": "cordic_circ_apfixed<18, 3, 0>",
+    "stores": {
+      "L": 13
+    },
+    "total_instructions": 1955
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 16,
+    "instructions": 329,
+    "loads": {
+      "L": 16
+    },
+    "name": "radix4_bfly",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 3801
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "FFT32.h",
+    "fileloc": 18,
+    "instructions": 7,
+    "loads": {
+      "L": 2
+    },
+    "name": "complex_t",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 7
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "hls_cordic_apfixed.cpp",
+    "fileloc": 41,
+    "instructions": 129,
+    "name": "__cxx_global_var_init",
+    "total_instructions": 2433
+  },
+  "6": {
+    "basicblocks": 19,
+    "calls": "11 2",
+    "file": "hls_cordic_apfixed.h",
+    "fileloc": 227,
+    "instructions": 274,
+    "loads": {
+      "L": 16
+    },
+    "name": "generic_sincos<16, 4>",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 4773
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "8",
+    "file": "FFT32_check.cpp",
+    "fileloc": 41,
+    "instructions": 99,
+    "loads": {
+      "L": 6
+    },
+    "name": "radix2_bfly",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 2212
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "4",
+    "file": "FFT32_check.cpp",
+    "fileloc": 7,
+    "instructions": 74,
+    "loads": {
+      "L": 2
+    },
+    "name": "cmul",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 1245
+  },
+  "9": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "FFT32_check.cpp",
+    "fileloc": 52,
+    "instructions": 16,
+    "name": "bit_reverse",
+    "total_instructions": 16
+  }
+}
